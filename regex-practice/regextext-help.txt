@@ -1,0 +1,31 @@
+Regurlar Expression Characters are below
+^ beginnig of a string
+$ end of string
+.(period) matches a single char
+[aeiou] matches at least one character
+[b-f] matches any char within range
+[^bcdef] matches any char except those within the brackets
+* matches zero or more occurrences of the preceding char
+— Regular Expression Characters
+? matches zero or one occurrence of the preceding character
+\ matches the character following the escape (\) character
+— Regular Expression Qualifiers
+* must match zero or more times
++ must match one or more times
+? Must match no more than one time
+{n} must match n times
+{n,} must at least n matches
+{n,m} must match at least n times, but not more than m times
+
+— Regular Expression Shortcuts
+\d matches any decimal digit. same as [O-9]
+\w matches any word character, saine as [O-9A-Za-z]
+\D matches any non—digit
+\W matches any non-word character such as space
+\S matches any non-whitespace character
+Get-Help about_regular_expression
+
+------Regular Expression part-2
+$ip="192.168.15.20"
+$rx="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+$ip -match $rx
