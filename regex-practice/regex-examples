@@ -1,3 +1,8 @@
 egrep '^[$].*[=|@]' regex.txt 
 $myvar=groovy
 $myvar@javatech
+
+sed -n '/^[$].*[=]/p' sedtext 
+$myvar=groovy
+$javahome=c:\drive
+
