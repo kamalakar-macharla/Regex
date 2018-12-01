@@ -1,0 +1,3 @@
+egrep '^[$].*[=|@]' regex.txt 
+$myvar=groovy
+$myvar@javatech
