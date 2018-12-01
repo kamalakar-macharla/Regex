@@ -1,3 +1,5 @@
+grep -rn '^[$]'    search word in all files and dirs
+
 egrep '^[$].*[=|@]' regex.txt 
 $myvar=groovy
 $myvar@javatech
