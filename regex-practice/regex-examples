@@ -6,3 +6,8 @@ sed -n '/^[$].*[=]/p' sedtext
 $myvar=groovy
 $javahome=c:\drive
 
+sed -n '/^[$].*[=]/s/$/; write-out/p' sedtext 
+$myvar=groovy; write-out
+$javahome=c:\drive; write-out
+
+
