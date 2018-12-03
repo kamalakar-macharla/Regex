@@ -1,1 +1,15 @@
+cut -c 1 /etc/passwd
+cut -c 7 /etc/passwd
+cut -c 4-7 /etc/passwd
+cut -c 4- /etc/passwd
+cut -c -4 /etc/passwd
+cut -c 1,3,5 /etc/passwd
 
+echo -e 'one\ttwo\tthree' | cut -f 1
+
+echo 'one,two,three' | cut -d ',' -f 2
+cut -d ':' -f 1,3 /etc/passwd
+cut -d ':' -f 1,3 --output-delimiter=',' /etc/passwd
+
+echo 'first,last' > people.csv
+cut -d ',' -f 1 people.csv
