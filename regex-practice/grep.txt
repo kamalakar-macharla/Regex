@@ -1,0 +1,4 @@
+grep '^first' people.csv
+grep 'last$' people.csv
+grep '^first,last$' people.csv
+grep -v '^first,last$' people.csv
