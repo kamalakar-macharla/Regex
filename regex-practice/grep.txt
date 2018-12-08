@@ -2,3 +2,9 @@ grep '^first' people.csv
 grep 'last$' people.csv
 grep '^first,last$' people.csv
 grep -v '^first,last$' people.csv
+
+grep -rn '^[$]'    search word in all files and dirs
+
+egrep '^[$].*[=|@]' regex.txt 
+$myvar=groovy
+$myvar@javatech
