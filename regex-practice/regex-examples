@@ -1,17 +1,3 @@
-grep -rn '^[$]'    search word in all files and dirs
+dg
 
-egrep '^[$].*[=|@]' regex.txt 
-$myvar=groovy
-$myvar@javatech
 
-sed -n '/^[$].*[=]/p' sedtext 
-$myvar=groovy
-$javahome=c:\drive
-
-sed -n '/^[$].*[=]/s/$/; write-out/p' sedtext 
-$myvar=groovy; write-out
-$javahome=c:\drive; write-out 
-then Edit the above result with sed -i '/^[$].*[=]/s/$/; write-out/' sedtext
-
-rp="; write-output myvar=\$groovy"
-sed -i "/^[$].*[=]/s/$/$rp/" sedtext     double-quotes allows the variables
