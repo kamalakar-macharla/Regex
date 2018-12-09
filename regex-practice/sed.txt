@@ -16,3 +16,5 @@ sed -i "/^[$].*[=]/s/$/$rp/" sedtext     double-quotes allows the variables
 sed '/clear/ a\ line add' set-db-config.sh
 clear
  line add
+
+sed '=' set-db-config.sh | sed 'N;s/\n/:/'  #25: linenumber
