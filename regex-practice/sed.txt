@@ -1,3 +1,4 @@
+sed -n '2,6p' text
 sed -n '/regex/p' text
 sed -n '/^[$].*[=]/p' sedtext 
 $myvar=groovy
