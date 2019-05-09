@@ -1,4 +1,5 @@
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
+grep 'build job' -lR
 ssh-keygen -t rsa
 awk -F "." '{print $1}'
 grep 'test' test.txt
