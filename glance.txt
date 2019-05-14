@@ -7,3 +7,7 @@ find /etc -type f -name yum*
 /etc/init.d/
 cat ~/.bash_profile
 export TZ="US/Central"
+while read LINE
+do
+	echo "$LINE"
+done < /etc/fstab
