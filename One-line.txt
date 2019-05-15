@@ -2,9 +2,6 @@
 Process of understanding the context "AT THE MOVEMENT" is more important than remembering.
 pdf to Word | Zamzar - Free online file conversion
 
-vim /etc/yum.repos.d/docker-ce.repo
-:%s/enabled=0/enabled=1/g
-
 ----grep-----
 grep 10.151.38.35 sync_* -lR
 grep searchword sync_* -lR
@@ -916,36 +913,10 @@ sunrpc on /var/lib/nfs/rpc_pipefs type rpc_pipefs (rw)
 10.131.180.8:/vol/ds2b_PIM_VERSIONS on /versions type nfs (rw,vers=4,addr=10.131.180.8,clientaddr=10.131.85.22)
 
 
-[root@SC141-DIST-L3 ~]# top
-top - 11:21:44 up 91 days, 21:17,  2 users,  load average: 0.33, 0.38, 0.43
-Tasks: 251 total,   1 running, 250 sleeping,   0 stopped,   0 zombie
-Cpu(s):  0.2%us,  0.5%sy,  0.0%ni, 99.1%id,  0.2%wa,  0.0%hi,  0.0%si,  0.0%st
-Mem:   5993660k total,  2015560k used,  3978100k free,   172080k buffers
-Swap:  2621436k total,   220688k used,  2400748k free,   159112k cached
+top
+service network status; service jenkins status
+sort just | uniq -i
 
-  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
-23894 root      20   0 15168 1364  936 R  1.3  0.0   0:00.68 top
- 9434 root      20   0 4510m 530m 7656 S  0.7  9.1 190:40.21 java
-26669 root      20   0 4705m 697m 9648 S  0.7 11.9 245:01.45 java
-
-[root@SC141-DIST-L3 ~]# service network status
-Configured devices:
-lo eth0 eth1 eth2
-Currently active devices:
-lo eth2
-
-
-[root@sc141_lb_audp_01 hostinfo]# sort just | uniq -i
-ismesv2b
-kamalAKAR
-linux022
-[root@sc141_lb_audp_01 hostinfo]# cat just
-ismesv2b
-linux022
-linux022
-linuX022
-KamAlakaR
-kamalAKAR
 
 
 grep -i ismesv6.ca.com wholelist
