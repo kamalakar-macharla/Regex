@@ -1094,6 +1094,7 @@ printenv			 						Get-ChildItem env:\
 printenv HOME								dir env:computername
 hostname			 						$env:computername
 whoami(kamal)		 						whoami (kamalakar\kamalakar312)
+cd ./Downloads                              cd .\Downloads
 history				 						Get-History
 hostna<tab>          						Get-Help *content*
 service --status-all						Get-Service
@@ -1117,10 +1118,13 @@ echo $PATH									$env:path
 											Get-Service | Select-Object name, Status
 											Get-Service ws* | Select-Object Status, displayname
 											Get-Process notepad++ | Get-ChildItem
-											Get-Help Get-Service -ShowWindow
-											Get-Service -name bits | select -Property naem, stitus | gm
+man command or command --help				Get-Help Get-Service -ShowWindow
+											Get-Service -name bits | select -Property name, status | gm
 											Get-ChildItem C:\test.html | Select-String -Pattern "Appinfo"
 											Invoke-Command -ComputerName dc,s1,s2 {Get-EventLog -LogName System -new 3}
+											
+grep 										Select-String -Path .\*.txt -Pattern 'Get'
+find ./ -type f -name '*.txt' -exec grep 'exchange' {} \;                                 Get-ChildItem -Path C:\Windows\System32\*.txt -Recurse | Select-String -Pattern 'other' -CaseSensitive
 
 
 

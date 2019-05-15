@@ -1,7 +1,10 @@
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
+sed '/^\s*$/d' file.txt delete empty lines.
 grep 'build job' -lR
 ssh-keygen -t rsa
+cut -d ':' -f 2
 awk -F "." '{print $1}'
+awk -F ':' '{print $3 " -> " $1}'
 grep 'test' test.txt
 find /etc -type f -name yum*
 /etc/init.d/
