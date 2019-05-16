@@ -1095,6 +1095,8 @@ printenv HOME								dir env:computername
 hostname			 						$env:computername
 whoami(kamal)		 						whoami (kamalakar\kamalakar312)
 cd ./Downloads                              cd .\Downloads
+                                            Get-Help Select-Object -Online
+                                            Get-Process | Select-Object -Property ProcessName, Id, WS
 history				 						Get-History
 hostna<tab>          						Get-Help *content*
 service --status-all						Get-Service
