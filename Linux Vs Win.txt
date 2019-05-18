@@ -6,6 +6,8 @@ printenv HOME								dir env:computername
 hostname			 						$env:computername
 whoami(kamal)		 						whoami (kamalakar\kamalakar312)
 cd ./Downloads                              cd .\Downloads
+ls											ls
+ll | cut -d ' ' -f 3						ls -Name
 hostna<tab>          						Get-Help *content*
                                             Get-Help Get-Process -Online
                                             Get-Process | Get-Member
