@@ -1095,11 +1095,12 @@ printenv HOME								dir env:computername
 hostname			 						$env:computername
 whoami(kamal)		 						whoami (kamalakar\kamalakar312)
 cd ./Downloads                              cd .\Downloads
+hostna<tab>          						Get-Help *content*
                                             Get-Help Select-Object -Online
                                             Get-Process | Select-Object -Property ProcessName, Id, WS
                                             Get-Process | Get-Member
 history				 						Get-History
-hostna<tab>          						Get-Help *content*
+
 service --status-all						Get-Service
 ls /etc/init.d		 						Get-Service
 ls /etc/init.d > testRD.txt					Get-Service > c:\testRD.txt
