@@ -1,0 +1,43 @@
+
+
+Linux                   vs				       windows
+printenv			 						Get-ChildItem env:\
+printenv HOME								dir env:computername
+hostname			 						$env:computername
+whoami(kamal)		 						whoami (kamalakar\kamalakar312)
+cd ./Downloads                              cd .\Downloads
+hostna<tab>          						Get-Help *content*
+                                            Get-Help Select-Object -Online
+                                            Get-Process | Select-Object -Property ProcessName, Id, WS
+                                            Get-Process | Get-Member
+history				 						Get-History
+
+service --status-all						Get-Service
+ls /etc/init.d		 						Get-Service
+ls /etc/init.d > testRD.txt					Get-Service > c:\testRD.txt
+											Get-Service | Out-File -FilePath c:\test.txt
+											Get-Service | Export-Csv -Path c:\service.csv
+cat service.csv		 						notepad c:\service.csv
+cat service.csv		 						Get-Content c:\service.csv
+											Get-Service | ConvertTo-Html -Property name,status | Out-File c:\test.html
+cat test.html								c:\test.html
+rm test.html								Remove-Item c:\test.html -WhatIf
+rm test.html								Remove-Item c:\test.html -Confirm
+echo $PATH									$env:path
+											$variable:HOME
+											"Video  Video  Audio  Audio  VBI    VBI" -split '\s+'
+											"kamalakar macharla tkr college" | Out-File c:\tkr.txt
+											New-Item -ItemType Directory wb
+											1..10 | ForEach-Object {New-Item -ItemType Directory .\Folder_"$_"}
+											Copy-Item .\myfile.txt .\Folder_1\
+											Get-Service | Select-Object name, Status
+											Get-Service ws* | Select-Object Status, displayname
+											Get-Process notepad++ | Get-ChildItem
+man command or command --help				Get-Help Get-Service -ShowWindow
+											Get-Service -name bits | select -Property name, status | gm
+											Get-ChildItem C:\test.html | Select-String -Pattern "Appinfo"
+											Invoke-Command -ComputerName dc,s1,s2 {Get-EventLog -LogName System -new 3}
+											
+grep 										Select-String -Path .\*.txt -Pattern 'Get'
+find ./ -type f -name '*.txt' -exec grep 'exchange' {} \;                                 Get-ChildItem -Path C:\Windows\System32\*.txt -Recurse | Select-String -Pattern 'other' -CaseSensitive
+
