@@ -7,9 +7,11 @@ hostname			 						$env:computername
 whoami(kamal)		 						whoami (kamalakar\kamalakar312)
 cd ./Downloads                              cd .\Downloads
 hostna<tab>          						Get-Help *content*
-                                            Get-Help Select-Object -Online
-                                            Get-Process | Select-Object -Property ProcessName, Id, WS
+                                            Get-Help Get-Process -Online
                                             Get-Process | Get-Member
+ps -ef | grep 'nginx'						Get-Process | Select-String -Pattern 'bash'
+											Get-Process | Select-Object -Property ProcessName,CPU | Sort-Object -Property CPU
+
 history				 						Get-History
 
 service --status-all						Get-Service
