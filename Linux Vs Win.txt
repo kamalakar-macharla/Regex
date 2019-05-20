@@ -4,6 +4,7 @@ Linux                   vs				       windows
 printenv			 						Get-ChildItem env:\
 printenv HOME								dir env:computername
 hostname			 						$env:computername
+echo "Host name is : $(printenv HOSTNAME)"  Write-Output "Host name is : $env:computername"
 whoami(kamal)		 						whoami (kamalakar\kamalakar312)
 cd ./Downloads                              cd .\Downloads
 ls											ls
@@ -45,3 +46,22 @@ man command or command --help				Get-Help Get-Service -ShowWindow
 grep 										Select-String -Path .\*.txt -Pattern 'Get'
 find ./ -type f -name '*.txt' -exec grep 'exchange' {} \;                                 Get-ChildItem -Path C:\Windows\System32\*.txt -Recurse | Select-String -Pattern 'other' -CaseSensitive
 
+----------------------------------while loop----------------------------
+grep xfs /etc/fstab | while read LINE
+do
+	echo "xfs: ${LINE}"
+done
+grep xfs /etc/fstab | while read FS MP REST
+FS_NUM=1
+((FS_NUM++))
+			/----------------/
+while($inp = Read-Host -Prompt "Select a command"){
+    switch($inp){
+           L {"File will be deleted"}
+           A {"File will be displayed"}
+           R {"File will be write protected"}
+           Q {"End"}
+           default {"Invalid entry"}
+       }
+}
+---------------------End------------------------------------
