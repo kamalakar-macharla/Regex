@@ -54,6 +54,7 @@ case $envn in
 		break
 	;;
 esac
+read -p "Please Enter a Message: `echo $'\n> '`" message
 read -p "Enter y or n :" ANSWER
 case "$ANSWER" in
 # start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss])  [Yy]*)
