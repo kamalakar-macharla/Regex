@@ -193,3 +193,9 @@ do
 	read -p "Enter your name: " NAME
 	read -p "Is ${NAME}" correct? " CORRECT
 done
+while ping -c 1 app1 >/dev/null
+do
+	echo "app1 still up ..."
+	sleep 100
+done
+echo "app1 is down..."
