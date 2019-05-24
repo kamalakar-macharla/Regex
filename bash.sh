@@ -237,3 +237,9 @@ debug(){
 debug ls
 PS4='+ $BASH_SOURCE : $LINENO '
 + ./test.sh : TEST_VAT=test
+
+echo "testing regex" | awk '/[Tt]esting regex/{print $2}'
+awk '/[^oi]th/{print $0}' myfile
+awk '/s[ae]*t/{print $0}'
+
+echo $'\none \ntwo \nthree' # \n \t
