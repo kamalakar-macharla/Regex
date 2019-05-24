@@ -49,8 +49,10 @@ case $envn in
 		;;
 	prod)
 		;;
+	*)
+	;;
 esac
-
+# start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss]
 
 
 
