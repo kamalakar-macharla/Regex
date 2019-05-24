@@ -2,6 +2,7 @@
 #!/path/to/interpreter
 #!/bin/bash -e
 uptime
+df -h
 top , htop
 mfree
 
@@ -50,6 +51,7 @@ case $envn in
 	prod)
 		;;
 	*)
+		break
 	;;
 esac
 read -p "Enter y or n :" ANSWER
@@ -199,3 +201,21 @@ do
 	sleep 100
 done
 echo "app1 is down..."
+while read LINE
+do
+ echo "$LINE"
+done < /etc/fstab
+grep xfs /etc/fstab | while read FS MP REST
+grep xfs /etc/fstab | while read LINE
+do
+	echo "xfs:${LINE}"
+done
+mysql -BNe 'show databases' | while read DB
+do
+	db-backed-up-recently $DB
+	if [ "$?" -eq "0" ]
+	then
+		continue
+	fi
+	backup $DB
+done
