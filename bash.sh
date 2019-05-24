@@ -229,3 +229,10 @@ set +x to stop debugging
 #!/bin/bash -xe
 #!/bin/bash -vx this is read & execute
 help set | less
+debug(){
+	echo "Executing: $@"
+	$@
+}
+debug ls
+PS4='+ $BASH_SOURCE : $LINENO '
++ ./test.sh : TEST_VAT=test
