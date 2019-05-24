@@ -12,7 +12,7 @@ ps -ef | grep 'SC140'
 
 ls /not/here
 echo "$?"
-
+mv *.txt notes
 grep 'test' test.txt
 grep 'build job' -lR
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
@@ -52,7 +52,9 @@ case $envn in
 	*)
 	;;
 esac
-# start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss]
+read -p "Enter y or n :" ANSWER
+case "$ANSWER" in
+# start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss])  [Yy]*)
 
 
 
@@ -177,3 +179,17 @@ mi=$(date +%F).$$ ; echo $mi # 2019-05-23.2296  $$ is PID
 *\? this matches done?
 ls a?.txt matches ab.txt
 ----------
+
+INDEX=1
+while [ $INDEX -lt 6 ]
+while true
+do
+	command N
+	sleep 10
+	((INDEX++))
+done
+while [ "$CORRECT != "y" ]
+do
+	read -p "Enter your name: " NAME
+	read -p "Is ${NAME}" correct? " CORRECT
+done
