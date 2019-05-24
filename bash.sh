@@ -219,3 +219,13 @@ do
 	fi
 	backup $DB
 done
+-------debugging
+-x prints commands as they execute
+#!/bin/bash -x
+set -x
+set +x to stop debugging
+-v prints shell input lines as they are read
+-e Exit on error
+#!/bin/bash -xe
+#!/bin/bash -vx this is read & execute
+help set | less
