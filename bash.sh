@@ -39,7 +39,7 @@ proj=$(ls -d devops* | cut -d '/' -f 1)
 APPTYPE=$(echo $apptype | awk '{print toupper($0)}')
 
 cp -r ./$1/* ./devops*/
-sed -i "s/country/$cntry/g" $proj/$1/db/config/common-db.json
+
 dbname=$(grep "^$cntry\s" reposlist.txt | grep "\s$apptype\s" | grep "\s$1\s" | awk '{print $5}')
 [ ! -z "$dbname" ] && sed -i "s/DBNAME/$dbname/g" $proj/$1/db/config/common-db.json
 
@@ -257,12 +257,4 @@ for ITEM in $(echo $'Red \nGreen \nYellow') # for loop can take the Horizonal/ve
 # if you want to combile them use "$(command)"
 # while loop consider the entire line 
 
-sed -i 's/kamalakar/KAMAL/Ig' case.txt # ignore case
-sed -i '/kamalakar/Id' case.txt # ignore case to delete
-sed -i 's/^x.*/xp/g' case.txt # . is to match any char, here * is to match one or more of any char
 
-sed '5d' a.txt  # Delete a particular line
-sed '3,5d' a.txt
-sed '2,$d' a.txt # $ refer last line
-sed '/pattern/d' filename
-sed '/^$/d' a.txt # to delete blank line
