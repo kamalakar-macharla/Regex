@@ -54,7 +54,7 @@ case $envn in
 		break
 	;;
 esac
-read -p "Please Enter a Message: `echo $'\n> '`" message
+read -p "Please Enter a Message: $(echo $'\n> ')" message
 read -p "Enter y or n :" ANSWER
 case "$ANSWER" in
 # start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss])  [Yy]*)
@@ -256,5 +256,29 @@ for ITEM in $(echo $'Red \nGreen \nYellow') # for loop can take the Horizonal/ve
 # for loop separate the items based on space between them
 # if you want to combile them use "$(command)"
 # while loop consider the entire line 
+
+echo $'one \ntwo \nthree' | xargs
+one two three
+ echo "one two three" | xargs
+one two three
+
+echo $'one \ntwo \nthree' | xargs -n1
+one
+two
+three
+
+touch file{1..9}.jpg
+
+grep -i 'aig' -lR
+dev-qa-uat-prod.sh
+multi-set-db-config.sh
+
+grep -i 'aig' -lR | xargs
+dev-qa-uat-prod.sh multi-set-db-config.sh
+
+grep -i 'aig' -lR | xargs sed -i 's/aig/angio/g'
+
+Special Character Classes [[:alpha:]] [[:alnum:]] [[:digit:]] [[:lower:]] [[:upper:]]
+
 
 

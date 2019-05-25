@@ -1,3 +1,6 @@
+
+If table data format appears, think of awk
+
 awk -F ':' '{print $1, $3}' /etc/passwd
 awk -F ':' '{print $1 "," $3}' /etc/passwd
 awk -F ':' '{print $1 ",  " $3}' /etc/passwd
