@@ -78,7 +78,7 @@ def init()
         _nodeOs = isUnix() ? _linux : _windows;
         
         //initialize utilities: get common pipeline utilities
-        clonerepo(_nodeOs, "github.aig.net/commercial-it-devops/pipeline-utilities.git", "master", "");
+        clonerepo(_nodeOs, "github.xpsgs.net/commercial-it-devops/pipeline-utilities.git", "master", "");
         _commonUtils = load "./pipeline-utilities/common.groovy";
 
         executeCommand("mkdir ${_dirPipelineRepo}");

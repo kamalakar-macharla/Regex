@@ -256,3 +256,13 @@ for ITEM in $(echo $'Red \nGreen \nYellow') # for loop can take the Horizonal/ve
 # for loop separate the items based on space between them
 # if you want to combile them use "$(command)"
 # while loop consider the entire line 
+
+sed -i 's/kamalakar/KAMAL/Ig' case.txt # ignore case
+sed -i '/kamalakar/Id' case.txt # ignore case to delete
+sed -i 's/^x.*/xp/g' case.txt # . is to match any char, here * is to match one or more of any char
+
+sed '5d' a.txt  # Delete a particular line
+sed '3,5d' a.txt
+sed '2,$d' a.txt # $ refer last line
+sed '/pattern/d' filename
+sed '/^$/d' a.txt # to delete blank line

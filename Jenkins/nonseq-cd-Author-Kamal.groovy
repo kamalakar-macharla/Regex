@@ -35,7 +35,7 @@ def init()
     try {
         _nodeOs = isUnix() ? _linux : _windows;
         //initialize utilities: get common pipeline utilities
-        clonerepo(_nodeOs, "github.aig.net/commercial-it-devops/pipeline-utilities.git", "master", "");
+        clonerepo(_nodeOs, "github.xpsgs.net/commercial-it-devops/pipeline-utilities.git", "master", "");
         _commonUtils = load "./pipeline-utilities/common.groovy";
         bat "mkdir ${_dirPipelineRepo}"
         _commonUtils.prepareStages('Promotion', 'Deployment', 'Notification');
@@ -78,7 +78,7 @@ def execute() {
       promoteBuild(artifactoryServer, env.artifactName, env.buildVersion, 'Released', promoteComment, uiSourceRepo, uiTargetRepo);
       _stageArray.put(env.CURRENT_STAGE,_success);
     }
-    def artifactDownloadPattern = "\"${uiTargetRepo}/com/aig/commercial/global-delivery/${env.projDesc.toLowerCase()}/ui/exe/${env.buildVersion}/*.zip\""
+    def artifactDownloadPattern = "\"${uiTargetRepo}/com/website.commercial/global-delivery/${env.projDesc.toLowerCase()}/ui/exe/${env.buildVersion}/*.zip\""
     println "artifactDownloadPattern = ${artifactDownloadPattern}"
     sourcefile = doDownloadFromArtifactory(artifactDownloadPattern,artifactoryServer);
     ExeDeployHandler(_pipelineProps.DES_DIR);
@@ -209,7 +209,7 @@ def CopyExeToServer(THOST,CUSER,CPWD,Des_DIR){
   		powershell '''
         $nhost = "$env:ter_host"
     		$pw = convertto-securestring -AsPlainText -Force -String $env:cr_pwd
-    		$RM_cred = New-Object System.Management.Automation.PSCredential ("R3-CORE\\$env:cr_user",$pw)
+    		$RM_cred = New-Object System.Management.Automation.PSCredential ("i3i78\\$env:cr_user",$pw)
     		$Server = New-PSSession -ComputerName $nhost -Credential $RM_cred
     		Invoke-Command -Session $Server -ScriptBlock {
       		whoami
