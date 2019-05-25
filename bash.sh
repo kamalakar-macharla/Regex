@@ -243,3 +243,10 @@ awk '/[^oi]th/{print $0}' myfile
 awk '/s[ae]*t/{print $0}'
 
 echo $'\none \ntwo \nthree' # \n \t
+echo $"\none \ntwo \nthree" # This doesnt work
+
+MYVAR=file.txt
+if [[ $MYVAR =~ .txt$ ]]
+then
+  echo "check..."
+fi
