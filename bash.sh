@@ -22,7 +22,7 @@ grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
 sed '/^\s*$/d' file.txt delete empty lines.
 
 ssh-keygen -t rsa
-cut -d ':' -f 2
+cut -d ':' -f 2  # delimeter must be single character
 awk -F "." '{print $1}'
 awk -F ':' '{print $3 " -> " $1}'
 
@@ -250,3 +250,9 @@ if [[ $MYVAR =~ .txt$ ]]
 then
   echo "check..."
 fi
+
+for ITEM in $(echo "Red Green Yellow") 
+for ITEM in $(echo $'Red \nGreen \nYellow') # for loop can take the Horizonal/vertical items
+# for loop separate the items based on space between them
+# if you want to combile them use "$(command)"
+# while loop consider the entire line 
