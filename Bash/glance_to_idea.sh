@@ -45,5 +45,14 @@ can be used service or websites monitor
 In this case,choice,scenarion
 specific thig should done               -----------> case
 
+when automating some thing
+provide input parameters      --------> read
+
+if file or dir exists         ----------> []
+
+logical and or or conditions          --------> &&  ||
+
+make a decisions on exit code  --------> [ $? -eq 0]
+
 
 sort , | column -t, uniqe, 

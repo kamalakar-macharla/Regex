@@ -10,14 +10,21 @@ mfree
 cat ~/.bash_profile
 ps -ef | grep 'SC140'
 /etc/init.d/
+cat file | less # less is paging utility
+cat file | head -2
+cat file | tail -2
+| tr ":" " " | column -t
 
 ls /not/here
 echo "$?"
 mv *.txt notes
+grep options -i ignoring case, -c count, -n line num, -v invert match
 grep 'test' test.txt
 grep 'build job' -lR
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
 
+file filename # display the file type
+strings binaryfile # to see text in the binary file
 
 sed '/^\s*$/d' file.txt delete empty lines.
 
@@ -267,7 +274,7 @@ one
 two
 three
 
-touch file{1..9}.jpg
+touch file{1..9}.jpg+*
 
 grep -i 'aig' -lR
 dev-qa-uat-prod.sh
@@ -280,5 +287,6 @@ grep -i 'aig' -lR | xargs sed -i 's/aig/angio/g'
 
 Special Character Classes [[:alpha:]] [[:alnum:]] [[:digit:]] [[:lower:]] [[:upper:]]
 
-
+MAIN="Kamalakar"
+echo ${#MAIN} # this gives length of a string
 
