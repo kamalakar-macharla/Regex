@@ -14,7 +14,7 @@ cat file | less # less is paging utility
 cat file | head -2
 cat file | tail -2
 | tr ":" " " | column -t
-
+Ctrl+R for history search
 ls /not/here
 echo "$?"
 mv *.txt notes
@@ -289,4 +289,5 @@ Special Character Classes [[:alpha:]] [[:alnum:]] [[:digit:]] [[:lower:]] [[:upp
 
 MAIN="Kamalakar"
 echo ${#MAIN} # this gives length of a string
-
+ ~ # tilda represent your home dir
+ who<Tabcompletion> gives who whoami
