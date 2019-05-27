@@ -2,13 +2,20 @@ office/personal work, anything doing regularly
 or in bluk, want to reduce the regular doing work        -------> bash
 Automate personal work to get more time.
 
-search file, over the files in dir            --------> grep
-or output of command(ps, df -h, top) data             
-
 
 find file,dirs based type
-size, modify dates              ----------> find
+size, modify dates              ----> find
 
+
+file1 file2 file3 file4 file5
+file2
+file3                           ----> for | xargs | while      # for works for Horizontal/ vertical items   
+file4                                                          # xargs converts vertical items to horizontal items
+file5                                                          # while takes horizontal items as one line           
+
+
+search file, over the files in dir            --------> grep
+or output of command(ps, df -h, top) data 
 
 OrderDate	Region	  Rep
 1/6/2018	East	  Jones
@@ -18,10 +25,7 @@ OrderDate	Region	  Rep
 
 daemon:x:2:2:daemon:/sbin:/sbin/nologin       ---------> cut
 
-file1 file2 file3 file4
-file2
-file3                                  ----> for | xargs   # both works for Horizontal/ vertical items   
-file4                                                      # xargs converts vertical items to horizontal items
+
 
 stream editor
 Edit the files                      -----------> sed
