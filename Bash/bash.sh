@@ -303,9 +303,10 @@ $DEBUG && echo "Debug mode ON"
 DEBUG=false
 $DEBUG || echo "Debug mode OFF"
 
+cat -A script.sh
 cat -v script.sh # CRLF/Carriage Return, Line Feed
 echo "Hello World"^M  #^M says windows line ending.
 file script.sh # script.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
-dos2unix script.sh
+dos2unix script.sh  #converting file to Unix format...
 file script.sh # script.sh: Bourne-Again shell script, ASCII text executable.
 
