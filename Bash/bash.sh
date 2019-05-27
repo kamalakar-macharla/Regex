@@ -276,14 +276,14 @@ three
 
 touch file{1..9}.jpg+*
 
-grep -i 'aig' -lR
+grep -i 'angio' -lR
 dev-qa-uat-prod.sh
 multi-set-db-config.sh
 
-grep -i 'aig' -lR | xargs
+grep -i 'angio' -lR | xargs
 dev-qa-uat-prod.sh multi-set-db-config.sh
 
-grep -i 'aig' -lR | xargs sed -i 's/aig/angio/g'
+grep -i 'angio' -lR | xargs sed -i 's/angio/angio/g'
 
 Special Character Classes [[:alpha:]] [[:alnum:]] [[:digit:]] [[:lower:]] [[:upper:]]
 
@@ -294,3 +294,5 @@ echo ${#MAIN} # this gives length of a string
 
 while ping jsiehsu.com 
 while command # if command succesed condition true, else false
+
+grep -i 'aig' -lR | xargs sed -i 's/aig/angio/Ig'  # DBS interview question, delete aig word in all files all dirs
