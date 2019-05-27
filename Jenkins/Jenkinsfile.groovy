@@ -480,7 +480,7 @@ def exeDeployment()
         println "Exe : ${_ExeFile}";
         println "BuildNode : ${_nodeLabel}";
 
-        build job: '/commercial-it-global-delivery/S3-vb6/dev-ci-cd/utils/deploy-component', parameters: [
+        build job: '/globe/S3-vb6/dev-ci-cd/utils/deploy-component', parameters: [
             string(name: 'PipelineRepository',value: _gitPipelineRepository), 
             string(name: 'PipelineBranch', value: _gitPipelineRepositoryBranch),
             string(name: 'DeploymentType', value: "Exe"),
@@ -497,7 +497,7 @@ def runSequenceJob()
     println "ExeAritfactURL : ${_artifactoryServerUrl}/${_artifactoryTarget}/exe/${_buildVersion}/${_artifactExeFile}";
     println "BuildNode : ${_nodeLabel}";
 
-    build job: '/commercial-it-global-delivery/S3-vb6/dev-ci-cd/utils/sequence-job', parameters: [
+    build job: '/globe/S3-vb6/dev-ci-cd/utils/sequence-job', parameters: [
         string(name: 'PipelineRepository',value: _gitPipelineRepository), 
         string(name: 'PipelineBranch', value: _gitPipelineRepositoryBranch),
         string(name: 'ExeAritfactURL', value: "${_artifactoryServerUrl}/${_artifactoryTarget}/exe/${_buildVersion}/${_artifactExeFile}"),
@@ -514,7 +514,7 @@ def appvDeployment()
         println "AppvUrl : ${_artifactoryServerUrl}/${_artifactoryTarget}/exe/${_buildVersion}/${_artifactAppvFile}";
         println "BuildNode : ${_nodeLabel}";
 
-        build job: '/commercial-it-global-delivery/S3-vb6/dev-ci-cd/utils/deploy-component', parameters: [
+        build job: '/globe/S3-vb6/dev-ci-cd/utils/deploy-component', parameters: [
             string(name: 'PipelineRepository',value: _gitPipelineRepository), 
             string(name: 'PipelineBranch', value: _gitPipelineRepositoryBranch),
             string(name: 'DeploymentType', value: "Appv"),

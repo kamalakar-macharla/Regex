@@ -1,0 +1,27 @@
+
+curl
+scp
+ftp
+winscp
+nslookup
+ping
+ipconfig
+printenv
+$env:\
+services.msc
+network share
+pc shared directory
+hostname.domain
+Rest api
+End-point
+AD groups
+telnet
+local uses, logined in user
+crontab
+scheduling in Linux/win
+git bash, git ftp
+winrm
+netuse
+ps-session
+SAML login auth
+portnumber

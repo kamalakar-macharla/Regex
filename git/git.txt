@@ -1,0 +1,11 @@
+
+warning: LF will be replaced by CRLF in Bash/bash.sh
+In Unix systems the end of a line is represented with a line feed (LF). 
+In windows a line is represented with a carriage return (CR) and a line feed (LF) thus (CRLF). 
+when you get code from git that was uploaded from a unix system they will only have an LF.
+
+bat "git clone -b ${branchName} https://${comm_git_clone_token}@${gitRepo} ${folder}";
+sh "scl enable rh-git29 -- git clone -b ${branchName} https://${comm_git_clone_token}@${gitRepo}";
+
+
+git clone -b br_name https://kmacharla@github.angio.net/reponame

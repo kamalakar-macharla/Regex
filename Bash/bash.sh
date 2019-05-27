@@ -296,3 +296,16 @@ while ping jsiehsu.com
 while command # if command succesed condition true, else false
 
 grep -i 'aig' -lR | xargs sed -i 's/aig/angio/Ig'  # DBS interview question, delete aig word in all files all dirs
+
+DEBUG=true
+$DEBUG && echo "Debug mode ON"
+
+DEBUG=false
+$DEBUG || echo "Debug mode OFF"
+
+cat -v script.sh # CRLF/Carriage Return, Line Feed
+echo "Hello World"^M  #^M says windows line ending.
+file script.sh # script.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
+dos2unix script.sh
+file script.sh # script.sh: Bourne-Again shell script, ASCII text executable.
+
