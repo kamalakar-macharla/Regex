@@ -291,3 +291,6 @@ MAIN="Kamalakar"
 echo ${#MAIN} # this gives length of a string
  ~ # tilda represent your home dir
  who<Tabcompletion> gives who whoami
+
+while ping jsiehsu.com 
+while command # if command succesed condition true, else false

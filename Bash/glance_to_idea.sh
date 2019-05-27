@@ -2,11 +2,9 @@ office/personal work, anything doing regularly
 or in bluk, want to reduce the regular doing work        -------> bash
 Automate personal work to get more time.
 
-search in single file
-over dirs contains many files       
-and list the file names -lR        -------> grep
-search ps output, any command 
-out put results
+search file, over the files in dir            --------> grep
+or output of command(ps, df -h, top) data             
+
 
 find file,dirs based type
 size, modify dates              ----------> find
@@ -22,25 +20,20 @@ daemon:x:2:2:daemon:/sbin:/sbin/nologin       ---------> cut
 
 file1 file2 file3 file4
 file2
-file3                                  ------------> | xargs
-file4
+file3                                  ----> for | xargs   # both works for Horizontal/ vertical items   
+file4                                                      # xargs converts vertical items to horizontal items
 
 stream editor
 Edit the files                      -----------> sed
 search word & replace
 
 
-List of items, want to go over it
-space between words makes item        -----------> for
-items can be horizontal/vertical
-
-
-read the lines directly from the file
-read the lines from the grep result
-Loop it specific number of times              ---------> while
-run continuously on condition of true/false        
-continuously run on true till gets false
-can be used service or websites monitor
+read the lines directly from the file         ----> while command
+read the lines from the grep result           ----> while [ $MYVAR -le 10 ]
+Loop it specific number of times              ----> while true
+run continuously on condition of true/false   ----> while read LINE
+continuously run on true till gets false      ----> echo "one two three four" | while read ITEM   # horizontal items consider as one line
+can be used service or websites monitor       ----> echo -e "one \ntwo \nthree \nfour" | while read ITEM  # vertical items runs the loop
 
 In this case,choice,scenarion
 specific thig should done               -----------> case
