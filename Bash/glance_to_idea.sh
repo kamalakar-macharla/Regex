@@ -19,11 +19,11 @@ or output of command(ps, df -h, top) data
 
 OrderDate	Region	  Rep
 1/6/2018	East	  Jones
-1/23/2018	Central	  Kivell	     -------> awk
+1/23/2018	Central	  Kivell	     -----> awk
 2/9/2018	Central	  Jardine
 2/26/2018	Central	  Gill
 
-daemon:x:2:2:daemon:/sbin:/sbin/nologin       ---------> cut
+daemon:x:2:2:daemon:/sbin:/sbin/nologin       ------> cut
 
 
 
@@ -40,16 +40,16 @@ continuously run on true till gets false      ----> echo "one two three four" | 
 can be used service or websites monitor       ----> echo -e "one \ntwo \nthree \nfour" | while read ITEM  # vertical items runs the loop
 
 In this case,choice,scenarion
-specific thig should done               -----------> case
+specific thig should done             --------> case
 
 when automating some thing
-provide input parameters      --------> read
+provide input parameters              --------> read
 
-if file or dir exists         ----------> []
+if file or dir exists                 --------> []
 
 logical and or or conditions          --------> &&  ||
 
-make a decisions on exit code  --------> [ $? -eq 0]
+make a decisions on exit code         --------> [ $? -eq 0]
 
 
 sort , | column -t, uniqe, 
