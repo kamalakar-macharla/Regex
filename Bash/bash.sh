@@ -22,6 +22,7 @@ grep options -i ignoring case, -c count, -n line num, -v invert match
 grep 'test' test.txt
 grep 'build job' -lR
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
+grep 'word1\|word2\|word3' /path/to/file
 
 file filename # display the file type
 strings binaryfile # to see text in the binary file
@@ -295,7 +296,8 @@ echo ${#MAIN} # this gives length of a string
  who<Tabcompletion> gives who whoami
 
 while ping jsiehsu.com 
-while command # if command succesed condition true, else false
+while command # if command exit status is zero, then while loop runs
+until command # if command exit status is non-zero, then while loop runs
 
 grep -i 'aig' -lR | xargs sed -i 's/aig/angio/Ig'  # DBS interview question, delete aig word in all files all dirs
 
