@@ -178,3 +178,5 @@ node {
     }
     step([$class: 'Mailer', recipients: 'admin@somewhere'])
 }
+
+archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
