@@ -248,6 +248,8 @@ PS4='+ $BASH_SOURCE : $LINENO '
 echo "testing regex" | awk '/[Tt]esting regex/{print $2}'
 awk '/[^oi]th/{print $0}' myfile
 awk '/s[ae]*t/{print $0}'
+awk --help | egrep '\-F'     # using \ as escaping char
+awk --help | egrep '\-.'     # to see all the options staring with -anychar
 
 echo $'\none \ntwo \nthree' # \n \t
 echo $"\none \ntwo \nthree" # This doesnt work
