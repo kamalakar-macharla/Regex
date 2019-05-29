@@ -123,5 +123,58 @@ server.upload spec: uploadSpec
 server.download spec: downloadSpec, failNoOp: true
 server.upload spec: uploadSpec, failNoOp: true
 
+def runner = load pwd() + '/first.groovy'
 
+------- load comman----- dsl script---
+You can return a new instance of the class via the load command and use the object to call "doStuff"
+So, you would have this in "Thing.groovy"
 
+class Thing {
+   def doStuff() { return "HI" }
+}
+return new Thing();
+
+And you would have this in your dsl script:
+
+node {
+   def thing = load 'Thing.groovy'
+   echo thing.doStuff()
+}
+-----------------------------------------
+
+readFile: Read file from workspace
+
+--------- jenkinsci/pipeline-utility-steps-plugin ------------
+findFiles
+touch
+zip
+unzip
+readProperties
+
+_pipelineProps = readProperties file: "$_dirPipelineRepo\\$_gitPipelineRepositoryFolder\\$_pipelinePropertyFile";
+env.projDesc = _pipelineProps.PROJECT_NAME;
+
+https://plugins.jenkins.io/
+pipeline: groovy
+pipeline: Pipeline Utility Steps
+
+def dirpath = "RELEASE/abc/${abc-version}"
+dir(dirpath){
+  //logic
+}
+
+if (fileExists('file')) {
+    echo 'Yes'
+} else {
+    echo 'No'
+}
+
+node {
+    try {
+        sh 'might fail'
+    } catch (err) {
+        echo "Caught: ${err}"
+        currentBuild.result = 'FAILURE'
+    }
+    step([$class: 'Mailer', recipients: 'admin@somewhere'])
+}
