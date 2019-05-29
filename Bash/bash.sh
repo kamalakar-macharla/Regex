@@ -10,7 +10,7 @@ mfree
 cat ~/.bash_profile
 ps -ef | grep 'SC140'
 /etc/init.d/
-cat file | less # less is paging utility
+cat file | less 		# less is paging utility
 cat file | head -2
 cat file | tail -2
 | tr ":" " " | column -t
@@ -24,13 +24,14 @@ grep 'build job' -lR
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
 grep 'word1\|word2\|word3' /path/to/file
 
-file filename # display the file type
-strings binaryfile # to see text in the binary file
+file filename 			# display the file type
+strings binaryfile 		# to see text in the binary file
+ls -d */   				# List directories only
 
 sed '/^\s*$/d' file.txt delete empty lines.
 
 ssh-keygen -t rsa
-cut -d ':' -f 2  # delimeter must be single character
+cut -d ':' -f 2  		# delimeter must be single character
 awk -F "." '{print $1}'
 awk -F ':' '{print $3 " -> " $1}'
 
@@ -178,7 +179,7 @@ fi
 -------
 basename $(pwd)
 
-date +%F    # 2019-05-23
+date +%F    				# 2019-05-23
 mi=$(date +%F).$$ ; echo $mi # 2019-05-23.2296  $$ is PID
 
 ----------
