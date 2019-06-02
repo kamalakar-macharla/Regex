@@ -315,3 +315,9 @@ file script.sh # script.sh: Bourne-Again shell script, ASCII text executable, wi
 dos2unix script.sh  #converting file to Unix format...
 file script.sh # script.sh: Bourne-Again shell script, ASCII text executable.
 
+echo "one two three" | while read ITEM; do echo "The item is : $ITEM"; done
+The item is : one two three
+echo -e "one\ntwo\nthree" | while read ITEM; do echo "The item is : $ITEM"; done
+The item is : one
+The item is : two
+The item is : three
