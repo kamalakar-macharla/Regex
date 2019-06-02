@@ -98,7 +98,7 @@ runit(){
 }
 runit
 
-
+echo -e "Vone \nVtwo \nVthree \nVfour"
 chmod 755 script.sh
 rm -rf devops*
 NUM_PARAMS="$#"
