@@ -11,7 +11,7 @@ file1 file2 file3 file4 file5
 file2
 file3                           ----> for | xargs | while      # for works for Horizontal/ vertical items   
 file4                                                          # xargs converts vertical items to horizontal items
-file5                                                          # while takes horizontal items as one line           
+file5                                                          # while takes vertical items as one line           
 
 
 search file, over the files in dir            --------> grep
