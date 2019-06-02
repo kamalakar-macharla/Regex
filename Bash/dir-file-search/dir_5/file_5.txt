@@ -1,0 +1,29 @@
+Segment	Country	 Product 	 Discount Band 	Units Sold
+Government	Canada	 Carretera 	 None 	1618.5
+Government	Germany	 Carretera 	 None 	1321
+Midmarket	France	 Carretera 	 None 	2178
+Midmarket	Germany	 Carretera 	 None 	888
+Midmarket	Mexico	 Carretera 	 None 	2470
+Government	Germany	 Carretera 	 None 	1513
+Midmarket	Germany	 Montana 	 None 	921
+Channel Partners	Canada	 Montana 	 None 	2518
+Government	France	 Montana 	 None 	1899
+Channel Partners	Germany	 Montana 	 None 	1545
+Midmarket	Mexico	 Montana 	 None 	2470
+Enterprise	Canada	 Montana 	 None 	2665.5
+Small Business	Mexico	 Montana 	 None 	958
+Government	Germany	 Montana 	 None 	2146
+Enterprise	Canada	 Montana 	 None 	345
+Midmarket	United States of America	 Montana 	 None 	615
+Government	Canada	 Paseo 	 None 	292
+Midmarket	Mexico	 Paseo 	 None 	974
+Channel Partners	Canada	 Paseo 	 None 	2518
+Government	Germany	 Paseo 	 None 	1006
+Channel Partners	Germany	 Paseo 	 None 	367
+Government	Mexico	 Paseo 	 None 	883
+Midmarket	France	 Paseo 	 None 	549
+Small Business	Mexico	 Paseo 	 None 	788
+Midmarket	Mexico	 Paseo 	 None 	2472
+Government	United States of America	 Paseo 	 None 	1143
+Government	Canada	 Paseo 	 None 	1725
+Channel Partners	United States of America	 Paseo 	 None 	912

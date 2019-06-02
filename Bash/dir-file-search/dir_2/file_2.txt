@@ -1,0 +1,24 @@
+Region	Rep	Item
+East	Jones	Pencil
+Central	Kivell	Binder
+Central	Jardine	Pencil
+Central	Gill	Pen
+West	Sorvino	Pencil
+East	Jones	Binder
+Central	Andrews	Pencil
+Central	Jardine	Pencil
+West	Thompson	Pencil
+East	Jones	Binder
+Central	Morgan	Pencil
+East	Howard	Binder
+East	Parent	Binder
+East	Jones	Pencil
+Central	Smith	Desk
+East	Jones	Pen Set
+Central	Morgan	Binder
+East	Jones	Pen
+East	Parent	Pen
+Central	Kivell	Pen Set
+Central	Smith	Pencil
+East	Parent	Pen Set
+Central	Gill	Binder

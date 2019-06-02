@@ -1,0 +1,7 @@
+_success    =  "SUCCESS";
+_failure    =  "FAILURE";
+_notStarted =  "NOT STARTED";
+_unstable   =  "UNSTABLE";
+println "ARTIFACTORY_SERVER_URL     : ${_artifactoryServerUrl}";
+println "ARTIFACTORY_BASE_FOLDER    : ${_artifactoryBaseFolder}";
+println "ARTIFACT_NAME_PREFIX       : ${_artifactNamePrefix}";

@@ -42,7 +42,10 @@ man command or command --help				Get-Help Get-Service -ShowWindow
 											Get-Service -name bits | select -Property name, status | gm
 											Get-ChildItem C:\test.html | Select-String -Pattern "Appinfo"
 											Invoke-Command -ComputerName dc,s1,s2 {Get-EventLog -LogName System -new 3}
-											
+
+
+
+
 grep 										Select-String -Path .\*.txt -Pattern 'Get'
 find ./ -type f -name '*.txt' -exec grep 'exchange' {} \;                                 Get-ChildItem -Path C:\Windows\System32\*.txt -Recurse | Select-String -Pattern 'other' -CaseSensitive
 
