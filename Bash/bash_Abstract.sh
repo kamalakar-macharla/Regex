@@ -4,7 +4,7 @@ Automate personal work to get more time.
 
 
 find file,dirs based type
-size, modify dates              ----> find
+size, modify dates             ----> find
 
 
 file1 file2 file3 file4 file5
@@ -28,7 +28,7 @@ daemon:x:2:2:daemon:/sbin:/sbin/nologin       ------> cut
 
 
 stream editor
-Edit the files                      -----------> sed
+Edit the files                      ---------> sed
 search word & replace
 
 
@@ -49,7 +49,7 @@ if file or dir exists                 --------> []
 
 logical and or or conditions          --------> &&  ||
 
-make a decisions on exit code         --------> [ $? -eq 0]
+make a decisions on exit code         --------> [ $? -eq 0 ]
 
 
 sort , | column -t, uniqe, 
