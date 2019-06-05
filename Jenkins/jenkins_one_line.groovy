@@ -130,7 +130,9 @@ You can return a new instance of the class via the load command and use the obje
 So, you would have this in "Thing.groovy"
 
 class Thing {
-   def doStuff() { return "HI" }
+   def doStuff() { 
+     return "HI" 
+    }
 }
 return new Thing();
 

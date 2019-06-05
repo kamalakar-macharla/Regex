@@ -287,7 +287,7 @@ multi-set-db-config.sh
 grep -i 'angio' -lR | xargs
 dev-qa-uat-prod.sh multi-set-db-config.sh
 
-grep -i 'angio' -lR | xargs sed -i 's/angio/angio/g'
+grep -i 'angio' -lR | xargs sed -i 's/angio/angio/Ig'
 
 Special Character Classes [[:alpha:]] [[:alnum:]] [[:digit:]] [[:lower:]] [[:upper:]]
 
