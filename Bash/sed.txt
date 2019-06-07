@@ -12,7 +12,7 @@ then Edit the above result with sed -i '/^[$].*[=]/s/$/; write-out/' sedtext
 rp="; write-output myvar=\$groovy"
 sed -i "/^[$].*[=]/s/$/$rp/" sedtext     double-quotes allows the variables
 
-
+pwd | tr "/" " " | sed 's/^\s//'
 sed '/clear/ a\ line add' set-db-config.sh
 clear
  line add
@@ -29,3 +29,11 @@ sed '2,$d' a.txt # $ refer last line
 sed '/pattern/d' filename
 sed '/^$/d' a.txt # to delete blank line
 sed -i "s/country/$cntry/g" $proj/$1/db/config/common-db.json
+
+e GitHub-Repos mastermind Bash code-snippets-practice
+pwd | tr "/" " " | sed 's/\s/\n/g'
+e
+GitHub-Repos
+mastermind
+Bash
+code-snippets-practice

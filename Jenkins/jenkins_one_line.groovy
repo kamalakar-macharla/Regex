@@ -1,3 +1,8 @@
+https://github.com/pipelineascodecourse/source_code
+
+env.TAG_NAME
+env.UNIX = isUnix()
+env.BRANCH_NAME
 
 NODELEBEL passed from the jenkins job.
 node('env.NODELEBEL'){ 
@@ -5,7 +10,6 @@ node('env.NODELEBEL'){
       bat "command";
       sh "command";
       powershell '''    '''
-
     }
 }
 
@@ -29,30 +33,23 @@ error
 sleep
 retry
 timeout
-
+-------------------------------------------------------
 withEnv
 withCredentials
-
-withEnv(['MYTOOL_HOME=/usr/local/mytool']) {
-    sh '$MYTOOL_HOME/bin/start'
-  }
 
 withEnv([
   "ter_host=${THOST}",
   "cr_user=${CUSER}",
-  "cr_pwd=${CPWD}",
-  "des_dir=${Des_DIR}"
-  ]) {
+  ]){
+    sh '${ter_host}'
 }
-
 
 Credentials Binding Plugin
 withCredentials([
           usernamePassword(credentialsId: 's3_za_qauat_new', usernameVariable: 'USER_qauat', passwordVariable: 'PWD_qauat'),
           usernamePassword(credentialsId: 's3_za_prod', usernameVariable: 'USER_prod', passwordVariable: 'PWD_prod')
         ]) {
-
-
+---------------------------------------------------------
 
 import groovy.io.FileType.*;
 def myvar // def accept any time.
@@ -63,7 +60,18 @@ node(_nodeLabel) {
   execute();
 }
 
-_nodeOs = isUnix() ? _linux : _windows;
+-----------------------------------------------------------------
+env.UNIX = isUnix()
+    if (Boolean.valueOf(env.UNIX)) {
+        sh cmd
+    }
+    else {
+        bat cmd
+   }
+isUnix: Checks if running on a Unix-like node
+Returns true if enclosing node is running on a Unix-like system 
+(such as Linux or Mac OS X), false if Windows.
+------------------------------------------------------------------
 _commonUtils = load "./pipeline-utilities/common.groovy";
 _commonUtils.prepareStages(_stageCheckoutPipeline,_stageCheckoutProject,_stageBuildAutomation,_stageBuildManagement,);
 
@@ -182,3 +190,37 @@ node {
 }
 
 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+
+---------------------------------------------------
+multibranch pipeline   https://www.udemy.com/jenkins-pipeline-as-code-all-you-need-to-know-from-a-z/learn/lecture/10999666#overview
+node{
+	if(env.BRANCH_NAME == 'master'){
+		echo "building master"	
+	}
+	if(env.BRANCH_NAME == 'dev'){
+		echo "building dev"	
+	}
+}
+
+multibranch building tags  https://www.udemy.com/jenkins-pipeline-as-code-all-you-need-to-know-from-a-z/learn/lecture/10999672#overview
+node{
+	stage("Build"){
+		if(env.TAG_NAME != null ){
+			println("we are building tag and tag name is ${env.TAG_NAME}")
+		}else{
+			println("we are building a branch")		
+		}
+		if(env.TAG_NAME == "release-1.0"){
+			println("we are building specifically release-1.0 tag")
+		}
+	}
+}
+
+------------------------------------------------------------------------------
+node{
+	stage('Build'){
+		retry(3){
+			error "Error statement just got executed"
+		}
+	}
+}

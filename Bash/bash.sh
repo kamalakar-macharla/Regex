@@ -321,3 +321,13 @@ echo -e "one\ntwo\nthree" | while read ITEM; do echo "The item is : $ITEM"; done
 The item is : one
 The item is : two
 The item is : three
+
+crontab -l
+crontab -e
+crontab -r
+30 08 10 06 * /home/maverick/full-backup
+			30 – 30th Minute
+			08 – 08 AM
+			10 – 10th Day
+			06 – 6th Month (June)
+			* – Every day of the week
