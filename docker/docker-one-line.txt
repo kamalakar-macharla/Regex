@@ -1,0 +1,18 @@
+docker is to package app & deploy to any env
+
+
+
+docker for linux setup https://www.udemy.com/docker-mastery/learn/lecture/7742916?start=1140#overview
+store.docker.com has instructions for each distro
+curl -sSL https://get.docker.com/ | sh
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker bret
+sudo docker version
+client:
+	version: 17.06
+Server:
+	version: 17.06
+Next step is to installing docke machine, and compose from github.com
+https://github.com/docker/machine
+https://github.com/docker/compose

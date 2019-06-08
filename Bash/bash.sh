@@ -322,6 +322,10 @@ The item is : one
 The item is : two
 The item is : three
 
+ls > /dev/null
+nwgpnpo 2> /dev/null
+ls &> /dev/null       # for std error and output
+
 crontab -l
 crontab -e
 crontab -r

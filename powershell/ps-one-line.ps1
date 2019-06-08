@@ -1,6 +1,12 @@
 #####################################################################################
 xxx-yyyyy | Get-Member
 xxx-yyyy  | select propertyname
+Get-Help Where-Object -Online
+
+#######################################################################
+Get-Service | select name,status | select -First 4
+Get-Process | select ProcessName,CPU | sort cpu
+
 
 ###########################################################################
 
@@ -29,7 +35,6 @@ echo $myvar | Get-Content {$_ name}
 Foreach ($i in $myvar){
 
  Get-Content .\$i
-
 }
 pwd
 cd ..
