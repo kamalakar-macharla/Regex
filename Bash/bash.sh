@@ -35,7 +35,22 @@ cut -d ':' -f 2  		# delimeter must be single character
 awk -F "." '{print $1}'
 awk -F ':' '{print $3 " -> " $1}'
 
+stat ./Bash/bash.sh    # displays accessed, changed, modified, birth, size etc details.
+
 find /etc -type f -iname yum*
+find /home -iname *.jpg
+find / -type d -name Tecmint
+find . -type f -name tecmint.p
+find . -type f -name "*.php"
+find ./ -mtime 30   				# file modified 30 days back.
+find ./ -atime 30   				# file modified 30 days back.
+find ./ -mtime +50 –mtime -100 		#more than 50 days back and less than 100 days.
+find ./ -cmin -60 					#files which are changed in last 1 hour.
+find ./ -mmin -60					#files which are modified in last 1 hour.
+find ./ -amin -60					#files which are accessed in last 1 hour.
+									Access - the last time the file was read
+									Modify - the last time the file was modified (content has been modified)
+									Change - the last time meta data of the file was changed (e.g. permissions)
 
 
 export TZ="US/Central"
