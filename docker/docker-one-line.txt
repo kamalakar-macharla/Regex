@@ -1,6 +1,7 @@
 docker is to package app & deploy to any env
+Docker ‘write once, and execute anywhere’, Java promises the exact same thing with JVM
 
-
+https://github.com/BretFisher/udemy-docker-mastery
 
 docker for linux setup https://www.udemy.com/docker-mastery/learn/lecture/7742916?start=1140#overview
 store.docker.com has instructions for each distro
