@@ -81,3 +81,18 @@ docker container top mysql       # process list in one container
 docker container inspect mysql   # info of how the container started full json array
 docker container stat mysql      # all the live info like cpu usage
 ----------------------------------------------------
+docker container run -it   #start new container interactively ( -t allocate pseudo TTY, -i interactive)
+docker container exec -it  #run additional command in existing container
+
+No SSH Needed
+docker cli is great substitude for adding SSH to containers
+
+docker container run [OPTIONS] IMAGE [COMMANDS] [ARG...]
+
+docker container run -it --name proxy nginx bash
+docker container exec     #Run additional process in running container
+docker container exec --help
+docker container exec -it mysql bash
+
+docker pull alpine
+docker image ls

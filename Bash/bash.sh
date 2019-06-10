@@ -356,3 +356,5 @@ $?    Stores the exit value of the last command that was executed.
 $0    Stores the first word of the entered command (the name of the shell program)
 $*    Stores all the arguments that were entered on the command line ($1 $2 ...)
 "$@"  Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...)
+
+ps aux    #a = process all users, u = process's user/owner, x = processes not attached to a terminal
