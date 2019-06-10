@@ -96,3 +96,61 @@ docker container exec -it mysql bash
 
 docker pull alpine
 docker image ls
+
+docker container port webhost
+80/tcp -> 0.0.0.0:80
+docker container inspect --format '{{ .NetworSettings.IPAddress}}' webhost
+172.17.0.2
+docker network ls
+docker network create --driver  #create a network
+docker network connect          #Attach a network to container
+docker network disconnect
+
+--------------------dockerfile--------------
+FROM debian:stretch-slim
+ENV NGINX_VERSION 1.13.6-1~stretch
+RUN apt-get update \
+	&& apt-get install --no-install-recommends --no-install-suggests -y gnupg1 \
+	&& \
+	NGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62; \
+	found=''; \
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+	&& ln -sf /dev/stderr /var/log/nginx/error.log
+EXPOSE 80 443
+CMD ["nginx", "-g", "daemon off;"]
+--------------------------------------------------------
+docker image build -t customnginx .     # here . is current dir contains Dockerfile
+										build happen in the layers wise which would be cached
+vim dockerfile
+build mayhappen using cached layers.
+
+Extending offical Images.
+FROM nginx:latest
+WORKDIR /usr/share/nginx/html
+COPY index.html index.html
+
+docker image build -t nginx-with-html .
+docker image tab --help
+docker image tag nginx-with-html:latest bretfisher/nginx-with-html:latest
+docker image ls
+
+-------------------------------------------------
+FROM node:6-alpine
+EXPOSE 3000
+RUN apk add --update tini
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY package.json package.json
+RUN npm install && npm cache clean
+COPY . .
+CMD [ "tini", "--", "node", "./bin/www" ]
+-----------
+docker build -t testnode .
+docker images
+docker tag testnode bretfisher/testing-node
+docker push --help
+docker push bretfisher/testing-node
+docker image ls
+docker image rm bretfisher/testing-node
+docker container run --rm -p 80:3000 bretfisher/testing-node
+

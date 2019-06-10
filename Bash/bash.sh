@@ -358,3 +358,7 @@ $*    Stores all the arguments that were entered on the command line ($1 $2 ...)
 "$@"  Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...)
 
 ps aux    #a = process all users, u = process's user/owner, x = processes not attached to a terminal
+
+ifconfig  # ip address
+ln -sf /dev/stdout /var/log/nginx/access.log
+ln -sf /dev/stderr /var/log/nginx/error.log
