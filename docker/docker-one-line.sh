@@ -75,3 +75,9 @@ REPOSITORY		TAG		IMAGE-ID	CREATED 	SIZE
 httpd           latest  499189fwib  2weeksago   176 MB
 mysql           latest  4856sienhs  2weeksago   406 MB
 nginx           latest  8965sjueus  3weeksago   182 MB
+
+----------------------------------------------
+docker container top mysql       # process list in one container
+docker container inspect mysql   # info of how the container started full json array
+docker container stat mysql      # all the live info like cpu usage
+----------------------------------------------------
