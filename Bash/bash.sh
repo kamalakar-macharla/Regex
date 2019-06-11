@@ -357,8 +357,16 @@ $0    Stores the first word of the entered command (the name of the shell progra
 $*    Stores all the arguments that were entered on the command line ($1 $2 ...)
 "$@"  Stores all the arguments that were entered on the command line, individually quoted ("$1" "$2" ...)
 
-ps aux    #a = process all users, u = process's user/owner, x = processes not attached to a terminal
+ps aux         #a = process all users, u = process's user/owner, x = processes not attached to a terminal
 
 ifconfig  # ip address
 ln -sf /dev/stdout /var/log/nginx/access.log
 ln -sf /dev/stderr /var/log/nginx/error.log
+
+#!/bin/bash
+INPUT_FILE=$1
+BASE_DIR=$(dirname $INPUT_FILE)
+BASE_NAME=$(basename -s .mp4 $INPUT_FILE)
+TMP_FILE=$(mktemp --suffix=.wav)
+OUT_FILE="$BASE_DIR/$BASE_NAME.wav"
+
