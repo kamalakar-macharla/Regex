@@ -154,3 +154,36 @@ docker image ls
 docker image rm bretfisher/testing-node
 docker container run --rm -p 80:3000 bretfisher/testing-node
 
+docker image prune     to clean up just "dangling" images 
+docker system prune     will clean up everything
+The big one is usually docker image prune -a which will remove all images youre not using. 
+Use docker system df to see space usage.
+
+--------persistent data-----------
+containers are usually immutable and ephemeral
+"immutable infrastructure": only re-deploy containers, never change
+This is the ideal scenario, but what about databases, or unique data?
+Docker gives us features to ensure these "separation of concerns"
+This is known as persistent data
+Two ways : data volumes and Bind Mounts
+data volumes: make special location outside of container UFS (union file system)
+Bind Mounts: link container path to host path
+
+go to github.com/docker-library/mysql
+and check Dockerfile, check VOLUME command
+VOLUME /var/lib/mysql
+
+docker pull mysql
+docker image inspect mysql   then look for the volume info
+docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysql
+docker container ls
+docker container inspect mysql   # then check volume as well as Mounts info
+
+docker volume ls
+DRIVER    VOLUMENAME
+local      946w149gw1g49158158
+
+docker volume inspect 946w149gw1g49158158
+
+
+
