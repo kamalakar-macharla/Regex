@@ -134,8 +134,9 @@ first-three-letters="ABC" # invalid declaration
 --- string operators tests ----
 [ -z $mystr ] True if string is empty
 [ -n $mystr ] True if string is not empty
-STRING1 = STRING2
-STRING1 != STRING2
+STRING1 = STRING2	the strings are equal
+STRING1 != STRING2	the strings are not equal
+INTEGER1 -eq INTEGER2	INTEGER1 is equal to INTEGER2
 -------- Arithmetic operators-------
 arg1 -eq arg2 #  -ne -lt -le -gt -ge
 
@@ -369,4 +370,22 @@ BASE_DIR=$(dirname $INPUT_FILE)
 BASE_NAME=$(basename -s .mp4 $INPUT_FILE)
 TMP_FILE=$(mktemp --suffix=.wav)
 OUT_FILE="$BASE_DIR/$BASE_NAME.wav"
+
+ls [a-c]*.sh
+ls [^a-c]*.sh
+ls [Aa]*.sh
+export myvar=lion
+
+private ssh key gos to ~/.ssh
+
+/bin
+/dev/null, /dev/tty
+/root           #Home directory for the root user.
+/home           #Users home directories
+/etc  
+/opt
+/lib
+/tmp
+/var/log
+/usr/bin
 
