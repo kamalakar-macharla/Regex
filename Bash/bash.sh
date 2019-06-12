@@ -410,6 +410,7 @@ export PATH=${PATH}:/sonar/bin
 touch {file1,file2}
 rm {file1,file2}
 touch file{1,2}
+echo "$name_01"{3,6,9}
 
 ./command -yes -no /home/username
 $# = 3
@@ -417,3 +418,6 @@ $* = -yes -no /home/username
 $@ = array: {"-yes", "-no", "/home/username"}
 $0 = ./command
 $1 = -yes
+
+yum -y update
+yum -y install pkgname

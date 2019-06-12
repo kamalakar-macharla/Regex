@@ -21,4 +21,6 @@ git revert : Reverting undoes a commit by creating a new commit
 git checkout hotfix
 git revert HEAD~2
 
+yum -y update
+yum -y install pkgname
 
