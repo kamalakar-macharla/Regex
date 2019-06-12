@@ -1,10 +1,20 @@
 #!/bin/bash
 #!/path/to/interpreter
 #!/bin/bash -e
+ssh-keygen -t rsa
+ssh-copy-id root@RHost
+hostname
+whoami
+who       #Print information about users who are currently logged in.
 uptime
+du -sh       # disk utilization -s smmary of grand total diskusage size.
 df -h
 top , htop
-mfree
+free -m | column -t
+stat ./
+service --status all
+service jenkins status
+service jenkins start
 
 ./script.sh
 cat ~/.bash_profile
@@ -331,6 +341,7 @@ file script.sh # script.sh: Bourne-Again shell script, ASCII text executable, wi
 dos2unix script.sh  #converting file to Unix format...
 file script.sh # script.sh: Bourne-Again shell script, ASCII text executable.
 
+rm -r ./dir    #-r, -R, --recursive   remove directories and their contents recursively. By default, rm does not remove directories.
 echo "one two three" | while read ITEM; do echo "The item is : $ITEM"; done
 The item is : one two three
 echo -e "one\ntwo\nthree" | while read ITEM; do echo "The item is : $ITEM"; done
@@ -389,3 +400,20 @@ private ssh key gos to ~/.ssh
 /var/log
 /usr/bin
 
+sed '/^\s*$/d'  file.txt  #remove empty lines from file
+find ./ -type -size +4096c   # to find files bigger than 4096 bytes
+find ./ -type -size -4096c   # to find files smaller than 4096 bytes
+
+export PATH=${PATH}:/sonar/bin
+~/.bash_profile     #configuration file for configuring user environments. The users can modify the default settings and add any extra configurations in it.
+
+touch {file1,file2}
+rm {file1,file2}
+touch file{1,2}
+
+./command -yes -no /home/username
+$# = 3
+$* = -yes -no /home/username
+$@ = array: {"-yes", "-no", "/home/username"}
+$0 = ./command
+$1 = -yes

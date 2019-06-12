@@ -9,3 +9,6 @@ sh "scl enable rh-git29 -- git clone -b ${branchName} https://${comm_git_clone_t
 
 
 git clone -b br_name https://kmacharla@github.angio.net/reponame
+
+git config user.name "kamalakar"
+git config --global user.email "kamal4954@gmail.com"
