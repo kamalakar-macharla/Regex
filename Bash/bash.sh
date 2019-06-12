@@ -421,3 +421,20 @@ $1 = -yes
 
 yum -y update
 yum -y install pkgname
+
+rpm --nodeps -i xyz.rpm
+rpm -ivh --nodeps xyz.rpm
+rpm -q BitTorrent
+rpm -qa | grep zlib-devel*
+
+tar -zxf Python-2.7.6tgz install from source
+cd Python-2.7.6
+./configure
+make
+make install
+
+/etc.repos.d
+vi Yum-rhel5u5.repo gpgcheck=0
+
+cat /etc/redhat-release
+ln -s /opt/freeware/python2.6_64 Python
