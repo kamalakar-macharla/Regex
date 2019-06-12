@@ -439,3 +439,39 @@ vi Yum-rhel5u5.repo gpgcheck=0
 
 cat /etc/redhat-release
 ln -s /opt/freeware/python2.6_64 Python
+
+
+sudo
+su
+scp
+rsync  # remote sync - copies and sync files to remote system
+rsync -avz dailywork/   root@192.168.0.101/home
+
+wget  www.jsig.com/down.pdf    
+mfree
+free -m
+ps -aux | grep 'firefox'
+ps -u root,kamal
+kill -9 4956
+
+chmod +x file.sh
+chmod   # u+wx   go=rwx o-x u=rw,go=rw 777  file.txt
+ll --block-size=M
+ls -lash  # it prints sizes in human readable format
+
+30 00 * * * /usr/sbin/reboot
+
+ifconfig
+netstat   #display connection info, routing table information etc
+ping -c 5 www.tecmint.com
+nslookup www.tecmint.com   #nslookup command also use to find out DNS related query. The following examples shows A Record (IP Address) of tecmint.com.
+host www.google.com    #host command to find name to IP or IP to name in IPv4 or IPv6 and also query DNS records.
+system-config-network     # GUI Tool to configure IP Address, Gateway, DNS etc
+
+netstat -lntu
+-l – prints only listening sockets
+-n – shows port number
+-t – enables listing of tcp ports
+-u – enables listing of udp ports
+
+/etc/sysconfig/network
