@@ -19,7 +19,7 @@ service jenkins start
 ./script.sh
 cat ~/.bash_profile
 ps -ef | grep 'SC140'
-/etc/init.d/
+/etc/init.d/            # find all running services here
 cat file | less 		# less is paging utility
 cat file | head -2
 cat file | tail -2
@@ -259,7 +259,8 @@ done
 -x prints commands as they execute
 #!/bin/bash -x
 set -x
-set +x to stop debugging
+..code to debug...
+set +x
 -v prints shell input lines as they are read
 -e Exit on error
 #!/bin/bash -xe
