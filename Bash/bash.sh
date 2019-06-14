@@ -475,3 +475,8 @@ netstat -lntu
 -u – enables listing of udp ports
 
 /etc/sysconfig/network
+A={1,2,3,4}
+B={a,b,c,d}  # sets
+read more info about array in linux
+
+

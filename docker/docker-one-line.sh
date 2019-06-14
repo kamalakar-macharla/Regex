@@ -130,7 +130,7 @@ WORKDIR /usr/share/nginx/html
 COPY index.html index.html
 
 docker image build -t nginx-with-html .
-docker image tab --help
+docker image tag --help
 docker image tag nginx-with-html:latest bretfisher/nginx-with-html:latest
 docker image ls
 
@@ -184,6 +184,13 @@ DRIVER    VOLUMENAME
 local      946w149gw1g49158158
 
 docker volume inspect 946w149gw1g49158158
+
+Reusing the Maven local repository
+The local Maven repository can be reused across containers by creating a volume and mounting it in /root/.m2.
+
+$ docker volume create --name maven-repo
+$ docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will download artifacts
+$ docker run -it -v maven-repo:/root/.m2 maven mvn archetype:generate # will reuse downloaded artifacts
 
 
 

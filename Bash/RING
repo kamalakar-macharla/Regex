@@ -1,27 +1,39 @@
 
 curl
+wget
 scp
 ftp
 winscp
 nslookup
 ping
 ipconfig
+ifconfig
 printenv
 $env:\
 services.msc
 network share
 pc shared directory
+hostname
 hostname.domain
 Rest api
 End-point
 AD groups
 telnet
 local uses, logined in user
+who
+whoami
+file
+stat
 crontab
 scheduling in Linux/win
 git bash, git ftp
 winrm
 netuse
+enable-psremoting
 ps-session
 SAML login auth
 portnumber
+netstat
+~./bashprofile
+vagrant   : development Environments made easy
+checksum

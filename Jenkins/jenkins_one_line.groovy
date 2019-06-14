@@ -1,7 +1,7 @@
 https://github.com/pipelineascodecourse/source_code
 
 env.TAG_NAME
-env.UNIX = isUnix()
+env.UNIX = isUnix()     #returns true if unix like systems
 env.BRANCH_NAME
 
 NODELEBEL passed from the jenkins job.
@@ -52,7 +52,7 @@ withCredentials([
 ---------------------------------------------------------
 
 import groovy.io.FileType.*;
-def myvar // def accept any time.
+def myvar // def accept any time of object.
 
 node(_nodeLabel) {
   deleteDir();
@@ -76,7 +76,6 @@ _commonUtils = load "./pipeline-utilities/common.groovy";
 _commonUtils.prepareStages(_stageCheckoutPipeline,_stageCheckoutProject,_stageBuildAutomation,_stageBuildManagement,);
 
 
-
 _pipelineProps = readProperties file: "$_dirPipelineRepo\\$_gitPipelineRepositoryFolder\\$_pipelinePropertyFile";
 env.projDesc = _pipelineProps.PROJECT_NAME;
 
@@ -87,8 +86,6 @@ env.projDesc = _pipelineProps.PROJECT_NAME;
             string(name: 'Exe', value: _ExeFile),
             string(name: 'BuildNode', value: _nodeLabel)
             ];
-
-
 
 node(_nodeLabel) {
     try
@@ -167,6 +164,15 @@ env.projDesc = _pipelineProps.PROJECT_NAME;
 https://plugins.jenkins.io/
 pipeline: groovy
 pipeline: Pipeline Utility Steps
+SonarQube Scanner
+SonarQuality gates
+Docker
+Docker pipeline
+Docker Compose Build Step
+Artifactory
+Azure commons
+
+
 
 def dirpath = "RELEASE/abc/${abc-version}"
 dir(dirpath){
@@ -224,3 +230,4 @@ node{
 		}
 	}
 }
+

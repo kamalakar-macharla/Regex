@@ -1,0 +1,15 @@
+https://www.vagrantup.com/
+https://app.vagrantup.com/boxes/search    to find boxes
+install git, while installing git need to select the below option
+"Use Git and optional Unix tools from the Windows command prompt"
+vagrant box add jasonc/centos7 --insecure
+mkdir shellclass
+cd shellclass
+mkdir testbox01
+cd testbox01
+vagrant init jasonc/centos7
+                                    A vagrantfile has been placed in this dir.
+                                    you are now ready to 'vagrant up' for your first virtual environment.
+vagrant up
+                                    Bringing machine 'default' up with 'virtualbox' provider...
+vagrant ssh                         ssh to vm
