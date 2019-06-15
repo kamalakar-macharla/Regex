@@ -516,5 +516,12 @@ w   # show who is logged on and what they are doing
 who  # show who is logged on
 whoami  # show current logged in
 
+chmod u=rwx file1.sh
+chmod g+x  file1.sh
+chmod u-x  file1.sh
+chmod go+x file1.sh
 
+cd ~  # change to user home dir like /home/vagrant
 
+ls -a
+ll -a  # show all files like .bash_profile
