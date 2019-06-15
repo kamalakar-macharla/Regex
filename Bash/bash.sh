@@ -150,6 +150,8 @@ INTEGER1 -eq INTEGER2	INTEGER1 is equal to INTEGER2
 -------- Arithmetic operators-------
 arg1 -eq arg2 #  -ne -lt -le -gt -ge
 
+if [[ "${UID}" -eq 0 ]]
+
 HOST="google.com"
 ping -c 1 $HOST
 if [ "$?" -eq "0" ]
@@ -478,5 +480,39 @@ netstat -lntu
 A={1,2,3,4}
 B={a,b,c,d}  # sets
 read more info about array in linux
+
+mount -l   #lists all mounts with LABELs
+
+-rwxr-xr-x vagrant vagrant demo.sh  # first vagrant is username 2nd vagrant is groupname
+chmod 755 demo.sh
+
+7 = 4+2+1
+    r+w+x
+5 = 4+1
+    r+x
+	
+type echo
+echo is a shell builtin
+help echo    # use help command for builtin commands
+help if      # if is a shell builtin
+help [[      # conditional command
+help test    # evaluate conditional expression
+$ type -a test
+test is a shell builtin
+
+man uptime   # use man for non-builtin 
+
+A-WORD='hello'   #this is a invalid variable name
+echo '$NAME'
+$NAME            # single quotes prevents the expansion of variable, 
+                 # if you want variables to be interpreted use double quotes
+				 
+id -n   #print a name instead of a number
+id -u   #print only the effective user ID
+id -u -n   #this gives the username
+id -un	or whoami #whoami	#this gives the username
+
+
+
 
 

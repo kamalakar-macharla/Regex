@@ -1,5 +1,7 @@
 https://www.vagrantup.com/
 https://app.vagrantup.com/boxes/search    to find boxes
+
+https://www.udemy.com/linux-shell-scripting-projects/learn/lecture/7980818?start=765#overview
 install git, while installing git need to select the below option
 "Use Git and optional Unix tools from the Windows command prompt"
 vagrant box add jasonc/centos7 --insecure
@@ -13,3 +15,44 @@ vagrant init jasonc/centos7
 vagrant up
                                     Bringing machine 'default' up with 'virtualbox' provider...
 vagrant ssh                         ssh to vm
+E:\GitHub-Repos\mastermind\vagrant\linuxbox01>vagrant ssh
+[vagrant@localhost ~]$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+vagrant halt                         #makes the vm to be powered off
+==> default: Attempting graceful shutdown of VM...
+
+open vagrantfile in atom editor and add the following line
+config.vm.hostname = "linuxbox01"
+
+vagrant reload
+
+[vagrant@linuxbox01 ~]$ mount -l | grep -i 'vagrant'
+vagrant on /vagrant type vboxsf (rw,nodev,relatime)
+
+
+--------- Multiple VM creations -------------------
+
+Vagrant.configure("2") do |config|
+
+	config.vm.box = "jasonc/centos7"
+	
+	config.vm.define "test1" do |test1|
+		test1.vm.hostname = "test1"
+		test1.vm.network "private_network", ip: "10.9.8.5"
+	end
+	
+	config.vm.define "test2" do |test2|
+		test2.vm.hostname = "test2"
+		test2.vm.network "private_network", ip: "10.9.8.6"
+	end
+	
+end
+----------------------------------
+vagrant up           # to start all the vms
+vagrant up test1     # to start specific vm
+vagrant status
+vagrant ssh test2
+ ping -c 3 10.9.8.5
+ ls /vagrant         # shows the Vagrantfile
