@@ -512,7 +512,9 @@ id -u   #print only the effective user ID
 id -u -n   #this gives the username
 id -un	or whoami #whoami	#this gives the username
 
-
+w   # show who is logged on and what they are doing
+who  # show who is logged on
+whoami  # show current logged in
 
 
 
