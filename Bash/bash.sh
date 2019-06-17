@@ -11,6 +11,7 @@ du -sh       # disk utilization -s smmary of grand total diskusage size.
 df -h
 top , htop
 free -m | column -t
+cat /etc/passwd       # all user names are avilable in this file
 stat ./
 service --status all
 service jenkins status
@@ -586,6 +587,7 @@ USER_NAME="${1}"
 shift
 COMMENT="${@}"
 
+useradd -m $USERNAME
 if [[ "${?}" -ne 0 ]]
 then
 	echo 'The account could not be created'
