@@ -593,3 +593,33 @@ then
 	echo 'The account could not be created'
 	exit 1
 fi
+
+sudo passwd --stdin einstein < password  #changing the password for the user einstein
+
+echo      # this gives empty line in the script
+echo "something"
+
+read X < /etc/centos-release
+echo "$UID" > uid    # this command same as below one
+echo "$UID" 1> uid   # makesure no space between 1 and >
+
+head -n1 /file 
+head -n1 /file /fakefile #STDOUT STDERR should be displayed on screen
+head -n1 /file /fakefile > head.out  # STDOUT goes to file, STDERR to screen
+head -n1 /file /fakefile 2> head.err  # STDERR goes to file, STDOUT to screen
+head -n1 /file /fakefile > head.out 2> head.err
+head -n1 /file /fakefile > head.out 2>> head.err
+head -n1 /file /fakefile > head.both 2>&1  # this is old way of doing
+head -n1 /file /fakefile &> head.both      # this is new way of doing
+head -n1 /file /fakefile &>> head.both     # to append it same file
+
+head -n1 /file /fakefile 2>&1 | cat -n
+head -n1 /file /fakefile |& cat -n      #above and below gives same output
+
+head -n1 /file /fakefile > /dev/null
+head -n1 /file /fakefile 2> /dev/null
+head -n1 /file /fakefile &> /dev/null
+
+FD 0 - standard input
+FD 1 - standard output
+FD 2 - standard Error
