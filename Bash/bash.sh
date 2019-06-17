@@ -150,7 +150,7 @@ INTEGER1 -eq INTEGER2	INTEGER1 is equal to INTEGER2
 -------- Arithmetic operators-------
 arg1 -eq arg2 #  -ne -lt -le -gt -ge
 
-if [[ "${UID}" -eq 0 ]]
+if [[ "${UID}" -eq 0 ]]        # double braket new wayto doit
 
 HOST="google.com"
 ping -c 1 $HOST
@@ -206,6 +206,8 @@ then
 fi
 -------
 basename $(pwd)
+dirname /vagrant/file.txt
+/vagrant
 
 date +%F    				# 2019-05-23
 mi=$(date +%F).$$ ; echo $mi # 2019-05-23.2296  $$ is PID
@@ -525,3 +527,67 @@ cd ~  # change to user home dir like /home/vagrant
 
 ls -a
 ll -a  # show all files like .bash_profile
+
+root UID always 0
+sudo ./luser-demo02.sh
+your UID is 0
+your username is root
+you are root
+su
+password:
+#         #root user start with # all other start with $
+
+if [ "$UID" -ne 0 ]
+then
+	echo "user is not root user"
+	exit 1
+fi
+if [[ "$STR1" = "$STR2" ]]   #here we are comparing two strings, single = works here
+exit 0;       #you may use this end of the shell file
+
+su - jsmith
+password:  
+
+if [[ "${UID} -ne 0 ]]"
+then
+ echo 'please run with sudo or as root'
+ exit 1
+fi
+echo "${RANDOM}"
+man date
+date +%s%N  # use it for random password generation
+
+$ sha1sum udemy-urls.sh             # generate checksum number
+191f3aa37ff6985beabf0aedd3a1dc0fae4ab537 *udemy-urls.sh
+
+$ sha256sum udemy-urls.sh
+22ea3c9fb17040ef0eaedbfb97dccac1f7363ff56cd976c84f770853eec24e3a *udemy-urls.sh
+
+$ echo 'testing' | head -c2
+te
+
+date +%s%N | sha256sum | head -c8
+echo 'testing' | fold -w1
+echo 'testing' | fold -w1 | shuf
+S=!@#$%^&*()_+=
+echo "${S}" | fold -w1 | shuf | head -c1   #chossing one special character
+
+sudo cp luser-dome06.sh /usr/local/bin/
+which luser-dome06.sh
+
+./luser-dome06.sh jason steve jan fred
+how below thing works for the above line
+for USER_NAME in "${@}"   # this consider as diff items
+for USER_NAME in "${*}"   # this consider as one line
+
+# The first parameter is the user name
+USER_NAME="${1}"
+# The rest of the parameters are for the account comments
+shift
+COMMENT="${@}"
+
+if [[ "${?}" -ne 0 ]]
+then
+	echo 'The account could not be created'
+	exit 1
+fi
