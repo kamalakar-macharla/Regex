@@ -81,7 +81,7 @@ dbname=$(grep "^$cntry\s" reposlist.txt | grep "\s$apptype\s" | grep "\s$1\s" | 
 case $envn in
 	devcicd)
 		;;
-	nprd)
+	nprd | qa)
 		;;
 	prod)
 		;;
@@ -89,6 +89,9 @@ case $envn in
 		break
 	;;
 esac
+
+nprd | qa | uat | --uat)  # you can use multiple patterns in case
+
 read -p "Please Enter a Message: $(echo $'\n> ')" message
 read -p "Enter y or n :" ANSWER
 case "$ANSWER" in
@@ -623,3 +626,22 @@ head -n1 /file /fakefile &> /dev/null
 FD 0 - standard input
 FD 1 - standard output
 FD 2 - standard Error
+
+case "${1}" in
+	start) echo 'starting.' ;;
+	stop) echo 'stoping.' ;;
+	status) echo 'status' ;;
+	*)
+	echo 'supply a valid option'
+	exit 1
+	;;
+esac
+
+log(){
+	local MESSAGE="${@}"
+	echo "${MESSAGE}"
+}
+log 'this is fun!'
+
+logger -t my-script 'Tagging on'
+sudo tail /var/log/messages
