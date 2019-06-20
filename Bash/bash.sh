@@ -199,7 +199,7 @@ function backup_file(){
  then
 	cp $1 $BACK
  else
-	return 1
+	return 1      # in functions use return instead of exit
  fi
 }
 -------
@@ -640,8 +640,54 @@ esac
 log(){
 	local MESSAGE="${@}"
 	echo "${MESSAGE}"
+	logger -t "Reg: backup file" "${MESSAGE}"
 }
-log 'this is fun!'
+log "Backing up ${FILE} to ${BACKUP_FILE}"
+debug 'ls -l'
+# Above log and debug functions are very useful, 
+# you can use these two fun in different places in a shell file
+
 
 logger -t my-script 'Tagging on'
 sudo tail /var/log/messages
+
+backup_file '/etc/passwd'
+if [[ "$? -eq 0 " ]]
+then
+	log 'File backup succeeded!'  # here log is function see above
+else
+	log 'File backup failed'
+	exit 1
+fi
+
+type -a getopts 
+NUM=$((1+2))
+
+netstat -nutl | grep -Ev '^Active|^Proto'   #Extended regular expression
+netstat -nutl | grep ';'  #here goal is to get the data without header
+
+netstat -nutl | grep ':' | awk '{print $4}' | awk -F ':' '{print $NF}'
+su du /var
+su du /var | sort -n      # n is for numeric sort
+su du -h /var | sort -n
+su du -h /var | sort -h   # h human readable format for sort command
+sort -u                   # u is for uniq data
+sort -n | uniq
+uniq -c                 # how many occurence same thing has happen
+sudo cat /var/log/messages | awk '{print $5}' | sort | uniq -c
+sudo cat /var/log/messages | awk '{print $5}' | sort | uniq -c | sort -n
+wc /etc/passwd
+25 50 1245 /etc/passwd
+wc -w /etc/passwd   50
+wc -l /etc/passwd   25   #mostly we use this
+grep bash /etc/passwd | wc -l    #how many users are using bash
+grep -c bash /etc/passwd    # c option for occurence
+cat /etc/passwd | sort -t ':' -k 3 -n    # -t field-separator -k sort via a key
+sort -u  and uniq commands serve the same purpose
+
+grep -v 'root' logfile
+grep Failed syslog-sample | awk '{print $(NF - 3)}'
+geoiplookup 182.100.67.59
+echo "consider this data in two colums" | while read COUNT IP
+
+

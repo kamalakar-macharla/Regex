@@ -1,3 +1,10 @@
+Vagrant uses virtualization engines like VirtualBox, VMWare or Hyper-V and builds on top of them. 
+
+Vagrant utilises a much simpler architecture than Docker. 
+It uses virtual machines to run environments independent of the host machine. ... 
+Docker, however, uses “containers” which include your application and all of its dependencies, 
+but share the kernel (operating system) with other containers.
+
 https://www.vagrantup.com/
 https://app.vagrantup.com/boxes/search    to find boxes
 
