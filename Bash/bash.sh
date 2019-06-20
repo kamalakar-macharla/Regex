@@ -384,6 +384,11 @@ ifconfig  # ip address
 ln -sf /dev/stdout /var/log/nginx/access.log
 ln -sf /dev/stderr /var/log/nginx/error.log
 
+ssh = secure shell
+Network protocol used to connect to linux
+No built in SSH client on windows
+Git includes an SSH client
+
 #!/bin/bash
 INPUT_FILE=$1
 BASE_DIR=$(dirname $INPUT_FILE)
