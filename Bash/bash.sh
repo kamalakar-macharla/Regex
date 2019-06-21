@@ -695,4 +695,15 @@ grep Failed syslog-sample | awk '{print $(NF - 3)}'
 geoiplookup 182.100.67.59
 echo "consider this data in two colums" | while read COUNT IP
 
+for SERVER in $(cat ${SERVER_LIST})
+do
+done
 
+
+usage(){
+ echo "$1"; 
+ shift; 
+ shift;
+ echo "$@";
+}
+usage first two three
