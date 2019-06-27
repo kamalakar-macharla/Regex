@@ -14,8 +14,6 @@ log(){
         echo "$@"
     fi
 }
-
-
 while getopts vl:s OPTION
 do
     case ${OPTION} in
