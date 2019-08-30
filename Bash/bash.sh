@@ -39,6 +39,11 @@ file filename 			# display the file type
 strings binaryfile 		# to see text in the binary file
 ls -d */   				# List directories only
 
+mkdir -p dir1/dir2
+rm -rf ./*/            # remove delete all dirs in current folder
+rm -r dir1             #-r  remove directories and their contents recursively
+rm -rf dir1/*
+
 sed '/^\s*$/d' file.txt delete empty lines.
 
 ssh-keygen -t rsa
@@ -707,3 +712,14 @@ usage(){
  echo "$@";
 }
 usage first two three
+
+# arrays
+my_array=(foo bar)
+my_array[0]=foo
+echo ${my_array[1]}
+
+$ for i in "${my_array[@]}"; do echo "$i"; done
+foo
+bar
+$ for i in "${my_array[*]}"; do echo "$i"; done
+foo bar
