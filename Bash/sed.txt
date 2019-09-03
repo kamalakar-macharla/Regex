@@ -4,6 +4,13 @@ sed -n '/^[$].*[=]/p' sedtext
 $myvar=groovy
 $javahome=c:\drive
 
+sed -i  # if you -i option then you actually editing on file
+		# without -i then seeing changes on console only
+
+team_email: team@domain.ca
+sed 's/team_email.*/team_email: team@domain.ca/g' ./config.yml   # here . is single char * multiple of singles char
+sed "s/team_email.*/team_email: $EMAILID/g" ./config.yml         # use double-quotes to access variables
+
 sed -n '/^[$].*[=]/s/$/; write-out/p' sedtext 
 $myvar=groovy; write-out
 $javahome=c:\drive; write-out 
