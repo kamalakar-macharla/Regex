@@ -102,7 +102,7 @@ read -p "Enter y or n :" ANSWER
 case "$ANSWER" in
 # start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss])  [Yy]*)
 
-
+[ -f /etc/passwd ] && echo "File exist" || echo "File does not exist"
 
 MY_SHELL="bash"
 if [ "MY_SHELL" = "bash" ]
@@ -366,6 +366,10 @@ The item is : three
 ls > /dev/null
 nwgpnpo 2> /dev/null
 ls &> /dev/null       # for std error and output
+
+echo 'kamalakar' && \  # write single long command in multiple lines
+echo 'aparna'
+
 
 crontab -l
 crontab -e
