@@ -677,6 +677,10 @@ fi
 type -a getopts 
 NUM=$((1+2))
 
+ls assemble[-D]*.yml
+assemble-dr.yml  assembleDR.yml
+
+
 netstat -nutl | grep -Ev '^Active|^Proto'   #Extended regular expression
 netstat -nutl | grep ';'  #here goal is to get the data without header
 
