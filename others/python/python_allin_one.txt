@@ -31,3 +31,116 @@ mylist[0]='NEW'
 mylist=['a','c','b']
 mylist.sort()
 mylist
+
+
+# dictionaries ---
+d={'k1':'v1','k2':'v2'}
+d['k2']
+d={'k1':[1,2,3]}
+d['k1'][1]
+
+tuples=(1,2,3)
+tuples
+tuples[0]='new' # Error tuple immutalbe
+
+# sets is collection of unique elements
+{1,2,3}
+{1,1,1,2,2,2,3,3,3}  # {1, 2, 3}  this gives unique values
+s={1,2,3}
+s.add(5)
+s        # {1, 2, 3, 5}
+s.add(5) # try to add 5 agian, gives no error
+
+# comparision opeators ---
+1 == 1
+1 != 2
+6 <= 4
+'hi' != 'bye'
+(1 < 2) and (2 > 3)
+(1 < 2) or (2 > 3)
+(1 < 2) or (2 > 3) or (1 == 1)
+True and True
+True and False
+False or True
+
+if 1<2:
+    print('yep!')
+if True: print('yes')
+if 1 == 2:
+    print('first')
+elif 3 == 3:
+    print('middle')
+else:
+    print('last')
+
+seq = [1,2,3,4,5]
+for item in seq:
+    print(item)
+
+i=1
+while i < 5:
+    print('i is: {}'.format(i))
+    i = i+1
+
+for x in range(0,5):
+	print(x)
+
+range(10)
+list(range(10))
+
+x=[1,2,3,4]
+out=[]
+for num in x:
+	out.append(num**2)
+# achieve same using below
+[num**2 for num in x]
+out = [num**2 for num in x]
+
+
+def my_func(name):
+    print("Hello "+name)
+my_func('jose')
+def my_func(name='default name'):
+
+def square(num):
+    return num*2
+output=square(2)
+output
+
+range  then click shift+tab to see help of whats this range about
+
+"""
+ This is multiline comments
+ various lines gos here
+"""
+def times2(var):
+    return var*2
+seq=[1,2,3,4,5]
+list(map(times2,seq))  # here fun mapping to each elements in the list
+list(map(lambda num: num*2,seq))  # you can call above fun like this
+
+list(filter(lambda num: num%2==0,seq))  # fileter returns the values based true false 
+
+def times2(var):
+    return var*2
+# we can write above fun like single line using lambda 
+t = lambda var:var*2
+t(12)
+
+
+lst = [1,2,3,4,5]
+item = lst.pop()
+item  # 5
+first = lst.pop(0)
+first  # 1
+lst.append('n')
+
+'x' in [1,2,3] # this returns false
+'x' in [1,2,'x'] # this teturns true
+
+x = [(1,2),(3,4),(5,6)]  # this is tuple and un-packing
+for a,b in x:
+    print(a)
+    print(b)
+
+-----------Data Analysis with Pandas-------------

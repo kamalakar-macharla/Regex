@@ -731,3 +731,6 @@ foo
 bar
 $ for i in "${my_array[*]}"; do echo "$i"; done
 foo bar
+
+C:\Users\kamalakar>ipconfig | clip   # copy out put to clip board
+C:\Users\kamalakar>wmic product get name  # displays the all installed software on windows
