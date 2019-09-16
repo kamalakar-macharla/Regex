@@ -734,3 +734,7 @@ foo bar
 
 C:\Users\kamalakar>ipconfig | clip   # copy out put to clip board
 C:\Users\kamalakar>wmic product get name  # displays the all installed software on windows
+
+curl -vs -u machaka:passwd https://jenkins.ghujghy.com/job/ 2>&1 | grep 'newName'
+
+
