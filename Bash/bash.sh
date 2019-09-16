@@ -24,7 +24,7 @@ ps -ef | grep 'SC140'
 cat file | less 		# less is paging utility
 cat file | head -2
 cat file | tail -2
-| tr ":" " " | column -t
+| tr ":" " " | column -t   # in tr use single quotes, translate
 Ctrl+R for history search
 ls /not/here
 echo "$?"
@@ -34,6 +34,9 @@ grep 'test' test.txt
 grep 'build job' -lR
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
 grep 'word1\|word2\|word3' /path/to/file
+
+echo "kamal:appu:mac" | tr ':' '\n'		# '\n' to newline, \t to tab space
+echo "+919867904907" | sed 's/^.../Mobile: /'  # Mobile: 9867904907
 
 file filename 			# display the file type
 strings binaryfile 		# to see text in the binary file
