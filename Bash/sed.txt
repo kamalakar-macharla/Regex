@@ -1,3 +1,6 @@
+sed [-n] script[file...]
+sed [-n][-e script]...[-f script_file]...[file...]
+
 sed -n '2,6p' text
 sed -n '/regex/p' text
 sed -n '/^[$].*[=]/p' sedtext 
@@ -56,4 +59,13 @@ You can refer to the first matched string with \1.
 Here's an example (replacing everything but 'bar baz'):
 
 echo '$powershell_variable=Itsvalue' | sed '/^\$.*=/p'  # This prints only powershell variables in a file
+
+Multiple expressions in one command using the -e option
+echo 'erors with last' | sed -e 's/erors/errors/g' -e 's/last/final/g'  # errors with final
+
+Important: if you get an “illegal byte sequence error” (mostly happens on sed), add the following to your script
+export LC_CTYPE=C
+export LANG=C
+
+
 
