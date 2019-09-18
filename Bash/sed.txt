@@ -67,5 +67,5 @@ Important: if you get an “illegal byte sequence error” (mostly happens on se
 export LC_CTYPE=C
 export LANG=C
 
-
+sed -i 's/emailJenkinsNotificationsTo.*com$/emailJenkinsNotificationsTo: DevOps_GRS@abszue.com/g' ./${REPO}/jenkins/common-deploy.properties
 
