@@ -1,4 +1,4 @@
-sed [-n] script[file...]
+﻿sed [-n] script[file...]
 sed [-n][-e script]...[-f script_file]...[file...]
 
 sed -n '2,6p' text
@@ -69,3 +69,8 @@ export LANG=C
 
 sed -i 's/emailJenkinsNotificationsTo.*com$/emailJenkinsNotificationsTo: DevOps_GRS@abszue.com/g' ./${REPO}/jenkins/common-deploy.properties
 
+How to grep lines between start and end pattern?
+$ sed -n '/aaa/,/cdn/p' file
+aaa
+b12
+cdn

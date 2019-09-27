@@ -740,4 +740,21 @@ C:\Users\kamalakar>wmic product get name  # displays the all installed software 
 
 curl -vs -u machaka:passwd https://jenkins.ghujghy.com/job/ 2>&1 | grep 'newName'
 
+CDTENVD-171
+As DevOps, We add on creation
+CDTENVD-242
+As a DevOps, we need to modify
+CDTENVD-251
+paste <(grep -i 'CDTENVD' newfile.txt) <(grep -iv 'CDTENVD' newfile.txt)
+CDTENVD-171     As DevOps, We add on creation
+CDTENVD-242     As a DevOps, we need to modify
+
+
+
+
+
+
+
+
+
 

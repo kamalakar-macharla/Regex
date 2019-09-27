@@ -35,7 +35,8 @@ grep '"*smug"*'	{'smug', with or without quotes}
 grep '^\.'	{any line that starts with a Period "."}
 grep '^\.[a-z][a-z]'	{line start with "." and 2 lc letters}
 
-
+echo '19:24:54  Downloading app package...' | sed "s/[0-9]\{2\}[: ]/A/g"
+AAA Downloading app package...
 
 Regurlar Expression Characters are below
 ^ beginnig of a string
