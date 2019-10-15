@@ -63,3 +63,9 @@ vagrant status
 vagrant ssh test2
  ping -c 3 10.9.8.5
  ls /vagrant         # shows the Vagrantfile
+
+ 
+---trouble shooting-----
+
+Not in a hypervisor partition (HVP=0) (VERR_NEM_NOT_AVAILABLE).
+VT-x is disabled in the BIOS for all CPU modes (VERR_VMX_MSR_ALL_VMX_DISABLED).

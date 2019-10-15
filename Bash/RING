@@ -37,3 +37,4 @@ netstat
 ~./bashprofile
 vagrant   : development Environments made easy
 checksum
+jq : json command line processor , jqplay.org
