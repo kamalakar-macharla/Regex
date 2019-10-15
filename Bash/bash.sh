@@ -24,7 +24,7 @@ ps -ef | grep 'SC140'
 cat file | less 		# less is paging utility
 cat file | head -2
 cat file | tail -2
-| tr ":" " " | column -t
+| tr ":" " " | column -t   # in tr use single quotes, translate
 Ctrl+R for history search
 ls /not/here
 echo "$?"
@@ -35,9 +35,17 @@ grep 'build job' -lR
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
 grep 'word1\|word2\|word3' /path/to/file
 
+echo "kamal:appu:mac" | tr ':' '\n'		# '\n' to newline, \t to tab space
+echo "+919867904907" | sed 's/^.../Mobile: /'  # Mobile: 9867904907
+
 file filename 			# display the file type
 strings binaryfile 		# to see text in the binary file
 ls -d */   				# List directories only
+
+mkdir -p dir1/dir2
+rm -rf ./*/            # remove delete all dirs in current folder
+rm -r dir1             #-r  remove directories and their contents recursively
+rm -rf dir1/*
 
 sed '/^\s*$/d' file.txt delete empty lines.
 
@@ -97,7 +105,7 @@ read -p "Enter y or n :" ANSWER
 case "$ANSWER" in
 # start|START) stop|STOP)   [Yy]|[Yy][Ee][Ss])  [Yy]*)
 
-
+[ -f /etc/passwd ] && echo "File exist" || echo "File does not exist"
 
 MY_SHELL="bash"
 if [ "MY_SHELL" = "bash" ]
@@ -361,6 +369,10 @@ The item is : three
 ls > /dev/null
 nwgpnpo 2> /dev/null
 ls &> /dev/null       # for std error and output
+
+echo 'kamalakar' && \  # write single long command in multiple lines
+echo 'aparna'
+
 
 crontab -l
 crontab -e
@@ -668,6 +680,10 @@ fi
 type -a getopts 
 NUM=$((1+2))
 
+ls assemble[-D]*.yml
+assemble-dr.yml  assembleDR.yml
+
+
 netstat -nutl | grep -Ev '^Active|^Proto'   #Extended regular expression
 netstat -nutl | grep ';'  #here goal is to get the data without header
 
@@ -707,3 +723,38 @@ usage(){
  echo "$@";
 }
 usage first two three
+
+# arrays
+my_array=(foo bar)
+my_array[0]=foo
+echo ${my_array[1]}
+
+$ for i in "${my_array[@]}"; do echo "$i"; done
+foo
+bar
+$ for i in "${my_array[*]}"; do echo "$i"; done
+foo bar
+
+C:\Users\kamalakar>ipconfig | clip   # copy out put to clip board
+C:\Users\kamalakar>wmic product get name  # displays the all installed software on windows
+
+curl -vs -u machaka:passwd https://jenkins.ghujghy.com/job/ 2>&1 | grep 'newName'
+
+CDTENVD-171
+As DevOps, We add on creation
+CDTENVD-242
+As a DevOps, we need to modify
+CDTENVD-251
+paste <(grep -i 'CDTENVD' newfile.txt) <(grep -iv 'CDTENVD' newfile.txt)
+CDTENVD-171     As DevOps, We add on creation
+CDTENVD-242     As a DevOps, we need to modify
+
+
+
+
+
+
+
+
+
+

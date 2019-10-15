@@ -1,0 +1,11 @@
+
+Display all the files recursively
+find ./ -type f
+
+Find and replace with sed in directory and sub directories
+find ./ -type f -exec sed -i -e 's/apple/orange/g' {} \;
+
+This prints all files that are descendants of your directory, skipping hidden files and directories:
+find ./ -type f -not -path '*/\.*'
+
+find ./ -type f -not -path '*/\.*' -exec sed -i -e 's/investment-process/customer-fund-direction-process/g' {} \;

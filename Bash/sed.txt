@@ -1,8 +1,22 @@
+﻿sed [-n] script[file...]
+sed [-n][-e script]...[-f script_file]...[file...]
+
 sed -n '2,6p' text
 sed -n '/regex/p' text
 sed -n '/^[$].*[=]/p' sedtext 
 $myvar=groovy
 $javahome=c:\drive
+
+sed -i  # if you -i option then you actually editing on file
+		# without -i then seeing changes on console only
+
+sed 's/^..//' file1.txt > file2.txt  # deleting first two char from line, ..$ for last two char
+echo "+919867904907" | sed 's/^.../Mobile: /'  # Mobile: 9867904907
+echo "+919867904907:Kamalakar" | sed 's/^.*:/Name: /'  # Name: Kamalakar
+
+team_email: team@domain.ca
+sed 's/team_email.*/team_email: team@domain.ca/g' ./config.yml   # here . is single char * multiple of singles char
+sed "s/team_email.*/team_email: $EMAILID/g" ./config.yml         # use double-quotes to access variables
 
 sed -n '/^[$].*[=]/s/$/; write-out/p' sedtext 
 $myvar=groovy; write-out
@@ -37,3 +51,26 @@ GitHub-Repos
 mastermind
 Bash
 code-snippets-practice
+
+echo "foo bar baz qux" | sed 's/.*bar baz.*/___kamal mac___/'  # output: ___kamal mac___
+echo "foo bar baz qux" | sed 's/.*\(bar baz\).*/___\1___/'   # output: ___bar baz___
+The .*'s around the search string will match everything but the string, and the parentheses tell sed to remember what it matched. 
+You can refer to the first matched string with \1.
+Here's an example (replacing everything but 'bar baz'):
+
+echo '$powershell_variable=Itsvalue' | sed '/^\$.*=/p'  # This prints only powershell variables in a file
+
+Multiple expressions in one command using the -e option
+echo 'erors with last' | sed -e 's/erors/errors/g' -e 's/last/final/g'  # errors with final
+
+Important: if you get an “illegal byte sequence error” (mostly happens on sed), add the following to your script
+export LC_CTYPE=C
+export LANG=C
+
+sed -i 's/emailJenkinsNotificationsTo.*com$/emailJenkinsNotificationsTo: DevOps_GRS@abszue.com/g' ./${REPO}/jenkins/common-deploy.properties
+
+How to grep lines between start and end pattern?
+$ sed -n '/aaa/,/cdn/p' file
+aaa
+b12
+cdn

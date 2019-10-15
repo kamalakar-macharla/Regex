@@ -1,0 +1,5 @@
+To get the jenkins job console output to file.
+curl -s -S -u macjcuej:Mejujfmo@123 https://jenkins.jdiejuj.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_portal-node/job/GRS_portal-node_DEV_Deploy/113/consoleText > output.txt
+
+Filter with grep
+curl -s -S -u mahjygf:Passtfvfg123 https://jenkins.uyygh.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_portal-node/job/GRS_portal-node_DEV_Deploy/113/consoleText | grep 'fly '
