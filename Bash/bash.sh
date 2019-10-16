@@ -740,7 +740,7 @@ C:\Users\kamalakar>wmic product get name  # displays the all installed software 
 
 curl -vs -u machaka:passwd https://jenkins.ghujghy.com/job/ 2>&1 | grep 'newName'
 
-#!/bin/bash
+#!/bin/bash  
 dos2unix file.txt
 #paste <(grep -i 'CDTENVD' file.txt) <(grep -iv 'CDTENVD' file.txt)
 NUMBER=$(grep -i 'CDTENVD' file.txt)
@@ -748,8 +748,9 @@ MATTER=$(grep -i '^As' file.txt)
 STATUS=$(grep -i '^status' file.txt)
 paste <(echo "${NUMBER}") <(echo "${MATTER}") <(echo "${STATUS}")
 
-
-
+echo -e "Title-1\tTitle-2\tTitle-3\tTitle-4" > out.txt
+paste <(echo "${NUMBER}") <(echo "${MATTER}") <(echo "${STATUS}") >> out.txt
+column -t out.txt
 
 
 
