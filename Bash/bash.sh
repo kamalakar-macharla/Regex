@@ -743,7 +743,7 @@ C:\Users\kamalakar>wmic product get name  # displays the all installed software 
 
 curl -vs -u machaka:passwd https://jenkins.ghujghy.com/job/ 2>&1 | grep 'newName'
 
-<<<<<<< HEAD
+
 CDTENVD-171
 As DevOps, We add on creation
 CDTENVD-242
@@ -760,7 +760,7 @@ Open winmerge software -> Edit -> options -> Editor -> view in line diff -> sele
 Menu Edit → Line Operations → Sort Lines in Ascending / Descending Order
 
 cat data.txt | sort | uniq -i > out.txt  # after sorting only uniq command will work
-=======
+
 #!/bin/bash  
 dos2unix file.txt
 #paste <(grep -i 'CDTENVD' file.txt) <(grep -iv 'CDTENVD' file.txt)
@@ -772,7 +772,8 @@ paste <(echo "${NUMBER}") <(echo "${MATTER}") <(echo "${STATUS}")
 echo -e "Title-1\tTitle-2\tTitle-3\tTitle-4" > out.txt
 paste <(echo "${NUMBER}") <(echo "${MATTER}") <(echo "${STATUS}") >> out.txt
 column -t out.txt
->>>>>>> 2b21a32eab19426b72c49a466939616e5453283e
+
+cp ./env-dev.env ../../../../target || true
 
 
 

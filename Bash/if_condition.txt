@@ -1,0 +1,50 @@
+
+== is a bash-specific alias for =, which performs a string (lexical) comparison instead of the -eq numeric comparison.
+[[ 01 -eq 1 ]]  true.
+[[ 01 == 1 ]] false
+[ 01 = 1 ] false
+
+-eq tells bash to interpret the strings as integers
+== for string comparison
+
+pat="[0-9a-zA-Z ]"
+x=a
+if [[ $x =~ $pat ]]
+then
+echo 'sucess'
+fi
+
+# below all are valid
+APP_NAME=product
+if [[ $APP_NAME == "product" ]]
+
+APP_NAME='product'
+if [[ $APP_NAME == "product" ]];
+
+APP_NAME="product"
+if [[ $APP_NAME == 'product' ]];
+
+APP_NAME=product
+if [[ $APP_NAME == 'product' ]];
+then
+	echo "true case"
+else
+	echo "false case"
+fi
+
+if [[ "$1" == --verbose ]] ; then
+if [[ -e source.txt && ! -e destination.txt ]] ; then
+
+-d file 
+True if file exists and is a directory.
+-f file 
+True if file exists and is a regular file.
+string1 == string2 
+True if string1 and string2 are equal.
+string ~= pattern 
+True if string matches pattern. (pattern has the same form as a pattern in filename expansion; for example, unquoted * means "zero or more characters".)
+string != pattern 
+True if string does not match pattern.
+
+if cf services | grep "${name}"
+then
