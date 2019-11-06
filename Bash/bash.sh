@@ -3,6 +3,7 @@
 #!/bin/bash -e
 ssh-keygen -t rsa
 ssh-copy-id root@RHost
+printenv
 hostname
 whoami
 who       #Print information about users who are currently logged in.
@@ -17,8 +18,10 @@ service --status all
 service jenkins status
 service jenkins start
 
+explorer .     # This opens windows folder explorer
 ./script.sh
 cat ~/.bash_profile
+cat ~/.bashrc
 ps -ef | grep 'SC140'
 /etc/init.d/            # find all running services here
 cat file | less 		# less is paging utility
@@ -749,8 +752,13 @@ paste <(grep -i 'CDTENVD' newfile.txt) <(grep -iv 'CDTENVD' newfile.txt)
 CDTENVD-171     As DevOps, We add on creation
 CDTENVD-242     As a DevOps, we need to modify
 
+--winmerge find the same words/repos on two files, what are missing words from one file other
+Open winmerge software -> Edit -> options -> Editor -> view in line diff -> select "word level"
 
+-- Sorting word/lines in Notepad++
+Menu Edit → Line Operations → Sort Lines in Ascending / Descending Order
 
+cat data.txt | sort | uniq -i > out.txt  # after sorting only uniq command will work
 
 
 

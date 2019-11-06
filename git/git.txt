@@ -1,6 +1,6 @@
 
 How to update your Git credentials on Windows:
-o update your credentials, go to Control Panel -> Credential Manager -> Generic Credentials.
+go to Control Panel -> Credential Manager -> Generic Credentials -> windows credentials
 
 warning: LF will be replaced by CRLF in Bash/bash.sh
 In Unix systems the end of a line is represented with a line feed (LF). 
