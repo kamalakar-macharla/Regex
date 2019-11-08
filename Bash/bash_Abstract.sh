@@ -8,7 +8,7 @@ size, modify dates             ----> find                   # find ./ -type f -e
 
 
 file1 file2 file3 file4 file5
-file2
+file2														   # ls | xargs  makes the result into oneline(Horizontal lines to vertical)
 file3                           ----> for | xargs | while      # for Loop works for Horizontal/ vertical items   
 file4                                                          # xargs converts vertical items to horizontal items; echo -e "one \ntwo \nthree" | xargs
 file5                                                          # while Loop takes vertical items as one line, horizontal items as one single line          
