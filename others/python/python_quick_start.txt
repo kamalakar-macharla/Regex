@@ -1,0 +1,13 @@
+open anaconda navigator
+then click on lanuch button of jupyter, this will open jupyter webpage into browser
+
+open git bash
+$ which jupyter
+/c/Users/machaka/AppData/Local/Continuum/anaconda3/Scripts/jupyter
+
+$ jupyter notebook
+
+
+C:\Users\kamalakar>jupyter notebook
+shift+enter to run cell
+Alt+enter to get a new cell below

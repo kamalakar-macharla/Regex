@@ -10,6 +10,8 @@ my number is 12 and my name is sam
 print('my number is {one} and my name is {two}'.format(one=num,two=name))
 print('my number is {one} and my name is {two} more {one}'.format(one=num,two=name))
 
+my="kamal"
+print(my+"  "+"mac")
 
 s='Hello'
 s[0]         # H

@@ -46,5 +46,5 @@ True if string matches pattern. (pattern has the same form as a pattern in filen
 string != pattern 
 True if string does not match pattern.
 
-if cf services | grep "${name}"
+if cf services | grep "${name}"      # if grep finds any result the exit code is 0, it means true
 then
