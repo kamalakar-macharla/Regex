@@ -25,4 +25,14 @@ git checkout hotfix
 git revert HEAD~2
 
 
+To search the commit log (across all branches) for the given text:
+git log --all --grep='Build 0051'
+To search the actual content of commits through a repo's history, use:
+git grep 'Build 0051' $(git rev-list --all)
+
+I put this in my ~/.gitconfig:
+[alias]
+    find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
+Then I can type "git find string" and I get a list of all the commits containing that string in the message. For example, to find all commits referencing ticket #33:
+
 

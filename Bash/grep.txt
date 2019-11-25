@@ -10,3 +10,16 @@ $myvar=groovy
 $myvar@javatech
 
 grep -n 'dbname' file #display line numbers
+
+
+
+2013/10/08 19:55:27.471
+Line 1
+Line 2
+Line 3
+Line 4
+Line 5
+
+grep -A 5 '19:55' file   # see man grep
+
+grep -A 5 '\- name\: build-DR-test' pipeline.yml

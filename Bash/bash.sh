@@ -75,6 +75,9 @@ find ./ -amin -60					#files which are accessed in last 1 hour.
 									Change - the last time meta data of the file was changed (e.g. permissions)
 
 
+rm -rf $(ls [a-z]*[-D][dR]*.sh)  # remove specific files
+ls [a-z]*[-D][dR]*.sh | xargs rm -rf  # this should work, somehow it's not working
+
 export TZ="US/Central"
 while read LINE
 do

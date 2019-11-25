@@ -13,9 +13,18 @@ print('my number is {one} and my name is {two} more {one}'.format(one=num,two=na
 my="kamal"
 print(my+"  "+"mac")
 
+name="kamal"
+name = "kamal" # space is valid
+"kamal".upper()
+"kamal".upper()[2]  # M
+
+if "kamal".upper()[2] == "M":
+    print('trues')
+
 s='Hello'
 s[0]         # H
 'kamal'[1]   # a
+"kamal"[1]   # a
 'abcdefghi'[:3]  #abc
 'abcdefghi'[0:]  #abcdefghi
 'abcdefghi'[0:4] #abc
