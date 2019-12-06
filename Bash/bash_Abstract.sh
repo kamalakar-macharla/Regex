@@ -7,7 +7,7 @@ find file,dirs based type
 size, modify dates             ----> find                   # find ./ -type f -exec sed -i -e 's/XXXXX/kamalakar/g' {} \;
 
 
-file1 file2 file3 file4 file5
+file1 file2 file3 file4 file5                                  # grep -i 'XXXXX' -lR | xargs sed -i 's/XXXXX/document-management/g'
 file2														   # ls | xargs  makes the result into oneline(Horizontal lines to vertical)
 file3                           ----> for | xargs | while      # for Loop works for Horizontal/ vertical items   
 file4                                                          # xargs converts vertical items to horizontal items; echo -e "one \ntwo \nthree" | xargs

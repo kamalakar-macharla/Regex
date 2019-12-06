@@ -35,6 +35,7 @@ mv *.txt notes
 grep options -i ignoring case, -c count, -n line num, -v invert match
 grep 'test' test.txt
 grep 'build job' -lR
+grep -i 'XXXXX' -lR | xargs sed -i 's/XXXXX/document-management/g'
 grep bob /etc/passwd | cut -d ':' -f1,5 | sort | tr ":" " " | column -t
 grep 'word1\|word2\|word3' /path/to/file
 
@@ -778,9 +779,17 @@ column -t out.txt
 
 cp ./env-dev.env ../../../../target || true
 
+Converting multiline RSA key into one single line with awk
+awk -v ORS='\\n' '1' RSAkey.pem > oneline.txt; npp oneline.txt
 
+adding alias to ~/.bashrc file
+alias npp='notepad++'
+alias exp='explorer .'
 
+npp file.txt # this opens file into notepad++
 
-
+adding new line end of the file
+sed -i -e '$a\' dev-ci.properties
+echo 'add new line end of the file' dev-ci.properties
 
 

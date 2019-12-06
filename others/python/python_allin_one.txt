@@ -1,6 +1,33 @@
 C:\Users\kamalakar>jupyter notebook
 shift+enter to run cell
 Alt+enter to get a new cell below
+
+myvar = "kamalakar";
+print("Hello "+myvar+' garu')
+print("Hello "+myvar[2])
+print("Hello "+myvar.upper()[2])
+print(myvar+myvar)
+
+str_a = 'Concat '; str_b = 'Example' 
+str_a += str_b; print(str_a)
+
+ms='apple'
+if(ms=='apple'): 
+    print('ok');     
+else: 
+    print('not ok')
+
+
+ms='apples'
+if(ms=='apple'): print('ok');     
+else: print('not ok')
+
+if (ms.lower()=='APPLE'.lower()) :
+    print('trues')
+
+
+txt = "Hello World"[2:4:]; print(txt)
+
 num=12
 name='sam'
 'my number is {} and my name is {}'.format(num,name)
@@ -74,6 +101,7 @@ True and True
 True and False
 False or True
 
+if (1<2): this is also valid 
 if 1<2:
     print('yep!')
 if True: print('yes')
