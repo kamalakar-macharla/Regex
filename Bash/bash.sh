@@ -792,4 +792,8 @@ adding new line end of the file
 sed -i -e '$a\' dev-ci.properties
 echo 'add new line end of the file' dev-ci.properties
 
+notepad++ ${LTN}/dev-ci.jenkinsfile  # within a shell file alias maynot work, so use correct command
+sed -i -e '$a\' ci.properties   # Add newline at end of the file.
+
+grep -A 5 '\- name\: build-DR-test' pipeline.yml  # this prints the next 5 line form line in which searched word found.
 

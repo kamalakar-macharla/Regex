@@ -22,4 +22,4 @@ Line 5
 
 grep -A 5 '19:55' file   # see man grep
 
-grep -A 5 '\- name\: build-DR-test' pipeline.yml
+grep -A 5 '\- name\: build-DR-test' pipeline.yml  # this prints the next 5 line form line in which searched word found.
