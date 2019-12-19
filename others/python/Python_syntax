@@ -1,0 +1,50 @@
+
+
+# ---------------
+print("Enter your age:")
+age = int(input())
+if( age >= 18 ):
+    print( name, ' is eligible to vote.')
+else:
+	print( name, ' is not eligible to vote.')
+
+# ---------------
+print("Hi\
+how are you?")
+
+a\
+=\
+10
+print(a)
+
+def myfun():
+    print("Hello")
+    
+myfun()
+
+# Python Indentation
+if ( 2>1 ):
+    print('1st line')
+    print('2nd line')
+    
+a=7;print(a);
+
+print("We need a 'chaperone'");
+
+# Python String Formatters
+# Use %s where you want a value to appear. After the string, put a % operator and mention the identifiers in parameters.
+x=10;  printer="HP"
+print("I just printed %s pages to the printer %s" % (x, printer)) # here single quotes also work
+
+# Format Method
+print("I just printed {0} pages to the printer {1}".format(x, printer))
+print("I  just printed {x} pages to the printer {printer}".format(x=7, printer='HP'))
+
+#f-strings
+# If you use an f-string, you just need to mention the identifiers in curly braces. Also, write ‘f’ right before the string, but outside the quotes used.
+
+print(f"I just printed {x} pages to the printer {printer}") # here single quotes also work
+
+
+
+

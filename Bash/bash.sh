@@ -797,3 +797,6 @@ sed -i -e '$a\' ci.properties   # Add newline at end of the file.
 
 grep -A 5 '\- name\: build-DR-test' pipeline.yml  # this prints the next 5 line form line in which searched word found.
 
+The non zero output indicate that file is empty.
+[ -s /tmp/f2 ]
+echo $?

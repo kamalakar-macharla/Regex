@@ -2,6 +2,9 @@ C:\Users\kamalakar>jupyter notebook
 shift+enter to run cell
 Alt+enter to get a new cell below
 
+Organised python tutorials
+https://data-flair.training/blogs/python-tutorials-home/
+
 myvar = "kamalakar";
 print("Hello "+myvar+' garu')
 print("Hello "+myvar[2])

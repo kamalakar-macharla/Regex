@@ -1,0 +1,40 @@
+cat "$filename"  | with open("$filename",'r') as fin:        | Read the file Sequentially
+                 |     for line in fin:                      |   
+-----------------------------------------------------------------------------------
+grep 'something' | import re                                 | The python version returns
+                 | line = re.findall(r'something', line)[0]  | a list of matches. We are only
+                 |                                           | interested in the zero group
+-----------------------------------------------------------------------------------
+cut -d'"' -f2    | line = line.split('"')[1]                 | Splits the string and selects
+                 |                                           | the second field (which is
+                 |                                           | index 1 in python)
+
+printing a file to stdout
+with open('file.txt') as fin:
+    print(fin.read())
+
+print(open('file.txt').read())
+print(open('file.txt').read(5))  # print first 5 words
+
+
+data = open('file.txt','r').readlines()
+for line in data:
+    print(line.upper())
+
+print(line.split('-'))
+print(line.split('-')[0])
+
+for x in open('file.txt','r').readlines():
+    print(x)
+    
+word = 'security-utilities-react'
+xy=word.split('-')
+print(xy)     #  ['security', 'utilities', 'react']
+for xp in xy:
+    print(xp)
+security
+utilities
+react
+
+
+
