@@ -11,6 +11,7 @@ sed -i  # if you -i option then you actually editing on file
 		# without -i then seeing changes on console only
 		
 sed -i 's/deploymentJenkinsJobName.*//g' *-ci.properties;
+sed -i '/^deploymentJenkinsJobName/d' *-ci.properties;
 sed -i '/^$/d' *-ci.properties		
 		
 
