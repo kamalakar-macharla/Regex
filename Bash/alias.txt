@@ -1,0 +1,13 @@
+# below lines will be added to ~/.bashrc or ~/.bashprofile
+export GITLABTOKEN="xxxyyxxxyyx"
+export DRTOKEN="GRS_PROD_secrete_token"
+reposgitlab () {
+curl --header "PRIVATE-TOKEN: ${GITLABTOKEN}" https://git.platform.xxxxxxxx.io/api/v4/groups/7366/ | jq .[] | jq .[] | jq .name | grep '^"' | sed 's/"//g' | sort > REST_api_Repos_list.txt
+}
+alias getrepos='reposgitlab'
+alias npp='notepad++'
+alias exp='explorer .'
+alias getscript='cp -r ~/whileloop .'
+alias winmerge='WinMergeU'
+alias DR='cat ~/dr-script.txt'
+alias gc='cat ~/gc.txt'
