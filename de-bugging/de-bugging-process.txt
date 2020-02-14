@@ -1,4 +1,5 @@
 
+gitk file.txt
 find & locate commands
 Winmerge : successful log | Error log
 Winmerge : ctrl+shift+m to mark a word
