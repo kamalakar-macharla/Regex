@@ -1,0 +1,80 @@
+
+$ git remote -v
+origin  https://github.com/kamalakar-macharla/myrepo.git (fetch)
+
+$ git branch -a
+  file.txt
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/fix1
+  remotes/origin/fix2
+  remotes/origin/master
+
+-------------- rebse ---------
+
+kamalakar@DESKTOP-D38FM35 MINGW64 /e/GitHub-Repos/Temp/Git-practice/myrepo/myrepo (covid)
+$ git log --oneline
+08f166d (HEAD -> covid, origin/covid) adding covid file
+37d69c6 index file added
+31b2dc7 4th commit
+ece2e00 3rd commit
+b36dd38 2nd commit
+eeca928 first commit
+
+kamalakar@DESKTOP-D38FM35 MINGW64 /e/GitHub-Repos/Temp/Git-practice/myrepo/myrepo (covid)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: adding covid file
+
+kamalakar@DESKTOP-D38FM35 MINGW64 /e/GitHub-Repos/Temp/Git-practice/myrepo/myrepo (covid)
+$ git log --oneline
+2a7ba9e (HEAD -> covid) adding covid file
+b47dda3 (origin/master, origin/HEAD, master) adding master-file   #this has been added newly as result of rebase
+37d69c6 index file added
+31b2dc7 4th commit
+ece2e00 3rd commit
+b36dd38 2nd commit
+eeca928 first commit
+
+------------------------------
+
+
+
+$ git log --oneline
+c0977ad (HEAD -> fix1) commit 53  # latest commit on local repo
+b4e0759 commit 53635
+8e1678b edit in fix1           
+a5afdd8 (origin/fix1) fix1 edit    # latest commit one on remote repo
+31b2dc7 (origin/master, origin/HEAD) 4th commit
+ece2e00 3rd commit
+b36dd38 2nd commit
+eeca928 first commit
+
+$ git log --oneline    # above log looks like below after git push origin fix1
+c0977ad (HEAD -> fix1, origin/fix1) commit 53  # this is the latest commit on local as well as remote
+b4e0759 commit 53635
+8e1678b edit in fix1
+a5afdd8 fix1 edit
+31b2dc7 (origin/master, origin/HEAD) 4th commit
+ece2e00 3rd commit
+b36dd38 2nd commit
+eeca928 first commit
+
+$ git log --oneline
+8bb572f (HEAD -> fix2) Revert "bad edit"
+6a73dbe Revert "edit good 898"
+9a7af71 Reverting last 3 commits Revert 'edit good 898'
+63be869 (origin/fix2) Revert "edit good 898"    # git revert HEAD~3..HEAD raned at this commit, this will make 3 new commits
+9e6ee55 edit good 898
+ce73179 bad edit
+9019e65 edit 086
+29f7e1d edit 978
+a7056be edit 787
+c0977ad (origin/fix1) commit 53
+b4e0759 commit 53635
+8e1678b edit in fix1
+a5afdd8 fix1 edit
+31b2dc7 (origin/master, origin/HEAD) 4th commit
+ece2e00 3rd commit
+b36dd38 2nd commit
+eeca928 first commit
