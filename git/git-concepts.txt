@@ -1,4 +1,10 @@
 
+git help # This very helpful command
+git grep 'manifest' # shows the files name & statements which are having the serch word
+git grep 'XXXXX' | grep -i 'fly'   # lists the files having a specific search word
+
+
+
 $ git remote -v
 origin  https://github.com/kamalakar-macharla/myrepo.git (fetch)
 
