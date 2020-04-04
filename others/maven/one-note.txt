@@ -1,0 +1,45 @@
+
+https://github.com/awesomejt/maven-quick-start
+
+
+cd ~/.m2/repository/<group-id>
+cd ~/.m2/repository/<com.vid.net>
+cd ~/.m2/repository/com/vid/net
+$ ls
+1.0	  maven-metadata-local.xml
+$ cd 1.0
+$ ls
+_remote.repositories	maven-quick-start-1.0.jar	maven-quick-start-1.0.pom
+
+maven plugins can do the following things
+.comiple the source code
+. Run unit tests
+. publish to Artifact Repository
+. Deploy to Remote Server
+. publish documentation
+
+java compiler plugin .... -source and -target
+
+transitive dependencies measns dependencies of dependencies
+
+---execute the jar file by using below command
+java -cp maven-quick-start-1.0.jar clinic.programming.training.Application
+
+[ERROR] Application.java:[5,32] package org.apache.commons.lang3 does not exist  # This measns code is not able find the dependency
+So add the dependency to pom.xml file
+
+maven-central
+
+$mvn dependency:tree > dependency-list.txt
+
+maven Archetypes
+
+
+
+
+
+
+
+
+
+

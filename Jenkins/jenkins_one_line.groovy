@@ -230,4 +230,17 @@ node{
 		}
 	}
 }
+----
+dir("${env.WORKSPACE}/aQA"){
+    sh "pwd"
+}
 
+The dir wrapper can wrap, any other step, and it all works inside a steps block, for example:
+
+        steps {
+          sh "$PWD"
+          dir('your-sub-directory'){
+            sh "$PWD"
+          }
+          sh "$PWD"
+        } 
