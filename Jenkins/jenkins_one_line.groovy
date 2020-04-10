@@ -1,5 +1,15 @@
 https://github.com/pipelineascodecourse/source_code
 
+node('iMac-agent'){
+	stage('Build'){
+		sh'''
+		hostname
+		whoami
+		printenv		
+		'''
+	}
+}
+
 env.TAG_NAME
 env.UNIX = isUnix()     #returns true if unix like systems
 env.BRANCH_NAME
