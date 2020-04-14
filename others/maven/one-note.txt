@@ -1,6 +1,12 @@
 
 https://github.com/awesomejt/maven-quick-start
 
+$mvn archetype:generate
+org.apache.maven.archetype:maven-archetype-quickstart
+
+
+
+
 
 cd ~/.m2/repository/<group-id>
 cd ~/.m2/repository/<com.vid.net>
