@@ -1,5 +1,5 @@
 
-$ find -type d -name 'java'
+$ find -type d -name 'java'  # this finds through all sub-folders
 ./net/java
 
 $ find -type d -iname 'java'  # case-sensitive
