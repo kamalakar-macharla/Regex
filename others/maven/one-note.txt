@@ -1,12 +1,43 @@
 
 https://github.com/awesomejt/maven-quick-start
 
+C:\Users\machaka\.m2
+C:\Users\machaka\.m2\repository   # all the dependencies resides into this  repository folder
+
+cd ~/.m2/repository/
+
+
+
+
 $mvn archetype:generate
 org.apache.maven.archetype:maven-archetype-quickstart
 
 
+<dependency>
+	<groupId>com.xmas.mps</groupId>     # com\xmas\mps  3 folders
+	<artifactId>mps-client</artifactId>		# mps-client 1 folder
+	<version>3.0.2</version>                # 3.0.2  is also folder
+</dependency>
+C:\Users\machaka\.m2\repository\com\xmas\mps\mps-client\3.0.2   # dependency jar file available here
+Run below command in git bash
+$ cd ~/.m2/repository/com/manulife/mps/mps-client/3.0.2
+@VBX00498 MINGW64 ~/.m2/repository/com/manulife/mps/mps-client/3.0.2
+$ ll
+total 35
+-rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161   212 Apr 15 14:01 _remote.repositories
+-rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161 20957 Apr 15 14:01 mps-client-3.0.2.jar
+-rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161    40 Apr 15 14:01 mps-client-3.0.2.jar.sha1
+-rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161  4471 Apr 15 14:00 mps-client-3.0.2.pom
+-rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161    40 Apr 15 14:00 mps-client-3.0.2.pom.sha1
 
 
+[INFO] ----< com.xmas.gwam.cdn.grs.finn.lib:mps-corelib-assetbalance >-----
+[INFO] Building mps 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.xmas:core-lib-framework:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+In the above warning  com.xmas is group-id
+					  core-lib-framework is artifactId
+					  0.0.1-SNAPSHOT   is versionId
 
 cd ~/.m2/repository/<group-id>
 cd ~/.m2/repository/<com.vid.net>
