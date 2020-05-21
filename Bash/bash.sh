@@ -364,6 +364,8 @@ echo "Hello World"^M  #^M says windows line ending.
 file script.sh # script.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
 dos2unix script.sh  #converting file to Unix format...
 file script.sh # script.sh: Bourne-Again shell script, ASCII text executable.
+file file-name.txt
+file-name.txt : ASCII text, with CRLF line terminators # This tells that It's a windows file.
 
 rm -r ./dir    #-r, -R, --recursive   remove directories and their contents recursively. By default, rm does not remove directories.
 echo "one two three" | while read ITEM; do echo "The item is : $ITEM"; done
