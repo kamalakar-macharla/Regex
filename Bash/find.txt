@@ -1,4 +1,16 @@
 
+$ find -type d -name 'java'  # this finds through all sub-folders
+./net/java
+
+$ find -type d -iname 'java'  # case-sensitive
+
+$ find -type f -name 'jvnet-parent-4.pom'
+./net/java/jvnet-parent/4/jvnet-parent-4.pom
+
+$ find ~/temp -type d -iname "finn*"
+
+
+
 Display all the files recursively
 find ./ -type f
 
