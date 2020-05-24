@@ -1,0 +1,41 @@
+
+---- Jenkins ------
+curl -s -S -u myusername:Cosmos78u6 https://jenkins.my-com-repo.com/job/dept_Projects/job/dept_deptPlus/job/dept_product/job/dept_product_DEV_Deploy/204/consoleText > output.txt
+
+
+grep -i 'jfrog rt' output.txt > jfrog_artifactory.txt
+grep -i 'git.exe' output.txt > git.txt
+grep -i 'fly ' output.txt > fly.txt
+grep -i 'cloning' output.txt > cloning_repos.txt
+grep -i 'common/scripts' output.txt > common_scripts.txt
+grep -i 'kafka' output.txt > kafka.txt
+grep -i 'Checking out Revision' output.txt > Checking_out_Revision.txt
+grep -i 'pcf' output.txt > pcf.txt
+grep -i 'cf ' output.txt >> pcf.txt
+
+
+-------Artifactory --------
+
+$ jfrog rt c --url https://artifactory.platform.my-com-repo.io/artifactory/ --apikey yrujfhyrujrhyfurjdtu
+Artifactory server ID: Artifactory-Global-Prod
+
+jfrog rt dl "institutional-dept-maven-snapshot/*.jar" --flat="true" --props="git.vcs.revision=d60dfa2a8a1c1f2fd280da553cdd55ea5151e3f9" --sort-by=created --sort-order=desc --limit=1
+
+
+jfrog rt c show
+Server ID: Artifactory-Global-Prodrtr
+Url: https://artifactory.platform.my-com-repo.io/artifactory/
+API key: yrhufjyehydgeegy
+Default:  true
+
+--------PCF -----------
+
+cf login -a api.sys.abx.preview.pcf.my-com-repo.com -u myusername -p Cosmos78u6 -o CDN-abx-DEV
+cf services > cf_ser.txt; npp cf_ser.txt
+
+https://apps.sys.abx.preview.pcf.my-com-repo.com/
+https://apps.sys.abx.pcf.my-com-repo.com/
+
+cf login -a api.sys.abx.preview.pcf.my-com-repo.com -u myusername -p Enigma78u6 -o CDN-abx-DEV
+cf target -s INSTITUTIONAL-dept-abx-DEV
+cf services > cf_ser.txt; npp cf_ser.txt
