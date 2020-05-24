@@ -1,0 +1,53 @@
+[2019-10-30T19:44:59.311Z] | PCF_ManifestFile            | WARNING       | Properties Files | N/A                                                         | Property is unknown by this pipeline.  This is probably a deprecated property or there is a typo in the property name. |
+[2019-10-30T19:44:59.311Z] | enterprisePCFCredentials    |               | Properties Files | dsdevops-sa                                                 |                                                                                                                        |
+[2019-10-30T19:44:59.311Z] | enterprisePCFSpace          |               | Properties Files | INSTITUTIONAL-GRS                                           |                                                                                                                        |
+[2019-10-30T19:44:59.311Z] | enterprisePCFUrl            |               | Default          | https://login.sys.cac.preview.pcf.manulife.com/oauth/token  | Defaulting the Enterprise PCF URL to https://login.sys.cac.preview.pcf.manulife.com/oauth/token                        |
+[2019-10-30T19:44:59.311Z] | secretPCFTokenCredentials   |               | Properties Files | token_dev                                                   |                                                                                                                        |
+[2019-10-30T19:45:04.790Z] Masking supported pattern matches of $PCF_SECRET_TOKEN
+[2019-10-30T19:45:05.593Z]       PCF_MANIFEST: manifest-dev.yml
+[2019-10-30T19:45:05.593Z]       PCF_MANIFEST: manifest-tst.yml
+[2019-10-30T19:45:05.593Z]       PCF_MANIFEST: manifest-uat.yml
+[2019-10-30T19:45:05.593Z]       PCF_MANIFEST: manifest-prod.yml
+[2019-10-30T19:45:05.593Z]       PCF_MANIFEST: manifest-dev.yml
+[2019-10-30T19:48:24.396Z] DEBUG:root:environment: environ({'PATH': '/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/jfrog:/usr/share/maven/bin:/usr/bin/gradle/bin:/usr/share/flyway:/usr/share/pcfcli', 'LANG': 'C.UTF-8', 'GPG_KEY': 'E3FF2839C048B25C084DEBE9B26995E310250568', 'PYTHON_VERSION': '3.8.0', 'PYTHON_PIP_VERSION': '19.3.1', 'PYTHON_GET_PIP_URL': 'https://github.com/pypa/get-pip/raw/ffe826207a010164265d9cc807978e3604d18ca0/get-pip.py', 'PYTHON_GET_PIP_SHA256': 'b86f36cc4345ae87bfd4f10ef6b2dbfa7a872fbff70608a1e43944d283fd0eee', 'JFROG_HOME': '/usr/share/jfrog', 'MAVEN_VERSION': '3.3.3', 'MAVEN_HOME': '/usr/share/maven', 'GRADLE_VERSION': '4.6', 'GRADLE_HOME': '/usr/bin/gradle', 'NODE_VERSION': '8.11.1', 'JAVA_HOME': '/usr/lib/jvm/java-11-openjdk-amd64/', 'FLYWAY_VERSION': '5.2.4', 'FLYWAY_CLI_HOME': '/usr/share/flyway', 'PCF_CLI_HOME': '/usr/share/pcfcli', 'BUILD_ID': '149200', 'BUILD_NAME': '25', 'BUILD_TEAM_ID': '41', 'BUILD_TEAM_NAME': 'INSTITUTIONAL-GRS', 'BUILD_JOB_ID': '22093', 'BUILD_JOB_NAME': 'build-dev-product', 'BUILD_PIPELINE_ID': '2114', 'BUILD_PIPELINE_NAME': 'concourse-product', 'ATC_EXTERNAL_URL': 'https://concourse.platform.my_mkr_repo', 'USER': 'root', 'HOME': '/root'})
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "POST /fly HTTP/1.1" 200 36
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:48:58.668Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:48:58.668Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:49:27.292Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:49:27.292Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:49:55.921Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:49:55.921Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:50:24.617Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:50:24.617Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:50:58.913Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:50:58.913Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:51:27.577Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:51:27.577Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:51:56.208Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:51:56.208Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 200 16034
+[2019-10-30T19:51:56.208Z] Setting api endpoint to [36;1mhttps://api.sys.cac.preview.pcf.manulife.com[0m...
+[2019-10-30T19:51:56.208Z] api endpoint:   https://api.sys.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.208Z] API endpoint: [36;1mhttps://api.sys.cac.preview.pcf.manulife.com[0m
+[2019-10-30T19:51:56.208Z] api endpoint:   https://api.sys.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.208Z] Using route dev-grs-product.apps.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.208Z] Binding dev-grs-product.apps.cac.preview.pcf.manulife.com to product-new...
+[2019-10-30T19:51:56.209Z] urls: dev-grs-product.apps.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.209Z] + cf unmap-route product-old apps.cac.preview.pcf.manulife.com --hostname dev-grs-product
+[2019-10-30T19:51:56.209Z] Removing route dev-grs-product.apps.cac.preview.pcf.manulife.com from app product-old in org CDN-CAC-DEV / space INSTITUTIONAL-GRS-CAC-DEV as epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep...
+Checking out Revision f521ae79fd9577701a9478435b4e3f144d2806cf (refs/remotes/origin/dev)
+[2019-10-30T19:44:59.311Z] | enterprisePCFUrl            |               | Default          | https://login.sys.cac.preview.pcf.manulife.com/oauth/token  | Defaulting the Enterprise PCF URL to https://login.sys.cac.preview.pcf.manulife.com/oauth/token                        |
+[2019-10-30T19:51:56.208Z] Not logged in. Use 'cf login' to log in.
+[2019-10-30T19:51:56.208Z] Use '[36;1mcf target[0m' to view or set your target org and space.
+[2019-10-30T19:51:56.208Z] + cf services
+[2019-10-30T19:51:56.208Z] + cf services
+[2019-10-30T19:51:56.208Z] + cf services
+[2019-10-30T19:51:56.208Z] + cf delete product-old -f
+[2019-10-30T19:51:56.208Z] + cf push product-new -f ./manifest-dev.yml
+[2019-10-30T19:51:56.209Z] ++ cf app product
+[2019-10-30T19:51:56.209Z] + cf rename product product-old
+[2019-10-30T19:51:56.209Z] + cf rename product-new product
+[2019-10-30T19:51:56.209Z] + cf unmap-route product-old apps.cac.preview.pcf.manulife.com --hostname dev-grs-product
+[2019-10-30T19:51:56.209Z] + cf stop product-old

@@ -1,0 +1,4 @@
+[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_CLI="https://api.sys.dev.gsdcf.manulife.com"
+[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_PREVIEW_CLI="https://api.sys.cac.preview.pcf.manulife.com"
+[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_SANDBOX_CLI="https://api.sys.use.sandbox.pcf.manulife.com"
+[2019-10-28T16:21:34.439Z] export PCF_UAT_PROD_CLI="https://api.sys.use.cf.manulife.com"

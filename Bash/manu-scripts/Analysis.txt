@@ -1,0 +1,36 @@
+
+---product
+Resolving deltas: 100% (771/771), done.
+4b4fcf7
+BUILD_NO : 449721
+4b4fcf7 Changed to tst version 2.34.0
++ '[' 4b4fcf7ca33784d64d91e03b1def126df3edbba4 = latest ']'
+}+ jfrog rt dl 'institutional-grs-maven-snapshot/*.jar' --flat=tue --props=git.vcs.revision=4b4fcf7ca33784d64d91e03b1def126df3edbba4 --sort-by=created --sort-order=desc --limit=1
+
+
+---member
+Resolving deltas: 100% (3636/3636), done.
+e183a8c
+BUILD_NO : 529430
+e183a8c Fix(effectiveDate): Accepte null effective date
+
+
+---agreement
+Resolving deltas: 100% (5813/5813), done.
+e415216
+BUILD_NO : 515904
+e415216 Merge remote-tracking branch 'origin/prod' into uat
++ '[' e4152165198f788865eefad2b9977f8a676253ee = latest ']'
+}+ jfrog rt dl 'institutional-grs-maven-snapshot/*.jar' --flat=true --props=git.vcs.revision=e4152165198f788865eefad2b9977f8a676253ee --sort-by=created --sort-order=desc --limit=1
+
+
+---transact-api
+Resolving deltas: 100% (1219/1219), done.
+e701652
+BUILD_NO : 565076
+e701652 Changed to tst version 0.29.0
++ '[' e7016526139fd0677e2f71ef15adfa26e5f75f5c = latest ']'
+}+ echo 'Downloading from artifactory with the commit id e7016526139fd0677e2f71ef15adfa26e5f75f5c'
+Downloading from artifactory with the commit id e7016526139fd0677e2f71ef15adfa26e5f75f5c
++ jfrog rt dl 'institutional-grs-maven-snapshot/*.jar' --flat=true --props=vcs.revision=e7016526139fd0677e2f71ef15adfa26e5f75f5c --sort-by=created --sort-order=desc --limit=1
+

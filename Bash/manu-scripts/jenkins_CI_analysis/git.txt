@@ -1,0 +1,20 @@
+ > E:\Git\cmd\git.exe rev-parse --is-inside-work-tree # timeout=10
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git # timeout=10
+ > E:\Git\cmd\git.exe --version # timeout=10
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe rev-parse "remotes/origin/dev^{commit}" # timeout=10
+ > E:\Git\cmd\git.exe branch -a -v --no-abbrev --contains 0235feeafd5684ad9467f4dba0e836fc6a18738e # timeout=10
+ > E:\Git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > E:\Git\cmd\git.exe checkout -f 0235feeafd5684ad9467f4dba0e836fc6a18738e
+ > E:\Git\cmd\git.exe rev-list --no-walk 67c0b3b33bdef37c189529ab8f4a34edbbd04795 # timeout=10
+ > E:\Git\cmd\git.exe init E:\jenkins_workspaces\GRS_Projects\GRS_GRSPlus\GRS_product\GRS_product_DEV_CI\workspace@libs\Manulife # timeout=10
+ > E:\Git\cmd\git.exe --version # timeout=10
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
+ > E:\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > E:\Git\cmd\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+ > E:\Git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > E:\Git\cmd\git.exe checkout -f 9f20010da18861db0e05acd70c93a6beefcf1183

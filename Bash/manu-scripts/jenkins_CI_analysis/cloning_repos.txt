@@ -1,0 +1,4 @@
+Cloning the remote Git repository
+Cloning repository ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
+Cloning the remote Git repository
+Cloning repository ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git

@@ -1,0 +1,17 @@
+
+
+------------  beneficiary-api  ------------------
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-beneficiary-api/jobs/build-DR-delete
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-beneficiary-api/jobs/build-prod-restart
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-beneficiary-api/jobs/build-prod-delete
+
+------------  agreement  ------------------
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-agreement/jobs/build-DR-delete
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-agreement/jobs/build-prod-restart
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-agreement/jobs/build-prod-delete
+
+------------  initial-load-ui  ------------------
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-initial-load-ui/jobs/build-DR-delete
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-initial-load-ui/jobs/build-prod-restart
+https://concourse.platform.my_mkr_repo/teams/INSTITUTIONAL-GRS/pipelines/concourse-initial-load-ui/jobs/build-prod-delete
+
