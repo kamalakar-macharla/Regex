@@ -4,6 +4,9 @@ https://github.com/awesomejt/maven-quick-start
 $mvn archetype:generate
 org.apache.maven.archetype:maven-archetype-quickstart
 
+To see the inside the content of the jar
+$ jar -tf jumpstart-example-1.0-SNAPSHOT.jar
+
 
 
 

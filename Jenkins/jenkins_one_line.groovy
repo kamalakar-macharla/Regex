@@ -19,7 +19,12 @@ node('env.NODELEBEL'){
     stage('build'){
       bat "command";
       sh "command";
-      powershell '''    '''
+	  sh '''
+	  
+	  '''
+      powershell '''
+
+	  '''
     }
 }
 
