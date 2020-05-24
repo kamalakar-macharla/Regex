@@ -1,7 +1,0 @@
-pluginManagement {
-    repositories {
-        maven {
-            url 'https://artifactory.platform.manulife.io/artifactory/plugins-release'
-        }
-     }
- }
