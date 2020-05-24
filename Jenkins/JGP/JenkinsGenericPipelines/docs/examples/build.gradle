@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://artifactory.platform.manulife.io/artifactory/example-maven-release"
+        }
+    }
+}
+ 
+// Ideally we would need a way to define this in init.gradle or settings.gradle
+plugins {
+  id 'org.sonarqube' version "2.7.1"
+  id 'jacoco'
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+ext {
+    jarBaseName = 'Gradle_Microservice_Example'
+}
+ 
+group = 'com.manulife.examples'
+version = "0.1.15"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    enabled = true
+    baseName = "${jarBaseName}"
+}
+
+repositories {
+    maven {
+        url "https://artifactory.platform.manulife.io/artifactory/example-maven-release"
+    }
+    maven {
+        url "https://artifactory.platform.manulife.io/artifactory/example-maven-snapshot"
+    }
+}
+
+dependencies {
+   compile 'org.slf4j:slf4j-api:1.7.12'
+   testCompile 'junit:junit:4.12'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}

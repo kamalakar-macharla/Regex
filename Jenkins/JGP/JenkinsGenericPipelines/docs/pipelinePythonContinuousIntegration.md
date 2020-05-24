@@ -1,0 +1,160 @@
+## Introduction
+A project will typically have a configuration for 4 categories of Continuous Integration (CI) pipelines
+- One for the feature & fix branches
+- One for the development branch
+- One for release, qa and uat branches
+- One for the production branch
+
+Depending on how your team decides to deal with bug fixes on releases and production you may have more branches and related Jenkins jobs.
+
+## Assumptions
+This Jenkins Generic Pipeline makes the following assumptions about the content of your Python project:
+
+1. The project contains its sonar-project.properties file in its root folder
+2. If you package your application and upload to Artifactory, make sure that you configure your package.json properly. Use the [documented guide](https://cpcnissgwp01.americas.manulife.net:23200/display/CETES/Python+CI-CD+Pipeline+Setup+Guidelines) for what the .json file structure should be
+
+## Configuring one Jenkins Pipeline
+Let's look at how we would configure a Jenkins pipeline for the development branch / environment.
+
+The first step is to add 3 files in your project's jenkins folder (in GitLab):
+- dev-ci.Jenkinsfile
+- common-ci.properties
+- dev-ci.properties
+
+### dev-ci.Jenkinsfile
+
+You will leverage the pipelinePythonContinuousIntegration pipeline as explained on [this page](docs/ci.md).
+
+### common-ci.properties
+The rest of the Generic Jenkins Pipelines configuration takes place in easy to use properties files.
+
+A typical project will have a different Jenkins job (Continuous Integration Pipeline) for the feature, dev and release branches.
+But most of the properties values that will be used are the same for all those pipelines.
+You can create a file called jenkins/common-ci.properties that will contain all those properties that are the same for all your CI pipelines.
+
+Then, for what is different for each pipeline, you can configure another properties file like "dev-ci.properties".
+
+#### Example properties files
+
+Let's look at an example of jenkins/common-ci.properties file:  
+```properties
+# GitLab Details
+gitLabSSHCredentialsId: Examples-SSH
+
+# Python Specific Details 
+pyVersion: py3
+pyLangVersion: 3.7
+pythonBuildCommand: python3 setup.py install
+pythonUnitTestCommand: python3 -m pytest
+pythonPackageCommand: python3 setup.py sdist bdist_wheel
+
+hubExclusionPattern: /Nothing/To/Exclude/
+hubVersionDist: INTERNAL
+releaseRepo: mfc-dig-pypi
+fortifyScanTree: affluence_ind_src
+```
+
+The jenkins/dev-ci.properties file for the same project could look like this:
+
+```properties
+hubVersionPhase: RELEASE  
+deploymentJenkinsJobName: Example_Python_DEV_Deploy
+sonarQubeFailPipelineOnFailedQualityGate: false
+hubFailPipelineOnFailedOpenSourceGovernance: false
+increasePatchVersion: true
+```
+
+For the same project, the jenkins/release-ci.properties file would look like this instead:
+
+```properties
+hubVersionPhase: RELEASE  
+deploymentJenkinsJobName: Example_Python_Release_Deploy
+sonarQubeFailPipelineOnFailedQualityGate: true
+hubFailPipelineOnFailedOpenSourceGovernance: true
+increasePatchVersion: true
+```
+
+In this example, if your project fails the SonarQube or BlackDuck gate:
+ * It will be considered as "unstable" in dev and the pipeline will still complete its execution until the end
+ * It will be considered as "failed" in release and won't publish any artifacts to Artifactory or trigger the execution of a deployment pipeline.
+
+Refer to the following pages for details about the properties that can be configured in your properties files:
+ * [Artifactory (for dependencies resolution and storage of your binary artifacts)](docs/artifactory.md)
+ * [BlackDuck (for open-source governance)](docs/blackduck.md)
+ * [Git (for source-code management)](docs/git.md)
+ * [GitLab (for source-code management)](docs/gitlab.md)
+ * [Notifications (for notifications on email or Slack)](docs/notifications.md)
+ * [Snyk (for open-source governance)](docs/snyk.md)
+ * [SonarQube (for code quality)](docs/sonarqube.md)
+ * [Fortify (for web application or mobile security)](docs/fortify.md)
+
+This pipelines also supports the following properties:
+
+| Common? | Mandatory | Property Name | Explaination | Possible Values | Default Value |
+| ------------- | ------------- | ------------- | ------------ | --------------- | ------------- |
+| Yes | No | pythonBuildCommand         | python Build Command | Default build  | pip install |
+| Yes | No | pythonPackageCommand       | python Package Application Command. 
+
+
+## Creating the Jenkins Continuous Integration job for the development branch
+In Jenkins, you create a new pipeline job.
+In its configuration, all you need to do is configure the pipeline section.
+
+1. Select 'Pipeline script from SCM' in the definition drop down box
+2. Select 'Git' in the sCM drop down list
+3. Enter your SSH git repository URI 
+4. Select your BU service account credentials
+5. In the Script Path field, enter: jenkins/dev-ci.Jenkinsfile
+6. Run the job once which will perform the rest of the job configuration for you
+
+That's it, you don't need to perform more configuration than that in Jenkins.
+
+> Coming Soon
+> This section will be fully automated where the user would just need to provide the SSH URL and jenkins would create all the jobs needed for the flow from DEV to PROD. 
+
+## Configure GitLab to trigger your job when there are events on the repository
+
+You want to configure GitLab to trigger your Jenkins job when someone commits code in the development branch.
+To do so:
+
+1. Connect in GitLab and browse to your project page
+2. Open the "Settings" tab
+3. Open the "Integrations" tab
+4. You have to capture the URL to your Jenkins project.  Login into Jenkins and open your project configuration.  In the "Build Triggers" section you will see the configuration for the integration with GitLab including the "GitLab CI Service URL".  Copy that url in the GitLab URL field.
+5. In the Secret Token field simply copy the value that you've put for jenkinsJobSecretToken in your dev-ci.Jenkinsfile
+5. Make sure both the "Push events" and "Merge request events" options are enabled
+6. Press the "Add Webhook" button
+
+That's it, Jenkins will now trigger your job on push and merge request events!
+
+## Conclusion
+That's it, you now have a Jenkins pipeline for your development branch.
+
+A typical project will be configured this way:
+
+| Branch Name | Jenkins Job Type | Jenkins Job Name | Jenkinsfile Name | Properties File Name | Jenkins job branches |
+| ----------- | ---------------- | ---------------- | ---------------- | -------------------- | -------------------- |
+| feature / fix | Multi-branch pipeline | <project name>_Feature_CI | feature-ci.Jenkinsfile | feature-ci.properties | feature* fix* |
+| development | Pipeline | <project name>_Dev_CI | dev-ci.Jenkinsfile | dev-ci.properties | dev* |
+| release | Pipeline | <project name>_Release_CI | release-ci.Jenkinsfile | release-ci.properties | release* |
+| production | Pipeline | <project name>_Prod_CI | prod-ci.Jenkinsfile | prod-ci.properties | prod* |
+
+In your project repository, you will have this structure:
+
+```
+jenkins/  
+    dev-ci.Jenkinsfile  
+    dev-ci.properties  
+    feature-ci.Jenkinsfile  
+    feature-ci.properties  
+    release-ci.Jenkinsfile  
+    release-ci.properties 
+    prod-ci.Jenkinsfile  
+    prod-ci.properties  
+src/  
+```
+
+You can follow the same process, as for dev, to create the files for the other environments.  
+Obviously, you won't have to redo the work for the common-ci.properties file since it has to be defined only once.  
+Then you can configure the remaining Jenkins jobs according to the table above.
+
