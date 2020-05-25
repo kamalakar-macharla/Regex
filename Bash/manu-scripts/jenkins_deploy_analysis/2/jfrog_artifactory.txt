@@ -1,2 +1,0 @@
-[2019-10-30T19:48:11.401Z] + jfrog rt config --url=https://artifactory.platform.my_mkr_repo/artifactory/ --apikey=AKCp5cc74QzhHYWmVjKH75u3qGLvtRoPzhhM5WJTfmgvjtsRZQDaJ5PjDwVrNVFcMLPMbnWpA Artifactory-Global-Prod
-[2019-10-30T19:48:11.401Z] }+ jfrog rt dl 'institutional-grs-maven-snapshot/*.jar' --flat=true --props=git.vcs.revision=0235feeafd5684ad9467f4dba0e836fc6a18738e --sort-by=created --sort-order=desc --limit=1

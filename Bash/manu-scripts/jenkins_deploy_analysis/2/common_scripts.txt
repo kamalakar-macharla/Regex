@@ -1,4 +1,0 @@
-[2019-10-30T19:45:05.593Z]   [32m+[0m [32m    deploy_script: runner/concourse/common/scripts/backout.sh[0m
-[2019-10-30T19:48:11.401Z] [1mrunning runner/concourse/common/scripts/assemble.sh[0m
-[2019-10-30T19:48:24.395Z] DEBUG:root:input: {'source': {'api': 'fly', 'debug': True, 'json': {'buildId': '{BUILD_ID}', 'buildJobName': '{BUILD_JOB_NAME}', 'buildName': '{BUILD_NAME}', 'buildPipelineName': '{BUILD_PIPELINE_NAME}', 'buildTaskName': 'assemble', 'buildTeamName': '{BUILD_TEAM_NAME}', 'deploy_script': 'runner/concourse/common/scripts/push.sh', 'division': 'CAC', 'org': 'CDN-CAC-DEV'}, 'method': 'POST', 'ssl_verify': False}}
-[2019-10-30T19:48:24.396Z] DEBUG:root:json_data: {'buildId': '149200', 'buildJobName': 'build-dev-product', 'buildName': '25', 'buildPipelineName': 'concourse-product', 'buildTaskName': 'assemble', 'buildTeamName': 'INSTITUTIONAL-GRS', 'deploy_script': 'runner/concourse/common/scripts/push.sh', 'division': 'CAC', 'org': 'CDN-CAC-DEV'}
