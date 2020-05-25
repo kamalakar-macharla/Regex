@@ -17,22 +17,22 @@ Checking out Revision 0235feeafd5684ad9467f4dba0e836fc6a18738e (origin/dev)
 Commit message: "Disabled swagger for prod envs"
  > E:\Git\cmd\git.exe rev-list --no-walk 67c0b3b33bdef37c189529ab8f4a34edbbd04795 # timeout=10
 Running in Durability level: MAX_SURVIVABILITY
-Loading library Manulife@master
+Loading library company-xyz@master
 using credential f61c651b-31cb-4d1a-86f0-56042f50b0d9
 Wiping out workspace first.
 Cloning the remote Git repository
-Cloning repository ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
- > E:\Git\cmd\git.exe init E:\jenkins_workspaces\GRS_Projects\GRS_GRSPlus\GRS_product\GRS_product_DEV_CI\workspace@libs\Manulife # timeout=10
-Fetching upstream changes from ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
+Cloning repository ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git
+ > E:\Git\cmd\git.exe init E:\jenkins_workspaces\GRS_Projects\GRS_GRSPlus\GRS_product\GRS_product_DEV_CI\workspace@libs\company-xyz # timeout=10
+Fetching upstream changes from ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git
  > E:\Git\cmd\git.exe --version # timeout=10
 using GIT_SSH to set credentials sandhma
- > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
- > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
  > E:\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
- > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
-Fetching upstream changes from ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
+Fetching upstream changes from ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git
 using GIT_SSH to set credentials sandhma
- > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
 skipping resolution of commit remotes/origin/dev, since it originates from another repository
  > E:\Git\cmd\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
  > E:\Git\cmd\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
@@ -128,7 +128,7 @@ Timeout set to expire in 45 min
 [2019-10-28T16:19:49.258Z] 
 [2019-10-28T16:19:49.258Z]     
 [Pipeline] echo
-[2019-10-28T16:19:49.297Z] Documentation: https://gitlab.manulife.com/CDT_Common/JenkinsGenericPipelines/tree/release/1.2
+[2019-10-28T16:19:49.297Z] Documentation: https://gitlab.company-xyz.com/CDT_Common/JenkinsGenericPipelines/tree/release/1.2
 [Pipeline] echo
 [2019-10-28T16:19:49.372Z] forceFullScan = false
 [Pipeline] echo
@@ -148,13 +148,13 @@ Timeout set to expire in 45 min
 [2019-10-28T16:19:50.507Z] | artifactoryDeploymentPattern                |               | Properties Files | *.jar                                                                                                        |                                                                                                                        |
 [2019-10-28T16:19:50.507Z] | artifactoryInstance                         | WARNING       | Properties Files | Artifactory-Global-Prod                                                                                      | Should remove entry from properties file since configured with same value as default.                                  |
 [2019-10-28T16:19:50.507Z] | deploymentJenkinsJobName                    |               | Properties Files | GRS_product_DEV_Deploy                                                                                       |                                                                                                                        |
-[2019-10-28T16:19:50.507Z] | emailJenkinsNotificationsTo                 |               | Properties Files | Gurpreet_Singh@manulife.ca, Vijay_Yadav@manulife.com, bijoy_francis@manulife.com, jaimin_gandhi@manulife.com |                                                                                                                        |
+[2019-10-28T16:19:50.507Z] | emailJenkinsNotificationsTo                 |               | Properties Files | Gurpreet_Singh@company-xyz.ca, Vijay_Yadav@company-xyz.com, bijoy_francis@company-xyz.com, jaimin_gandhi@company-xyz.com |                                                                                                                        |
 [2019-10-28T16:19:50.507Z] | fortifyApp                                  |               | Default          | null                                                                                                         | Defaulting fortifyApp property to null (guessing from projectKey, sonarQubeProjectKey and JOB_BASE_NAME)               |
 [2019-10-28T16:19:50.507Z] | fortifyAppDescr                             |               | Default          | null                                                                                                         | Defaulting fortifyAppDescr property to null (guessing from a URL of a git checkout)                                    |
 [2019-10-28T16:19:50.507Z] | fortifyGating                               |               | Default          | true                                                                                                         | Defaulting fortifyGating property to true.                                                                             |
 [2019-10-28T16:19:50.507Z] | fortifyScanTree                             |               | Default          | null                                                                                                         | Defaulting fortifyScanTree property to null                                                                            |
 [2019-10-28T16:19:50.507Z] | fortifyScriptWeb                            |               | Default          | 888,master,sample-builds/                                                                                    | Defaulting fortifyScriptWeb property to "888,master,sample-builds/"                                                    |
-[2019-10-28T16:19:50.507Z] | fortifyServer                               |               | Default          | https://fortify.americas.manulife.net/ssc                                                                    | Defaulting fortifyServer property to "https://fortify.americas.manulife.net/ssc"                                       |
+[2019-10-28T16:19:50.507Z] | fortifyServer                               |               | Default          | https://fortify.americas.company-xyz.net/ssc                                                                    | Defaulting fortifyServer property to "https://fortify.americas.company-xyz.net/ssc"                                       |
 [2019-10-28T16:19:50.507Z] | fortifyTokenName                            |               | Default          | FORTIFY_MANAGE_APPLICATION_TOKEN                                                                             | Defaulting fortifyTokenName property to "FORTIFY_MANAGE_APPLICATION_TOKEN"                                             |
 [2019-10-28T16:19:50.507Z] | fortifyTriggers                             |               | Properties Files | dev                                                                                                          |                                                                                                                        |
 [2019-10-28T16:19:50.507Z] | fortifyVer                                  |               | Default          | null                                                                                                         | Defaulting fortifyVer property to null (guessing from BRANCH_NAME)                                                     |
@@ -226,7 +226,7 @@ Timeout set to expire in 45 min
 [Pipeline] {
 [Pipeline] isUnix
 [Pipeline] sh
-[2019-10-28T16:19:54.487Z] + curl -sS -m 15 -H 'Private-Token: ****' https://git.platform.my_mkr_repo/api/v4/projects/12901/statuses/0235feeafd5684ad9467f4dba0e836fc6a18738e --data-urlencode name=Jenkins --data-urlencode target_url=https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/ --data-urlencode state=running
+[2019-10-28T16:19:54.487Z] + curl -sS -m 15 -H 'Private-Token: ****' https://git.platform.my_mkr_repo/api/v4/projects/12901/statuses/0235feeafd5684ad9467f4dba0e836fc6a18738e --data-urlencode name=Jenkins --data-urlencode target_url=https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/ --data-urlencode state=running
 [Pipeline] }
 [Pipeline] // withCredentials
 [Pipeline] }
@@ -297,7 +297,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:20:33.433Z] + mvn -q -B -U -s /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml -f pom.xml -B -f pom.xml verify -Denv=dev
 [2019-10-28T16:20:47.221Z] 2019-10-28 12:21:04,549 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:20:47.221Z] 2019-10-28 12:21:04,592 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:20:47.221Z] 2019-10-28 12:21:04,599 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:20:47.221Z] 2019-10-28 12:21:04,599 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:20:47.221Z] fetching the product using Id: 1
 [2019-10-28T16:20:47.221Z] Writing data to the product response object
 [2019-10-28T16:20:47.221Z] Writing data to the product Display response object
@@ -354,21 +354,21 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:20:57.227Z] Successfully applied 5 migrations to schema [dbo] (execution time 00:01.381s)
 [2019-10-28T16:21:01.360Z] 2019-10-28 12:21:19,535 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:01.360Z] 2019-10-28 12:21:19,575 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:01.360Z] 2019-10-28 12:21:19,582 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
-[2019-10-28T16:21:01.360Z] Could not detect default resource locations for test class [com.manulife.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
-[2019-10-28T16:21:01.360Z] Could not detect default configuration classes for test class [com.manulife.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[2019-10-28T16:21:01.738Z] Found @SpringBootConfiguration com.manulife.it.grs.product.ProductApplication for test class com.manulife.it.grs.product.itest.restrepository.ProductRepositoryIT
+[2019-10-28T16:21:01.360Z] 2019-10-28 12:21:19,582 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
+[2019-10-28T16:21:01.360Z] Could not detect default resource locations for test class [com.company-xyz.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-10-28T16:21:01.360Z] Could not detect default configuration classes for test class [com.company-xyz.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-10-28T16:21:01.738Z] Found @SpringBootConfiguration com.company-xyz.it.grs.product.ProductApplication for test class com.company-xyz.it.grs.product.itest.restrepository.ProductRepositoryIT
 [2019-10-28T16:21:01.738Z] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
 [2019-10-28T16:21:01.738Z] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@38a61c81, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f03fdc0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1a06ec24, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1715193f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1f5f4d48, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2f025e9e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2c8e096, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3dabdd11, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@587bf2e1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6530a1de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@20b921be, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@431923ed]
 [2019-10-28T16:21:02.115Z] 2019-10-28 12:21:20,589 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:02.115Z] 2019-10-28 12:21:20,593 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:02.115Z] 2019-10-28 12:21:20,596 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:02.115Z] 2019-10-28 12:21:20,599 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:02.115Z] 2019-10-28 12:21:20,599 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:02.921Z] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5e38fa83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 [2019-10-28T16:21:02.921Z] 2019-10-28 12:21:21,163 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:02.921Z] 2019-10-28 12:21:21,166 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:02.921Z] 2019-10-28 12:21:21,168 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:02.921Z] 2019-10-28 12:21:21,169 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:02.921Z] 2019-10-28 12:21:21,169 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:02.921Z] 
 [2019-10-28T16:21:02.921Z]   .   ____          _            __ _ _
 [2019-10-28T16:21:02.921Z]  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -429,9 +429,9 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:15.141Z] Starting ProtocolHandler ["http-nio-auto-1"]
 [2019-10-28T16:21:15.141Z] Tomcat started on port(s): 58914 (http) with context path ''
 [2019-10-28T16:21:15.141Z] Started ProductRepositoryIT in 13.331 seconds (JVM running for 14.997)
-[2019-10-28T16:21:15.141Z] Could not detect default resource locations for test class [com.manulife.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
-[2019-10-28T16:21:15.141Z] Could not detect default configuration classes for test class [com.manulife.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[2019-10-28T16:21:15.141Z] Found @SpringBootConfiguration com.manulife.it.grs.product.ProductApplication for test class com.manulife.it.grs.product.itest.restrepository.ProductRuleRelationshipRepositoryIT
+[2019-10-28T16:21:15.141Z] Could not detect default resource locations for test class [com.company-xyz.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-10-28T16:21:15.141Z] Could not detect default configuration classes for test class [com.company-xyz.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-10-28T16:21:15.141Z] Found @SpringBootConfiguration com.company-xyz.it.grs.product.ProductApplication for test class com.company-xyz.it.grs.product.itest.restrepository.ProductRuleRelationshipRepositoryIT
 [2019-10-28T16:21:15.141Z] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
 [2019-10-28T16:21:15.142Z] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@55885a6c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@255b0c41, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@283c67f5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1515d809, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2d9bbfd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7f9d96e3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@34d5452a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@fbb1629, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@40f24270, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53cbee03, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4d290d45, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1af45097]
 [2019-10-28T16:21:15.142Z] Shutting down ExecutorService 'applicationTaskExecutor'
@@ -456,12 +456,12 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,741 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,744 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,746 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,747 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,747 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:15.518Z] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5e38fa83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 [2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,811 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,815 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,817 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,818 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:15.518Z] 2019-10-28 12:21:33,818 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:15.518Z] 
 [2019-10-28T16:21:15.518Z]   .   ____          _            __ _ _
 [2019-10-28T16:21:15.518Z]  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -518,9 +518,9 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:18.585Z] Starting ProtocolHandler ["http-nio-auto-2"]
 [2019-10-28T16:21:18.585Z] Tomcat started on port(s): 58919 (http) with context path ''
 [2019-10-28T16:21:18.585Z] Started ProductRuleRelationshipRepositoryIT in 3.216 seconds (JVM running for 18.489)
-[2019-10-28T16:21:18.585Z] Could not detect default resource locations for test class [com.manulife.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
-[2019-10-28T16:21:18.585Z] Could not detect default configuration classes for test class [com.manulife.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[2019-10-28T16:21:18.585Z] Found @SpringBootConfiguration com.manulife.it.grs.product.ProductApplication for test class com.manulife.it.grs.product.itest.controller.ProductRuleControllerIT
+[2019-10-28T16:21:18.585Z] Could not detect default resource locations for test class [com.company-xyz.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-10-28T16:21:18.585Z] Could not detect default configuration classes for test class [com.company-xyz.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-10-28T16:21:18.585Z] Found @SpringBootConfiguration com.company-xyz.it.grs.product.ProductApplication for test class com.company-xyz.it.grs.product.itest.controller.ProductRuleControllerIT
 [2019-10-28T16:21:18.585Z] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
 [2019-10-28T16:21:18.585Z] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6db71cd1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3fd9fa72, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@9b52f45, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3b7dc9cc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6e790be6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1e836631, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3eecbda3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6b0a201b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d8a20a7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48bd75c9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13e7c8d8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29572847]
 [2019-10-28T16:21:18.585Z] Shutting down ExecutorService 'applicationTaskExecutor'
@@ -535,12 +535,12 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,054 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,057 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,060 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,061 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,061 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:18.585Z] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5e38fa83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 [2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,107 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,110 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,112 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,114 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:18.585Z] 2019-10-28 12:21:37,114 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:18.961Z] 
 [2019-10-28T16:21:18.961Z]   .   ____          _            __ _ _
 [2019-10-28T16:21:18.961Z]  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -600,9 +600,9 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:21.651Z] Initializing Spring DispatcherServlet 'dispatcherServlet'
 [2019-10-28T16:21:21.651Z] Initializing Servlet 'dispatcherServlet'
 [2019-10-28T16:21:21.651Z] Completed initialization in 16 ms
-[2019-10-28T16:21:22.030Z] Could not detect default resource locations for test class [com.manulife.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
-[2019-10-28T16:21:22.030Z] Could not detect default configuration classes for test class [com.manulife.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[2019-10-28T16:21:22.030Z] Found @SpringBootConfiguration com.manulife.it.grs.product.ProductApplication for test class com.manulife.it.grs.product.itest.controller.ProductControllerIT
+[2019-10-28T16:21:22.030Z] Could not detect default resource locations for test class [com.company-xyz.it.grs.product.itest.ProductIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2019-10-28T16:21:22.030Z] Could not detect default configuration classes for test class [com.company-xyz.it.grs.product.itest.ProductIT]: ProductIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2019-10-28T16:21:22.030Z] Found @SpringBootConfiguration com.company-xyz.it.grs.product.ProductApplication for test class com.company-xyz.it.grs.product.itest.controller.ProductControllerIT
 [2019-10-28T16:21:22.030Z] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
 [2019-10-28T16:21:22.030Z] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@63102d9c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6caf11d0, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2e1d96b5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3c1fe81e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e014ecc, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4ab4e54d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@85e7a90, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b423c9d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1fe16c17, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72926c2b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@9e31213, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@531f7166]
 [2019-10-28T16:21:22.030Z] Shutting down ExecutorService 'applicationTaskExecutor'
@@ -618,12 +618,12 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,405 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,408 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,410 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,413 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,413 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:22.030Z] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$5e38fa83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 [2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,458 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
 [2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,461 main ERROR Error processing element ListAppender ([Appenders: null]): CLASS_NOT_FOUND
 [2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,462 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
-[2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,464 main ERROR Unable to locate appender "list" for logger config "com.manulife.it.grs.product.itest.kafka"
+[2019-10-28T16:21:22.030Z] 2019-10-28 12:21:40,464 main ERROR Unable to locate appender "list" for logger config "com.company-xyz.it.grs.product.itest.kafka"
 [2019-10-28T16:21:22.030Z] 
 [2019-10-28T16:21:22.030Z]   .   ____          _            __ _ _
 [2019-10-28T16:21:22.030Z]  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -809,7 +809,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [Pipeline] sh
 [Pipeline] isUnix
 [Pipeline] sh
-[2019-10-28T16:21:50.451Z] [GRS_product_DEV_CI] $ /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java -classpath /usr/local/Cellar/maven/3.6.1/libexec/boot/* -Dmaven.home=/usr/local/Cellar/maven/3.6.1/libexec -Dmaven.conf=/usr/local/Cellar/maven/3.6.1/libexec/conf -DbuildInfoConfig.propertiesFile=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/artifactory/buildInfo4578000372302898431.properties -DbuildInfoConfig.artifactoryResolutionEnabled=true -Dm3plugin.lib=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/artifactory/cache/artifactory-plugin/3.4.0 -Dclassworlds.conf=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/artifactory/classworlds7510897891138780630conf -Dmaven.multiModuleProjectDirectory=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI -Dmaven.compiler.fork=true -Dmaven.test.skip org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml -q -B -U -s /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml -f pom.xml sonar:sonar -Dsonar.host.url=https://sonar.manulife.com -Dsonar.login=**** -Dsonar.projectKey=MFC_GRS_product -Dsonar.projectName=MFC_GRS_product -Dsonar.log.level=WARNING -Dsonar.branch.target=master -Dsonar.branch.name=dev
+[2019-10-28T16:21:50.451Z] [GRS_product_DEV_CI] $ /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java -classpath /usr/local/Cellar/maven/3.6.1/libexec/boot/* -Dmaven.home=/usr/local/Cellar/maven/3.6.1/libexec -Dmaven.conf=/usr/local/Cellar/maven/3.6.1/libexec/conf -DbuildInfoConfig.propertiesFile=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/artifactory/buildInfo4578000372302898431.properties -DbuildInfoConfig.artifactoryResolutionEnabled=true -Dm3plugin.lib=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/artifactory/cache/artifactory-plugin/3.4.0 -Dclassworlds.conf=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/artifactory/classworlds7510897891138780630conf -Dmaven.multiModuleProjectDirectory=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI -Dmaven.compiler.fork=true -Dmaven.test.skip org.codehaus.plexus.classworlds.launcher.Launcher -f pom.xml -q -B -U -s /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml -f pom.xml sonar:sonar -Dsonar.host.url=https://sonar.company-xyz.com -Dsonar.login=**** -Dsonar.projectKey=MFC_GRS_product -Dsonar.projectName=MFC_GRS_product -Dsonar.log.level=WARNING -Dsonar.branch.target=master -Dsonar.branch.name=dev
 [2019-10-28T16:21:33.077Z] + export 'DETECT_CURL_OPTS=--cacert blackduck-zscaler-bundle.pem'
 [2019-10-28T16:21:33.077Z] + DETECT_CURL_OPTS='--cacert blackduck-zscaler-bundle.pem'
 [2019-10-28T16:21:33.078Z] + export DETECT_JAR_PATH=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp
@@ -817,7 +817,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.078Z] ++ curl -sS --write-out '%{http_code}' -o detect.sh --cacert blackduck-zscaler-bundle.pem https://detect.synopsys.com/detect.sh
 [2019-10-28T16:21:33.078Z] + code=200
 [2019-10-28T16:21:33.078Z] + [[ 200 == \2\0\0 ]]
-[2019-10-28T16:21:33.078Z] + source detect.sh --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI '--detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B' --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime
+[2019-10-28T16:21:33.078Z] + source detect.sh --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI '--detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B' --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime
 [2019-10-28T16:21:33.078Z] ++ DETECT_RELEASE_VERSION=
 [2019-10-28T16:21:33.078Z] ++ DETECT_VERSION_KEY=DETECT_LATEST
 [2019-10-28T16:21:33.078Z] ++ DETECT_SOURCE=
@@ -828,19 +828,19 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.078Z] ++ DETECT_JAVA_OPTS=
 [2019-10-28T16:21:33.078Z] ++ DETECT_CURL_OPTS='--cacert blackduck-zscaler-bundle.pem'
 [2019-10-28T16:21:33.078Z] ++ DETECT_DOWNLOAD_ONLY=0
-[2019-10-28T16:21:33.078Z] ++ SCRIPT_ARGS='--blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
+[2019-10-28T16:21:33.078Z] ++ SCRIPT_ARGS='--blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
 [2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=
 [2019-10-28T16:21:33.078Z] ++ echo 'Detect Shell Script 2.2.1'
 [2019-10-28T16:21:33.078Z] Detect Shell Script 2.2.1
 [2019-10-28T16:21:33.078Z] ++ for i in '$*'
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --blackduck.hub.password=* ]]
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --blackduck.hub.proxy.password=* ]]
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --blackduck.hub.api.token=* ]]
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --blackduck.password=* ]]
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --blackduck.proxy.password=* ]]
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --blackduck.api.token=* ]]
-[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://manulifefinancial.blackducksoftware.com/ == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/'
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --blackduck.hub.password=* ]]
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --blackduck.hub.proxy.password=* ]]
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --blackduck.hub.api.token=* ]]
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --blackduck.password=* ]]
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --blackduck.proxy.password=* ]]
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --blackduck.api.token=* ]]
+[2019-10-28T16:21:33.078Z] ++ [[ --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ == --polaris.access.token=* ]]
+[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/'
 [2019-10-28T16:21:33.078Z] ++ for i in '$*'
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.username=**** == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.username=**** == --blackduck.hub.proxy.password=* ]]
@@ -849,13 +849,13 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.username=**** == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.username=**** == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.username=**** == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=****'
+[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=****'
 [2019-10-28T16:21:33.078Z] ++ for i in '$*'
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.password=**** == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.password=**** == --blackduck.hub.proxy.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.password=**** == --blackduck.hub.api.token=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --blackduck.password=**** == --blackduck.password=* ]]
-[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted>'
+[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted>'
 [2019-10-28T16:21:33.078Z] ++ for i in '$*'
 [2019-10-28T16:21:33.078Z] ++ [[ --detect.tools=DETECTOR == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --detect.tools=DETECTOR == --blackduck.hub.proxy.password=* ]]
@@ -864,7 +864,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.078Z] ++ [[ --detect.tools=DETECTOR == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --detect.tools=DETECTOR == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --detect.tools=DETECTOR == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR'
+[2019-10-28T16:21:33.078Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR'
 [2019-10-28T16:21:33.078Z] ++ for i in '$*'
 [2019-10-28T16:21:33.078Z] ++ [[ --logging.level.com.synopsys.integration=WARN == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --logging.level.com.synopsys.integration=WARN == --blackduck.hub.proxy.password=* ]]
@@ -873,7 +873,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.078Z] ++ [[ --logging.level.com.synopsys.integration=WARN == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --logging.level.com.synopsys.integration=WARN == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.078Z] ++ [[ --logging.level.com.synopsys.integration=WARN == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.name=MFC_GRS_product == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.name=MFC_GRS_product == --blackduck.hub.proxy.password=* ]]
@@ -882,7 +882,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.name=MFC_GRS_product == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.name=MFC_GRS_product == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.name=MFC_GRS_product == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.name=dev == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.name=dev == --blackduck.hub.proxy.password=* ]]
@@ -891,7 +891,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.name=dev == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.name=dev == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.name=dev == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.phase=DEVELOPMENT == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.phase=DEVELOPMENT == --blackduck.hub.proxy.password=* ]]
@@ -900,7 +900,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.phase=DEVELOPMENT == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.phase=DEVELOPMENT == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.phase=DEVELOPMENT == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.distribution=INTERNAL == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.distribution=INTERNAL == --blackduck.hub.proxy.password=* ]]
@@ -909,7 +909,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.distribution=INTERNAL == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.distribution=INTERNAL == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.project.version.distribution=INTERNAL == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.code.location.name=MFC_GRS_product-dev == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.code.location.name=MFC_GRS_product-dev == --blackduck.hub.proxy.password=* ]]
@@ -918,7 +918,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.code.location.name=MFC_GRS_product-dev == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.code.location.name=MFC_GRS_product-dev == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.code.location.name=MFC_GRS_product-dev == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.report.timeout=1800 == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.report.timeout=1800 == --blackduck.hub.proxy.password=* ]]
@@ -927,7 +927,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.report.timeout=1800 == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.report.timeout=1800 == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.report.timeout=1800 == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.depth=3 == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.depth=3 == --blackduck.hub.proxy.password=* ]]
@@ -936,7 +936,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.depth=3 == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.depth=3 == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.depth=3 == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3'
+[2019-10-28T16:21:33.079Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3'
 [2019-10-28T16:21:33.079Z] ++ for i in '$*'
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.continue=true == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.079Z] ++ [[ --detect.detector.search.continue=true == --blackduck.hub.proxy.password=* ]]
@@ -945,7 +945,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.detector.search.continue=true == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.detector.search.continue=true == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.detector.search.continue=true == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true'
+[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true'
 [2019-10-28T16:21:33.080Z] ++ for i in '$*'
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.source.path=. == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.source.path=. == --blackduck.hub.proxy.password=* ]]
@@ -954,7 +954,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.source.path=. == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.source.path=. == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.source.path=. == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=.'
+[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=.'
 [2019-10-28T16:21:33.080Z] ++ for i in '$*'
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules == --blackduck.hub.proxy.password=* ]]
@@ -963,7 +963,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules'
+[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules'
 [2019-10-28T16:21:33.080Z] ++ for i in '$*'
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.wait.for.results=true == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.wait.for.results=true == --blackduck.hub.proxy.password=* ]]
@@ -972,7 +972,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.wait.for.results=true == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.wait.for.results=true == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.wait.for.results=true == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true'
+[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true'
 [2019-10-28T16:21:33.080Z] ++ for i in '$*'
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.policy.check.fail.on.severities=ALL == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.policy.check.fail.on.severities=ALL == --blackduck.hub.proxy.password=* ]]
@@ -981,7 +981,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.policy.check.fail.on.severities=ALL == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.policy.check.fail.on.severities=ALL == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.policy.check.fail.on.severities=ALL == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL'
+[2019-10-28T16:21:33.080Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL'
 [2019-10-28T16:21:33.080Z] ++ for i in '$*'
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.risk.report.pdf=true == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.risk.report.pdf=true == --blackduck.hub.proxy.password=* ]]
@@ -990,7 +990,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.risk.report.pdf=true == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.risk.report.pdf=true == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.080Z] ++ [[ --detect.risk.report.pdf=true == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true'
+[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true'
 [2019-10-28T16:21:33.081Z] ++ for i in '$*'
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI == --blackduck.hub.proxy.password=* ]]
@@ -999,7 +999,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI'
+[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI'
 [2019-10-28T16:21:33.081Z] ++ for i in '$*'
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.maven.build.command=-s\ == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.maven.build.command=-s\ == --blackduck.hub.proxy.password=* ]]
@@ -1008,7 +1008,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.maven.build.command=-s\ == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.maven.build.command=-s\ == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ --detect.maven.build.command=-s\ == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\'
+[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\'
 [2019-10-28T16:21:33.081Z] ++ for i in '$*'
 [2019-10-28T16:21:33.081Z] ++ [[ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ == --blackduck.hub.proxy.password=* ]]
@@ -1017,7 +1017,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.081Z] ++ [[ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\'
+[2019-10-28T16:21:33.081Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\'
 [2019-10-28T16:21:33.081Z] ++ for i in '$*'
 [2019-10-28T16:21:33.081Z] ++ [[ -B == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ -B == --blackduck.hub.proxy.password=* ]]
@@ -1026,7 +1026,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.081Z] ++ [[ -B == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ -B == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.081Z] ++ [[ -B == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B'
+[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B'
 [2019-10-28T16:21:33.082Z] ++ for i in '$*'
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn == --blackduck.hub.proxy.password=* ]]
@@ -1035,7 +1035,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn'
+[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn'
 [2019-10-28T16:21:33.082Z] ++ for i in '$*'
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.excluded.modules=Nothing_To_Exclude == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.excluded.modules=Nothing_To_Exclude == --blackduck.hub.proxy.password=* ]]
@@ -1044,7 +1044,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.excluded.modules=Nothing_To_Exclude == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.excluded.modules=Nothing_To_Exclude == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.excluded.modules=Nothing_To_Exclude == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude'
+[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude'
 [2019-10-28T16:21:33.082Z] ++ for i in '$*'
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.scope=runtime == --blackduck.hub.password=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.scope=runtime == --blackduck.hub.proxy.password=* ]]
@@ -1053,7 +1053,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.scope=runtime == --blackduck.proxy.password=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.scope=runtime == --blackduck.api.token=* ]]
 [2019-10-28T16:21:33.082Z] ++ [[ --detect.maven.scope=runtime == --polaris.access.token=* ]]
-[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
+[2019-10-28T16:21:33.082Z] ++ LOGGABLE_SCRIPT_ARGS=' --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
 [2019-10-28T16:21:33.082Z] ++ run
 [2019-10-28T16:21:33.082Z] ++ get_detect
 [2019-10-28T16:21:33.082Z] ++ '[' -z '' ']'
@@ -1085,7 +1085,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [Pipeline] sh
 [2019-10-28T16:21:34.438Z] + export PATH=/bin:/usr/bin
 [2019-10-28T16:21:34.438Z] + PATH=/bin:/usr/bin
-[2019-10-28T16:21:34.439Z] + source /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/fortify.sh https://fortify.americas.manulife.net/ssc GRS_product_DEV_CI dev ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git /Users/dsmobile/Home/workspace/fortify -b maven-GRS_product_DEV_CI
+[2019-10-28T16:21:34.439Z] + source /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/fortify.sh https://fortify.americas.company-xyz.net/ssc GRS_product_DEV_CI dev ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git /Users/dsmobile/Home/workspace/fortify -b maven-GRS_product_DEV_CI
 [2019-10-28T16:21:34.439Z] ++ set +x
 [2019-10-28T16:21:34.439Z] Finding java.home for "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"...
 [2019-10-28T16:21:34.439Z] java.home is "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre".
@@ -1124,7 +1124,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:34.439Z] export BUILD_ID="124"
 [2019-10-28T16:21:34.439Z] export BUILD_NUMBER="124"
 [2019-10-28T16:21:34.439Z] export BUILD_TAG="jenkins-GRS_Projects-GRS_GRSPlus-GRS_product-GRS_product_DEV_CI-124"
-[2019-10-28T16:21:34.439Z] export BUILD_URL="https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/"
+[2019-10-28T16:21:34.439Z] export BUILD_URL="https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/"
 [2019-10-28T16:21:34.439Z] export CF_HOME="E:\\CloudFoundry"
 [2019-10-28T16:21:34.439Z] export CODE_COVERAGE_14_0="C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Team Tools\\Dynamic Code Coverage Tools"
 [2019-10-28T16:21:34.439Z] export DOTNET_HOME="C:\\Program Files\\dotnet"
@@ -1142,18 +1142,18 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:34.439Z] export HUDSON_COOKIE="a236db42-943e-4896-8f50-f254eee86075"
 [2019-10-28T16:21:34.439Z] export HUDSON_HOME="C:\\jenkins"
 [2019-10-28T16:21:34.439Z] export HUDSON_SERVER_COOKIE="c3fb07de18e77ad1"
-[2019-10-28T16:21:34.439Z] export HUDSON_URL="https://jenkins.manulife.com/"
+[2019-10-28T16:21:34.439Z] export HUDSON_URL="https://jenkins.company-xyz.com/"
 [2019-10-28T16:21:34.439Z] export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre"
 [2019-10-28T16:21:34.439Z] export JAVA_MAIN_CLASS_1547="hudson.remoting.Launcher"
 [2019-10-28T16:21:34.439Z] export JENKINS_HOME="C:\\jenkins"
 [2019-10-28T16:21:34.439Z] export JENKINS_NODE_COOKIE="7460feb2-9e8b-4127-b6e9-c26cccfc3b9b"
 [2019-10-28T16:21:34.439Z] export JENKINS_SERVER_COOKIE="durable-100e69d6a8a4fadabddc5437ca295214"
-[2019-10-28T16:21:34.439Z] export JENKINS_URL="https://jenkins.manulife.com/"
+[2019-10-28T16:21:34.439Z] export JENKINS_URL="https://jenkins.company-xyz.com/"
 [2019-10-28T16:21:34.439Z] export JFROG_CLI_HOME="E:\\build-tools\\jfrog"
 [2019-10-28T16:21:34.439Z] export JOB_BASE_NAME="GRS_product_DEV_CI"
-[2019-10-28T16:21:34.439Z] export JOB_DISPLAY_URL="https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/display/redirect"
+[2019-10-28T16:21:34.439Z] export JOB_DISPLAY_URL="https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/display/redirect"
 [2019-10-28T16:21:34.439Z] export JOB_NAME="GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI"
-[2019-10-28T16:21:34.439Z] export JOB_URL="https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/"
+[2019-10-28T16:21:34.439Z] export JOB_URL="https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/"
 [2019-10-28T16:21:34.439Z] export LOGNAME="dsmobile"
 [2019-10-28T16:21:34.439Z] export M2_HOME="/usr/local/Cellar/maven/3.6.1/libexec"
 [2019-10-28T16:21:34.439Z] export MAIL="/var/mail/dsmobile"
@@ -1172,15 +1172,15 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:34.439Z] export OLDPWD
 [2019-10-28T16:21:34.439Z] export OPENCOVER_4_6_HOME="E:\\build-tools\\microsoft\\opencover.4.6.519"
 [2019-10-28T16:21:34.439Z] export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/bin:/bin:/usr/bin"
-[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_CLI="https://api.sys.dev.gsdcf.manulife.com"
-[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_PREVIEW_CLI="https://api.sys.cac.preview.pcf.manulife.com"
-[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_SANDBOX_CLI="https://api.sys.use.sandbox.pcf.manulife.com"
-[2019-10-28T16:21:34.439Z] export PCF_UAT_PROD_CLI="https://api.sys.use.cf.manulife.com"
+[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_CLI="https://api.sys.dev.gsdcf.company-xyz.com"
+[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_PREVIEW_CLI="https://api.sys.cac.preview.pcf.company-xyz.com"
+[2019-10-28T16:21:34.439Z] export PCF_DEV_TEST_SANDBOX_CLI="https://api.sys.use.sandbox.pcf.company-xyz.com"
+[2019-10-28T16:21:34.439Z] export PCF_UAT_PROD_CLI="https://api.sys.use.cf.company-xyz.com"
 [2019-10-28T16:21:34.439Z] export PWD="/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI"
 [2019-10-28T16:21:34.439Z] export PYTHON_3_6_HOME="E:\\Python\\Python36"
 [2019-10-28T16:21:34.439Z] export REPORTGENERATOR_3_0_2_HOME="E:\\build-tools\\microsoft\\ReportGenerator_3.0.2.0"
-[2019-10-28T16:21:34.439Z] export RUN_CHANGES_DISPLAY_URL="https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/display/redirect?page=changes"
-[2019-10-28T16:21:34.439Z] export RUN_DISPLAY_URL="https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/display/redirect"
+[2019-10-28T16:21:34.439Z] export RUN_CHANGES_DISPLAY_URL="https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/display/redirect?page=changes"
+[2019-10-28T16:21:34.439Z] export RUN_DISPLAY_URL="https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/display/redirect"
 [2019-10-28T16:21:34.439Z] export SBT_HOME="C:\\Program Files (x86)\\sbt\\bin"
 [2019-10-28T16:21:34.439Z] export SHELL="/bin/bash"
 [2019-10-28T16:21:34.439Z] export SHLVL="3"
@@ -1212,7 +1212,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:34.439Z] export gitlabSourceRepoURL="ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git"
 [2019-10-28T16:21:34.439Z] export gitlabTargetBranch="dev"
 [2019-10-28T16:21:34.439Z] export gitlabUserName="Singh, Gurpreet"
-[2019-10-28T16:21:34.439Z] export library.Manulife.version="master"
+[2019-10-28T16:21:34.439Z] export library.company-xyz.version="master"
 [2019-10-28T16:21:34.439Z] export loggingLevel="INFO"
 [2019-10-28T16:21:34.439Z] export runtime.environment="test-integration"
 [2019-10-28T16:21:34.439Z] export user.home="C:\\Users\\AZCWVCBSCISP01Servic"
@@ -1223,12 +1223,12 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:34.439Z] zscaler, 15-Apr-2019, trustedCertEntry, 
 [2019-10-28T16:21:34.439Z] Certificate fingerprint (SHA1): D7:2F:47:D8:74:20:E3:F0:F9:BD:CA:C6:F0:3A:56:67:43:C4:81:B9
 [2019-10-28T16:21:34.439Z] 
-[2019-10-28T16:21:34.439Z] Check and create GRS_product_DEV_CI dev in https://fortify.americas.manulife.net/ssc...
-[2019-10-28T16:21:34.439Z] + "python" "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/fortify-ssc.py" "https://fortify.americas.manulife.net/ssc" "GRS_product_DEV_CI" "dev" "ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git"
-[2019-10-28T16:21:34.440Z] Connecting to https://fortify.americas.manulife.net...
-[2019-10-28T16:21:34.440Z] Connected to https://fortify.americas.manulife.net
+[2019-10-28T16:21:34.439Z] Check and create GRS_product_DEV_CI dev in https://fortify.americas.company-xyz.net/ssc...
+[2019-10-28T16:21:34.439Z] + "python" "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/fortify-ssc.py" "https://fortify.americas.company-xyz.net/ssc" "GRS_product_DEV_CI" "dev" "ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git"
+[2019-10-28T16:21:34.440Z] Connecting to https://fortify.americas.company-xyz.net...
+[2019-10-28T16:21:34.440Z] Connected to https://fortify.americas.company-xyz.net
 [2019-10-28T16:21:34.440Z] === GET /ssc/api/v1/projects?q=name%3AGRS_product_DEV_CI ===
-[2019-10-28T16:21:35.243Z] {"data":[{"_href":"https://fortify.americas.manulife.net/ssc/api/v1/projects/1123","createdBy":"fortify_ci","name":"GRS_product_DEV_CI","description":"ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git\n ","id":1123,"creationDate":"2019-03-26T15:54:29.000+0000","issueTemplateId":null}],"count":1,"responseCode":200,"links":{"last":{"href":"https://fortify.americas.manulife.net/ssc/api/v1/projects?q=name%3AGRS_product_DEV_CI&start=0"},"first":{"href":"https://fortify.americas.manulife.net/ssc/api/v1/projects?q=name%3AGRS_product_DEV_CI&start=0"}}}
+[2019-10-28T16:21:35.243Z] {"data":[{"_href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projects/1123","createdBy":"fortify_ci","name":"GRS_product_DEV_CI","description":"ssh://git@git.platform.my_mkr_repo:2222/my-dept/product.git\n ","id":1123,"creationDate":"2019-03-26T15:54:29.000+0000","issueTemplateId":null}],"count":1,"responseCode":200,"links":{"last":{"href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projects?q=name%3AGRS_product_DEV_CI&start=0"},"first":{"href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projects?q=name%3AGRS_product_DEV_CI&start=0"}}}
 [2019-10-28T16:21:35.243Z] Received a list of 1 project name(s).
 [2019-10-28T16:21:35.243Z] === GET /ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI&fields=id%2Cname ===
 [2019-10-28T16:21:35.321Z] ++ curlReturn=200
@@ -1244,11 +1244,11 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:35.321Z] ++ echo 'Java Source: JAVA_HOME/bin/java=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java'
 [2019-10-28T16:21:35.321Z] Java Source: JAVA_HOME/bin/java=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java
 [2019-10-28T16:21:35.321Z] ++ JAVACMD='"/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar"'
-[2019-10-28T16:21:35.322Z] ++ echo 'running Detect: "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar"  --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
-[2019-10-28T16:21:35.322Z] running Detect: "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar"  --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime
-[2019-10-28T16:21:35.322Z] ++ eval '"/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar" --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
-[2019-10-28T16:21:35.322Z] +++ /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java -jar /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar --blackduck.url=https://manulifefinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI '--detect.maven.build.command=-s /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml -B' --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime
-[2019-10-28T16:21:36.048Z] {"data":[{"_href":"https://fortify.americas.manulife.net/ssc/api/v1/projectVersions/1609","name":"dev","id":1609}],"count":1,"responseCode":200,"links":{"last":{"href":"https://fortify.americas.manulife.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI&fields=id%2Cname&start=0"},"first":{"href":"https://fortify.americas.manulife.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI&fields=id%2Cname&start=0"}}}
+[2019-10-28T16:21:35.322Z] ++ echo 'running Detect: "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar"  --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
+[2019-10-28T16:21:35.322Z] running Detect: "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar"  --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=<redacted> --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime
+[2019-10-28T16:21:35.322Z] ++ eval '"/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java"  -jar "/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar" --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI --detect.maven.build.command=-s\ /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml\ -B --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime'
+[2019-10-28T16:21:35.322Z] +++ /Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/bin/java -jar /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/synopsys-detect-5.6.2.jar --blackduck.url=https://company-xyzfinancial.blackducksoftware.com/ --blackduck.username=**** --blackduck.password=**** --detect.tools=DETECTOR --logging.level.com.synopsys.integration=WARN --detect.project.name=MFC_GRS_product --detect.project.version.name=dev --detect.project.version.phase=DEVELOPMENT --detect.project.version.distribution=INTERNAL --detect.code.location.name=MFC_GRS_product-dev --detect.report.timeout=1800 --detect.detector.search.depth=3 --detect.detector.search.continue=true --detect.source.path=. --detect.blackduck.signature.scanner.exclusion.name.patterns=/Nothing/To/Exclude/,.sonar,.sonarqube,node_modules --detect.wait.for.results=true --detect.policy.check.fail.on.severities=ALL --detect.risk.report.pdf=true --detect.risk.report.pdf.path=/Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI '--detect.maven.build.command=-s /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/settings.xml -B' --detect.maven.path=/usr/local/Cellar/maven/3.6.1/libexec/bin/mvn --detect.maven.excluded.modules=Nothing_To_Exclude --detect.maven.scope=runtime
+[2019-10-28T16:21:36.048Z] {"data":[{"_href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projectVersions/1609","name":"dev","id":1609}],"count":1,"responseCode":200,"links":{"last":{"href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI&fields=id%2Cname&start=0"},"first":{"href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI&fields=id%2Cname&start=0"}}}
 [2019-10-28T16:21:36.048Z] === GET /ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI%2Band%2Bactive%3Afalse&fields=id%2Cname ===
 [2019-10-28T16:21:36.126Z] ______     _            _
 [2019-10-28T16:21:36.126Z] |  _  \   | |          | |
@@ -1257,41 +1257,41 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:36.126Z] | |/ /  __/ ||  __/ (__| |_
 [2019-10-28T16:21:36.126Z] |___/ \___|\__\___|\___|\__|
 [2019-10-28T16:21:36.126Z] 
-[2019-10-28T16:21:36.429Z] {"data":[],"count":0,"responseCode":200,"links":{"last":{"href":"https://fortify.americas.manulife.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI%2Band%2Bactive%3Afalse&fields=id%2Cname&start=0"},"first":{"href":"https://fortify.americas.manulife.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI%2Band%2Bactive%3Afalse&fields=id%2Cname&start=0"}}}
+[2019-10-28T16:21:36.429Z] {"data":[],"count":0,"responseCode":200,"links":{"last":{"href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI%2Band%2Bactive%3Afalse&fields=id%2Cname&start=0"},"first":{"href":"https://fortify.americas.company-xyz.net/ssc/api/v1/projectVersions?q=project.name%3AGRS_product_DEV_CI%2Band%2Bactive%3Afalse&fields=id%2Cname&start=0"}}}
 [2019-10-28T16:21:36.429Z] === GET /ssc/api/v1/projectVersions/1609/resultProcessingRules ===
 [2019-10-28T16:21:36.506Z] 
 [2019-10-28T16:21:36.506Z] Detect Version: 5.6.2
 [2019-10-28T16:21:36.506Z] 
 [2019-10-28T16:21:37.240Z] {"data":[{"identifier":"com.fortify.manager.BLL.processingrules.BuildP...
 [2019-10-28T16:21:37.240Z] 
-[2019-10-28T16:21:37.240Z] Application GRS_product_DEV_CI version dev exists: https://fortify.americas.manulife.net/ssc/html/ssc/version/1609/fix
+[2019-10-28T16:21:37.240Z] Application GRS_product_DEV_CI version dev exists: https://fortify.americas.company-xyz.net/ssc/html/ssc/version/1609/fix
 [2019-10-28T16:21:37.240Z] 
 [2019-10-28T16:21:37.240Z] Expecting earlier translation in Fortify build(s) maven-GRS_product_DEV_CI.
 [2019-10-28T16:21:37.240Z] List files collected by the translate phase...
 [2019-10-28T16:21:37.240Z] + "/Users/dsmobile/Home/workspace/fortify/bin/sourceanalyzer" -Xmx21845M -b "maven-GRS_product_DEV_CI" -show-files
 [2019-10-28T16:21:38.532Z] pom.xml
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/ProductApplication.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/config/EnvironmentConfig.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/config/GrsServiceSsoScope.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/config/SwaggerConfig.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/config/WebSecurityConfigurer.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/constants/ProductConstants.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/controller/ProductController.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/controller/ProductRuleController.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/domain/Product.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/domain/ProductDisplay.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/domain/ProductRuleRelationship.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/domain/Rule.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/exception/InvalidProductException.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/restrepository/ProductDisplayRepository.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/restrepository/ProductRepository.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/restrepository/ProductRuleRelationshipRepository.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/restrepository/RestRepositoryConfiguration.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/restrepository/RuleRepository.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/service/ProductRuleRelationshipService.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/service/ProductService.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/service/impl/ProductRuleRelationshipServiceImpl.java
-[2019-10-28T16:21:38.532Z] src/main/java/com/manulife/it/grs/product/service/impl/ProductServiceImpl.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/ProductApplication.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/config/EnvironmentConfig.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/config/GrsServiceSsoScope.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/config/SwaggerConfig.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/config/WebSecurityConfigurer.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/constants/ProductConstants.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/controller/ProductController.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/controller/ProductRuleController.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/domain/Product.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/domain/ProductDisplay.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/domain/ProductRuleRelationship.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/domain/Rule.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/exception/InvalidProductException.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/restrepository/ProductDisplayRepository.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/restrepository/ProductRepository.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/restrepository/ProductRuleRelationshipRepository.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/restrepository/RestRepositoryConfiguration.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/restrepository/RuleRepository.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/service/ProductRuleRelationshipService.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/service/ProductService.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/service/impl/ProductRuleRelationshipServiceImpl.java
+[2019-10-28T16:21:38.532Z] src/main/java/com/company-xyz/it/grs/product/service/impl/ProductServiceImpl.java
 [2019-10-28T16:21:38.532Z] src/main/resources/application-local.properties
 [2019-10-28T16:21:38.532Z] src/main/resources/application.properties
 [2019-10-28T16:21:38.532Z] src/main/resources/bootstrap.properties
@@ -1311,8 +1311,8 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:21:58.421Z] + "ls" -la "./fortify-maven-GRS_product_DEV_CI.fpr"
 [2019-10-28T16:21:58.421Z] -rw-r--r--  1 dsmobile  staff  817016 Oct 28 12:22 ./fortify-maven-GRS_product_DEV_CI.fpr
 [2019-10-28T16:21:58.421Z] 
-[2019-10-28T16:21:58.421Z] Upload to https://fortify.americas.manulife.net/ssc as GRS_product_DEV_CI dev...
-[2019-10-28T16:21:58.421Z] + "/Users/dsmobile/Home/workspace/fortify/bin/fortifyclient" -url "https://fortify.americas.manulife.net/ssc" "uploadFPR" -application "GRS_product_DEV_CI" -applicationVersion "dev" -file "./fortify-maven-GRS_product_DEV_CI.fpr" -authtoken "XXXX" || :
+[2019-10-28T16:21:58.421Z] Upload to https://fortify.americas.company-xyz.net/ssc as GRS_product_DEV_CI dev...
+[2019-10-28T16:21:58.421Z] + "/Users/dsmobile/Home/workspace/fortify/bin/fortifyclient" -url "https://fortify.americas.company-xyz.net/ssc" "uploadFPR" -application "GRS_product_DEV_CI" -applicationVersion "dev" -file "./fortify-maven-GRS_product_DEV_CI.fpr" -authtoken "XXXX" || :
 [Pipeline] }
 [Pipeline] // withSonarQubeEnv
 [Pipeline] }
@@ -1336,7 +1336,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:22:01.671Z] 
 [2019-10-28T16:22:01.671Z] Waiting 60 seconds for Fortify SSC to process the uploaded scan...
 [2019-10-28T16:22:01.671Z] + "sleep" "60"
-[2019-10-28T16:22:02.016Z] + curl -s --cacert /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonar-zscaler-bundle.pem -u ****: -o /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonarqube-status.json --write-out '%{http_code}' 'https://sonar.manulife.com/api/ce/task?id=AW4TLJRWbNg4BaMzmYGm'
+[2019-10-28T16:22:02.016Z] + curl -s --cacert /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonar-zscaler-bundle.pem -u ****: -o /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonarqube-status.json --write-out '%{http_code}' 'https://sonar.company-xyz.com/api/ce/task?id=AW4TLJRWbNg4BaMzmYGm'
 [Pipeline] readFile
 [Pipeline] sleep
 [2019-10-28T16:22:02.288Z] Sleeping for 5 sec
@@ -1344,7 +1344,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:22:07.336Z] Querying SonarQube Server for Code Quality Gate Result.  Attempt #2
 [Pipeline] isUnix
 [Pipeline] sh
-[2019-10-28T16:22:08.067Z] + curl -s --cacert /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonar-zscaler-bundle.pem -u ****: -o /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonarqube-status.json --write-out '%{http_code}' 'https://sonar.manulife.com/api/ce/task?id=AW4TLJRWbNg4BaMzmYGm'
+[2019-10-28T16:22:08.067Z] + curl -s --cacert /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonar-zscaler-bundle.pem -u ****: -o /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI@tmp/sonarqube-status.json --write-out '%{http_code}' 'https://sonar.company-xyz.com/api/ce/task?id=AW4TLJRWbNg4BaMzmYGm'
 [Pipeline] readFile
 [Pipeline] echo
 [2019-10-28T16:22:08.327Z] SonarQube Server returned the following result for Code Quality Gate: SUCCESS
@@ -1379,8 +1379,8 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [Pipeline] // stage
 [Pipeline] }
 [2019-10-28T16:23:12.090Z] 
-[2019-10-28T16:23:12.091Z] Download a possible merge with earlier issues and suppressions of GRS_product_DEV_CI dev from https://fortify.americas.manulife.net/ssc...
-[2019-10-28T16:23:12.091Z] + "/Users/dsmobile/Home/workspace/fortify/bin/fortifyclient" -url "https://fortify.americas.manulife.net/ssc" "downloadFPR" -application "GRS_product_DEV_CI" -applicationVersion "dev" -file "./fortify-maven-GRS_product_DEV_CI.fpr" -authtoken "XXXX" || :
+[2019-10-28T16:23:12.091Z] Download a possible merge with earlier issues and suppressions of GRS_product_DEV_CI dev from https://fortify.americas.company-xyz.net/ssc...
+[2019-10-28T16:23:12.091Z] + "/Users/dsmobile/Home/workspace/fortify/bin/fortifyclient" -url "https://fortify.americas.company-xyz.net/ssc" "downloadFPR" -application "GRS_product_DEV_CI" -applicationVersion "dev" -file "./fortify-maven-GRS_product_DEV_CI.fpr" -authtoken "XXXX" || :
 [2019-10-28T16:23:12.091Z] Successfully downloaded file to /Users/dsmobile/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_CI/./fortify-maven-GRS_product_DEV_CI.fpr
 [2019-10-28T16:23:12.091Z] + "ls" -la "./fortify-maven-GRS_product_DEV_CI.fpr"
 [2019-10-28T16:23:12.091Z] -rw-r--r--  1 dsmobile  staff  835620 Oct 28 12:23 ./fortify-maven-GRS_product_DEV_CI.fpr
@@ -1391,7 +1391,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:23:14.610Z] + sed -e 's/:[0-9][0-9]*//' "./fortify-issues.txt" | uniq > "./fortify-issues-coalesced.txt"
 [2019-10-28T16:23:14.610Z] + "cat" "./fortify-issues-coalesced.txt"
 [2019-10-28T16:23:14.610Z] -e 
-[2019-10-28T16:23:14.610Z] Application GRS_product_DEV_CI version dev URL https://fortify.americas.manulife.net/ssc/html/ssc/version/1609/fix
+[2019-10-28T16:23:14.610Z] Application GRS_product_DEV_CI version dev URL https://fortify.americas.company-xyz.net/ssc/html/ssc/version/1609/fix
 [2019-10-28T16:23:14.610Z] 
 [2019-10-28T16:23:14.610Z] + "ls" -la
 [2019-10-28T16:23:14.610Z] total 2880
@@ -1479,7 +1479,7 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:23:35.754Z] drwxr-xr-x   4 dsmobile  staff     128 Oct 28 12:20 src
 [2019-10-28T16:23:35.754Z] drwxr-xr-x  18 dsmobile  staff     576 Oct 28 12:22 target
 [2019-10-28T16:23:35.754Z] 
-[2019-10-28T16:23:35.754Z] Fortify URL for application "GRS_product_DEV_CI" version "dev" profile "WEB": https://fortify.americas.manulife.net/ssc/html/ssc/version/1609/fix
+[2019-10-28T16:23:35.754Z] Fortify URL for application "GRS_product_DEV_CI" version "dev" profile "WEB": https://fortify.americas.company-xyz.net/ssc/html/ssc/version/1609/fix
 [2019-10-28T16:23:35.754Z] Done with Fortify.
 [Pipeline] readFile
 [Pipeline] }
@@ -1599,14 +1599,14 @@ expected to call org.jfrog.hudson.pipeline.common.types.packageManagerBuilds.Mav
 [2019-10-28T16:23:56.222Z] 
 [Pipeline] echo
 [2019-10-28T16:23:56.322Z] localBranchName = dev
-expected to call com.manulife.audittrail.StagesExecutionTimeTracker.initStageDuration but wound up catching com.manulife.audittrail.StagesExecutionTimeTracker.getInitStageDuration; see: https://jenkins.io/redirect/pipeline-cps-method-mismatches/
+expected to call com.company-xyz.audittrail.StagesExecutionTimeTracker.initStageDuration but wound up catching com.company-xyz.audittrail.StagesExecutionTimeTracker.getInitStageDuration; see: https://jenkins.io/redirect/pipeline-cps-method-mismatches/
 [Pipeline] echo
 [2019-10-28T16:23:56.585Z] JGP AuditTrail Submitted
 [Pipeline] echo
 [2019-10-28T16:23:56.648Z] Sending Notifications...
 [Pipeline] emailext
 [2019-10-28T16:23:56.802Z] Not sending mail to unregistered user dsmobile-imac@DSs-iMac.local because your SCM claimed this was associated with a user ID ‘dsmobile-imac' which your security realm does not recognize; you may need changes in your SCM plugin
-[2019-10-28T16:23:57.364Z] Sending email to: Gurpreet_Singh@manulife.ca Vijay_Yadav@manulife.com bijoy_francis@manulife.com jaimin_gandhi@manulife.com Gurpreet_Singh@manulife.com
+[2019-10-28T16:23:57.364Z] Sending email to: Gurpreet_Singh@company-xyz.ca Vijay_Yadav@company-xyz.com bijoy_francis@company-xyz.com jaimin_gandhi@company-xyz.com Gurpreet_Singh@company-xyz.com
 [Pipeline] }
 [Pipeline] // script
 [Pipeline] cleanWs
@@ -1622,7 +1622,7 @@ expected to call com.manulife.audittrail.StagesExecutionTimeTracker.initStageDur
 [Pipeline] {
 [Pipeline] isUnix
 [Pipeline] sh
-[2019-10-28T16:23:59.061Z] + curl -sS -m 15 -H 'Private-Token: ****' https://git.platform.my_mkr_repo/api/v4/projects/12901/statuses/0235feeafd5684ad9467f4dba0e836fc6a18738e --data-urlencode name=Jenkins --data-urlencode target_url=https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/ --data-urlencode state=success
+[2019-10-28T16:23:59.061Z] + curl -sS -m 15 -H 'Private-Token: ****' https://git.platform.my_mkr_repo/api/v4/projects/12901/statuses/0235feeafd5684ad9467f4dba0e836fc6a18738e --data-urlencode name=Jenkins --data-urlencode target_url=https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_CI/124/ --data-urlencode state=success
 [Pipeline] }
 [Pipeline] // withCredentials
 [Pipeline] }

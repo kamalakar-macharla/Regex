@@ -4,7 +4,7 @@ read -p 'Enter App Name : ' APP_NAME
 
 rm -rf ./*/
 
-# curl -s -S -u machaka:Memo@123 https://jenkins.manulife.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_Deploy/204/consoleText > output.txt
+# curl -s -S -u machaka:Memo@123 https://jenkins.company-xyz.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_product/job/GRS_product_DEV_Deploy/204/consoleText > output.txt
 curl -s -S -u machaka:Cosmos@123 $JENKINS_URL > output.txt
 grep -i 'jfrog rt' output.txt > jfrog_artifactory.txt
 grep -i 'git.exe' output.txt > git.txt

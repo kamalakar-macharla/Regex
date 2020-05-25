@@ -12,7 +12,7 @@ echo "BRANCH is : ${BRANCH}" > output.txt
 while read REPO
 do
 	echo
-	git clone -b ${BRANCH} https://git.platform.manulife.io/${GROUP}/${REPO}.git
+	git clone -b ${BRANCH} https://git.platform.company-xyz.io/${GROUP}/${REPO}.git
 	
 	
 done < reposlist.txt

@@ -1,22 +1,22 @@
 Started by user Vijay Yadav
 Obtained jenkins/dev-deploy.Jenkinsfile from git ssh://git@git.platform.my_mkr_repo:2222/my-dept-devops-test/product.git
 Running in Durability level: MAX_SURVIVABILITY
-Loading library Manulife@master
+Loading library company-xyz@master
 using credential f61c651b-31cb-4d1a-86f0-56042f50b0d9
 Wiping out workspace first.
 Cloning the remote Git repository
-Cloning repository ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
- > E:\Git\cmd\git.exe init E:\jenkins_workspaces\GRS_Projects\GRS_GRSPlus\GRS_product\GRS_product_DEV_Deploy\workspace@libs\Manulife # timeout=10
-Fetching upstream changes from ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
+Cloning repository ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git
+ > E:\Git\cmd\git.exe init E:\jenkins_workspaces\GRS_Projects\GRS_GRSPlus\GRS_product\GRS_product_DEV_Deploy\workspace@libs\company-xyz # timeout=10
+Fetching upstream changes from ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git
  > E:\Git\cmd\git.exe --version # timeout=10
 using GIT_SSH to set credentials sandhma
- > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
- > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
  > E:\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
- > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
-Fetching upstream changes from ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git
+ > E:\Git\cmd\git.exe config remote.origin.url ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git # timeout=10
+Fetching upstream changes from ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git
 using GIT_SSH to set credentials sandhma
- > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.manulife.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
+ > E:\Git\cmd\git.exe fetch --tags --progress ssh://git@gitlab.company-xyz.com:2222/CDT_Common/JenkinsGenericPipelines.git +refs/heads/*:refs/remotes/origin/*
  > E:\Git\cmd\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
  > E:\Git\cmd\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
 Checking out Revision 9f20010da18861db0e05acd70c93a6beefcf1183 (refs/remotes/origin/master)
@@ -90,7 +90,7 @@ Timeout set to expire in 45 min
 [2019-10-30T19:44:58.336Z] 
 [2019-10-30T19:44:58.336Z]     
 [Pipeline] echo
-[2019-10-30T19:44:58.392Z] Documentation: https://gitlab.manulife.com/CDT_Common/JenkinsGenericPipelines/tree/release/1.2
+[2019-10-30T19:44:58.392Z] Documentation: https://gitlab.company-xyz.com/CDT_Common/JenkinsGenericPipelines/tree/release/1.2
 [Pipeline] fileExists
 [Pipeline] echo
 [2019-10-30T19:44:58.621Z] /Users/dsmacbuild/Home/workspace/GRS_Projects/GRS_GRSPlus/GRS_product/GRS_product_DEV_Deploy/jenkins/common-deploy.properties file found? true
@@ -112,10 +112,10 @@ Timeout set to expire in 45 min
 [2019-10-30T19:44:59.311Z] | concourseTeamURL            |               | Default          | https://concourse.platform.my_mkr_repo/sky/token?team_name= | Defaulting ConcourseURL property to https://concourse.platform.my_mkr_repo/sky/token?team_name=                        |
 [2019-10-30T19:44:59.311Z] | concourseURL                |               | Default          | https://concourse.platform.my_mkr_repo                      | Defaulting ConcourseURL property to https://concourse.platform.my_mkr_repo                                             |
 [2019-10-30T19:44:59.311Z] | downloadPattern             | WARNING       | Properties Files | N/A                                                         | Property is unknown by this pipeline.  This is probably a deprecated property or there is a typo in the property name. |
-[2019-10-30T19:44:59.311Z] | emailJenkinsNotificationsTo |               | Properties Files | vijay_yadav@manulife.com, Jaimin_Gandhi@manulife.com        |                                                                                                                        |
+[2019-10-30T19:44:59.311Z] | emailJenkinsNotificationsTo |               | Properties Files | vijay_yadav@company-xyz.com, Jaimin_Gandhi@company-xyz.com        |                                                                                                                        |
 [2019-10-30T19:44:59.311Z] | enterprisePCFCredentials    |               | Properties Files | dsdevops-sa                                                 |                                                                                                                        |
 [2019-10-30T19:44:59.311Z] | enterprisePCFSpace          |               | Properties Files | INSTITUTIONAL-GRS                                           |                                                                                                                        |
-[2019-10-30T19:44:59.311Z] | enterprisePCFUrl            |               | Default          | https://login.sys.cac.preview.pcf.manulife.com/oauth/token  | Defaulting the Enterprise PCF URL to https://login.sys.cac.preview.pcf.manulife.com/oauth/token                        |
+[2019-10-30T19:44:59.311Z] | enterprisePCFUrl            |               | Default          | https://login.sys.cac.preview.pcf.company-xyz.com/oauth/token  | Defaulting the Enterprise PCF URL to https://login.sys.cac.preview.pcf.company-xyz.com/oauth/token                        |
 [2019-10-30T19:44:59.311Z] | mattermostChannelName       | WARNING       | Properties Files | N/A                                                         | Property is unknown by this pipeline.  This is probably a deprecated property or there is a typo in the property name. |
 [2019-10-30T19:44:59.311Z] | mattermostEndPoint          | WARNING       | Properties Files | N/A                                                         | Property is unknown by this pipeline.  This is probably a deprecated property or there is a typo in the property name. |
 [2019-10-30T19:44:59.311Z] | mattermostText              | WARNING       | Properties Files | N/A                                                         | Property is unknown by this pipeline.  This is probably a deprecated property or there is a typo in the property name. |
@@ -526,7 +526,7 @@ Timeout set to expire in 45 min
 [2019-10-30T19:48:11.401Z]   "Version": "1"
 [2019-10-30T19:48:11.401Z] }+ jfrog rt dl 'institutional-grs-maven-snapshot/*.jar' --flat=true --props=git.vcs.revision=0235feeafd5684ad9467f4dba0e836fc6a18738e --sort-by=created --sort-order=desc --limit=1
 [2019-10-30T19:48:11.401Z] [Info] Searching items to download...
-[2019-10-30T19:48:11.401Z] [Info] [Thread 2] Downloading institutional-grs-maven-snapshot-local/com/manulife/it/product/product/2.25.0-SNAPSHOT/product-2.25.0-SNAPSHOT.jar
+[2019-10-30T19:48:11.401Z] [Info] [Thread 2] Downloading institutional-grs-maven-snapshot-local/com/company-xyz/it/product/product/2.25.0-SNAPSHOT/product-2.25.0-SNAPSHOT.jar
 [2019-10-30T19:48:11.401Z] [Info] [Thread 2] [0]: 206 Partial Content...
 [2019-10-30T19:48:11.401Z] [Info] [Thread 2] [1]: 206 Partial Content...
 [2019-10-30T19:48:13.268Z] [Info] [Thread 2] [2]: 206 Partial Content...
@@ -606,50 +606,50 @@ Timeout set to expire in 45 min
 [2019-10-30T19:48:24.396Z] WARNING:root:blackduck scan parameters not passed
 [2019-10-30T19:48:24.396Z] DEBUG:root:ORG: CDN-CAC-DEV
 [2019-10-30T19:48:24.396Z] DEBUG:root:Non PROD deployment, proceeding.
-[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
 [2019-10-30T19:48:24.396Z] /usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py:997: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
 [2019-10-30T19:48:24.396Z]   warnings.warn(
-[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "POST /fly HTTP/1.1" 200 36
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "POST /fly HTTP/1.1" 200 36
 [2019-10-30T19:48:24.396Z] INFO:root:http response code: 200
 [2019-10-30T19:48:24.396Z] INFO:root:http response text: b606537f-23e7-c2db-9e59-b1e4c059bf51
 [2019-10-30T19:48:24.396Z] DEBUG:root:Generated buildGuid: b606537f-23e7-c2db-9e59-b1e4c059bf51
-[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:48:24.396Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:48:24.396Z] DEBUG:root:------------------------------
 [2019-10-30T19:48:24.396Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:48:24.396Z] DEBUG:root:------------------------------
-[2019-10-30T19:48:58.668Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:48:58.668Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:48:58.668Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:48:58.668Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:48:58.668Z] DEBUG:root:------------------------------
 [2019-10-30T19:48:58.668Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:48:58.668Z] DEBUG:root:------------------------------
-[2019-10-30T19:49:27.292Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:49:27.292Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:49:27.292Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:49:27.292Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:49:27.292Z] DEBUG:root:------------------------------
 [2019-10-30T19:49:27.292Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:49:27.292Z] DEBUG:root:------------------------------
-[2019-10-30T19:49:55.921Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:49:55.921Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:49:55.921Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:49:55.921Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:49:55.921Z] DEBUG:root:------------------------------
 [2019-10-30T19:49:55.921Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:49:55.921Z] DEBUG:root:------------------------------
-[2019-10-30T19:50:24.617Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:50:24.617Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:50:24.617Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:50:24.617Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:50:24.617Z] DEBUG:root:------------------------------
 [2019-10-30T19:50:24.617Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:50:24.617Z] DEBUG:root:------------------------------
-[2019-10-30T19:50:58.913Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:50:58.913Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:50:58.913Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:50:58.913Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:50:58.913Z] DEBUG:root:------------------------------
 [2019-10-30T19:50:58.913Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:50:58.913Z] DEBUG:root:------------------------------
-[2019-10-30T19:51:27.577Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:51:27.577Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
+[2019-10-30T19:51:27.577Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:51:27.577Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 202 2
 [2019-10-30T19:51:27.577Z] DEBUG:root:------------------------------
 [2019-10-30T19:51:27.577Z] DEBUG:root:Waiting for job to complete...
 [2019-10-30T19:51:27.577Z] DEBUG:root:------------------------------
-[2019-10-30T19:51:56.208Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.manulife.com:443
-[2019-10-30T19:51:56.208Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.manulife.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 200 16034
+[2019-10-30T19:51:56.208Z] DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443
+[2019-10-30T19:51:56.208Z] DEBUG:urllib3.connectionpool:https://enterprise-pipeline-node.apps.cac.pcf.company-xyz.com:443 "GET /build-status?buildGuid=b606537f-23e7-c2db-9e59-b1e4c059bf51 HTTP/1.1" 200 16034
 [2019-10-30T19:51:56.208Z] DEBUG:root:1: build #25, step: assemble, type: task
 [2019-10-30T19:51:56.208Z] 2: build #25, step: cf-push-dev, type: put
 [2019-10-30T19:51:56.208Z] 3: build #25, step: code, type: get
@@ -665,16 +665,16 @@ Timeout set to expire in 45 min
 [2019-10-30T19:51:56.208Z] kafka
 [2019-10-30T19:51:56.208Z] runner
 [2019-10-30T19:51:56.208Z] target
-[2019-10-30T19:51:56.208Z] Setting api endpoint to [36;1mhttps://api.sys.cac.preview.pcf.manulife.com[0m...
+[2019-10-30T19:51:56.208Z] Setting api endpoint to [36;1mhttps://api.sys.cac.preview.pcf.company-xyz.com[0m...
 [2019-10-30T19:51:56.208Z] [32;1mOK[0m
-[2019-10-30T19:51:56.208Z] api endpoint:   https://api.sys.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.208Z] api endpoint:   https://api.sys.cac.preview.pcf.company-xyz.com
 [2019-10-30T19:51:56.208Z] api version:    2.125.0
 [2019-10-30T19:51:56.208Z] Not logged in. Use 'cf login' to log in.
-[2019-10-30T19:51:56.208Z] API endpoint: [36;1mhttps://api.sys.cac.preview.pcf.manulife.com[0m
+[2019-10-30T19:51:56.208Z] API endpoint: [36;1mhttps://api.sys.cac.preview.pcf.company-xyz.com[0m
 [2019-10-30T19:51:56.208Z] Authenticating...
 [2019-10-30T19:51:56.208Z] [32;1mOK[0m
 [2019-10-30T19:51:56.208Z] Use '[36;1mcf target[0m' to view or set your target org and space.
-[2019-10-30T19:51:56.208Z] api endpoint:   https://api.sys.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.208Z] api endpoint:   https://api.sys.cac.preview.pcf.company-xyz.com
 [2019-10-30T19:51:56.208Z] api version:    2.125.0
 [2019-10-30T19:51:56.208Z] user:           epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep
 [2019-10-30T19:51:56.208Z] org:            CDN-CAC-DEV
@@ -731,7 +731,7 @@ Timeout set to expire in 45 min
 [2019-10-30T19:51:56.208Z] User Defined grs-sso
 [2019-10-30T19:51:56.208Z] + grep grs-sso
 [2019-10-30T19:51:56.208Z] + cf services
-[2019-10-30T19:51:56.208Z] grs-sso                                    p-identity           manulife-dev           agreement, beneficiary-api, customer-fund-direction-process, enrolment-api, error-tracker, financial, financial-new, financial-update-mps, financial-update-slx, initial-load-ui-sso, investment, member, monitor-utility, node-sso-poc-v2, party, party-update-mps, party-update-slx, utility-graphql-server-dev                                                                                                                                                                                                                   create succeeded
+[2019-10-30T19:51:56.208Z] grs-sso                                    p-identity           company-xyz-dev           agreement, beneficiary-api, customer-fund-direction-process, enrolment-api, error-tracker, financial, financial-new, financial-update-mps, financial-update-slx, initial-load-ui-sso, investment, member, monitor-utility, node-sso-poc-v2, party, party-update-mps, party-update-slx, utility-graphql-server-dev                                                                                                                                                                                                                   create succeeded
 [2019-10-30T19:51:56.208Z] + echo 'Skipped creation of grs-sso p-identity already existing'
 [2019-10-30T19:51:56.208Z] + regex='RegServer-(.*).json'
 [2019-10-30T19:51:56.208Z] Skipped creation of grs-sso p-identity already existing
@@ -770,8 +770,8 @@ Timeout set to expire in 45 min
 [2019-10-30T19:51:56.208Z] OK
 [2019-10-30T19:51:56.208Z] Creating app product-new in org CDN-CAC-DEV / space INSTITUTIONAL-GRS-CAC-DEV as epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep...
 [2019-10-30T19:51:56.208Z] OK
-[2019-10-30T19:51:56.208Z] Using route dev-grs-product.apps.cac.preview.pcf.manulife.com
-[2019-10-30T19:51:56.208Z] Binding dev-grs-product.apps.cac.preview.pcf.manulife.com to product-new...
+[2019-10-30T19:51:56.208Z] Using route dev-grs-product.apps.cac.preview.pcf.company-xyz.com
+[2019-10-30T19:51:56.208Z] Binding dev-grs-product.apps.cac.preview.pcf.company-xyz.com to product-new...
 [2019-10-30T19:51:56.208Z] OK
 [2019-10-30T19:51:56.208Z] Uploading product-new...
 [2019-10-30T19:51:56.208Z] Uploading app files from: /tmp/unzipped-app953788251
@@ -861,7 +861,7 @@ Timeout set to expire in 45 min
 [2019-10-30T19:51:56.209Z] requested state: started
 [2019-10-30T19:51:56.209Z] instances: 1/1
 [2019-10-30T19:51:56.209Z] usage: 2G x 1 instances
-[2019-10-30T19:51:56.209Z] urls: dev-grs-product.apps.cac.preview.pcf.manulife.com
+[2019-10-30T19:51:56.209Z] urls: dev-grs-product.apps.cac.preview.pcf.company-xyz.com
 [2019-10-30T19:51:56.209Z] last uploaded: Wed Oct 30 19:48:40 UTC 2019
 [2019-10-30T19:51:56.209Z] stack: cflinuxfs3
 [2019-10-30T19:51:56.209Z] buildpack: client-certificate-mapper=1.8.0_RELEASE container-security-provider=1.16.0_RELEASE java-buildpack=[34mv4.20[0m-offline-https://github.com/cloudfoundry/java-buildpack.git#2cd7e3e java-main java-opts java-security jvmkill-agent=1.16.0_RELEASE new-relic...
@@ -880,8 +880,8 @@ Timeout set to expire in 45 min
 [2019-10-30T19:51:56.209Z] + cf rename product-new product
 [2019-10-30T19:51:56.209Z] Renaming app product-new to product in org CDN-CAC-DEV / space INSTITUTIONAL-GRS-CAC-DEV as epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep...
 [2019-10-30T19:51:56.209Z] OK
-[2019-10-30T19:51:56.209Z] + cf unmap-route product-old apps.cac.preview.pcf.manulife.com --hostname dev-grs-product
-[2019-10-30T19:51:56.209Z] Removing route dev-grs-product.apps.cac.preview.pcf.manulife.com from app product-old in org CDN-CAC-DEV / space INSTITUTIONAL-GRS-CAC-DEV as epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep...
+[2019-10-30T19:51:56.209Z] + cf unmap-route product-old apps.cac.preview.pcf.company-xyz.com --hostname dev-grs-product
+[2019-10-30T19:51:56.209Z] Removing route dev-grs-product.apps.cac.preview.pcf.company-xyz.com from app product-old in org CDN-CAC-DEV / space INSTITUTIONAL-GRS-CAC-DEV as epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep...
 [2019-10-30T19:51:56.209Z] OK
 [2019-10-30T19:51:56.209Z] + cf stop product-old
 [2019-10-30T19:51:56.209Z] Stopping app product-old in org CDN-CAC-DEV / space INSTITUTIONAL-GRS-CAC-DEV as epipe_institutional-grs_concourse-product_assemble_4ibqrl_149200_ep...
@@ -971,8 +971,8 @@ Stage "Trigger Automated Smoke Test Pipeline" skipped due to when conditional
 [Pipeline] echo
 [2019-10-30T19:52:07.765Z] Sending Notifications...
 [Pipeline] emailext
-[2019-10-30T19:52:07.935Z] Not sending mail to unregistered user vijay_yadav@manulife.com because your SCM claimed this was associated with a user ID ‘vijay_yadav' which your security realm does not recognize; you may need changes in your SCM plugin
-[2019-10-30T19:52:07.939Z] Sending email to: vijay_yadav@manulife.com Jaimin_Gandhi@manulife.com Kamalakar_Macharla@manulife.ca
+[2019-10-30T19:52:07.935Z] Not sending mail to unregistered user vijay_yadav@company-xyz.com because your SCM claimed this was associated with a user ID ‘vijay_yadav' which your security realm does not recognize; you may need changes in your SCM plugin
+[2019-10-30T19:52:07.939Z] Sending email to: vijay_yadav@company-xyz.com Jaimin_Gandhi@company-xyz.com Kamalakar_Macharla@company-xyz.ca
 [Pipeline] withCredentials
 [2019-10-30T19:52:08.372Z] Masking supported pattern matches of $tokenid
 [Pipeline] {

@@ -23,8 +23,8 @@ org.apache.maven.archetype:maven-archetype-quickstart
 </dependency>
 C:\Users\machaka\.m2\repository\com\xmas\mps\mps-client\3.0.2   # dependency jar file available here
 Run below command in git bash
-$ cd ~/.m2/repository/com/manulife/mps/mps-client/3.0.2
-@VBX00498 MINGW64 ~/.m2/repository/com/manulife/mps/mps-client/3.0.2
+$ cd ~/.m2/repository/com/company-xyz/mps/mps-client/3.0.2
+@VBX00498 MINGW64 ~/.m2/repository/com/company-xyz/mps/mps-client/3.0.2
 $ ll
 total 35
 -rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161   212 Apr 15 14:01 _remote.repositories
