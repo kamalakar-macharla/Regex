@@ -1,0 +1,1169 @@
+
+Process of understanding the context "AT THE MOVEMENT" is more important than remembering.
+pdf to Word | Zamzar - Free online file conversion
+
+----grep-----
+grep 10.151.38.35 sync_* -lR
+grep searchword sync_* -lR
+grep ^root /etc/passwd
+grep bash$ /etc/passwd
+grep kamal *.*
+grep -e "root" -e "pulse" /etc/passwd
+grep :$ /etc/passwd
+
+----sed----
+The tools sed or tr will do this for you by swapping the whitespace for nothing
+sed 's/ //g'
+tr -d ' '
+echo "    kamal    " | sed 's/ //g';
+kamal
+
+
+
+ls -lt sync_* | grep SC141
+ls -lt /etc/*.conf
+ls -lt /etc/* | grep file
+ls -lt /etc/*release*
+ls | wc -l list the files in directory
+
+rpm --nodeps -i python-2.6.8-1.aix6.1.ppc.rpm
+rpm -ivh --nodeps BitTorrent-5.2.rpm
+rpm -q BitTorrent
+rpm -qa | grep zlib-devel*
+RPM Commands on Tecmint.com
+
+stat --help
+man stat
+info <yum,ssh
+
+[root@sc141_lb_audp_01 ~]# ssh then double click tab
+ssh          ssh-add      ssh-agent    ssh-copy-id  sshd         ssh-keygen   ssh-keyscan
+[root@sc141_lb_audp_01 ~]# cd D doubletab
+Desktop/   Documents/ Downloads/
+[root@sc141_lb_audp_01 ~]# cd doubletab shows every things
+
+Linux Configuration Files  /etc/*
+
+
+
+ps -ef | grep AutoTestMgr*
+kill -9 5046376
+
+hostnamectl set-hostname <newname
+
+service network restart
+
+Building remotely on pim-jenkins-s1
+C:\Program Files (x86)\Jenkins\workspace\<job-name
+
+
+C:\Program Files (x86)\Git\bin\git.exe checkout -f 14b03250ed
+    jenkins Build - Execute shell -
+    #!C:\Program Files\Git\bin\bash
+C:\Program Files\Git\bin\bash C:\Users\ADMINI~1\AppData\Local\Temp\hudson492.sh
+
+
+set -e   Exit immediately if a command exits with a non-zero status.
+set +e   sets error ignoring state
+
+
+mRemote Connection File
+WinSCP
+
+
+ssh-keygen -t rsa
+bash
+$ grep 'test' test.txt
+$ grep -i 'test' test.txt
+
+find /etc -type f -name yum*
+find /etc -type d -name ansib*
+find . -type f -size +4096c
+    to find files bigger than 4096 bytes.
+find . -type f -size -4096c
+    to find files smaller than 4096 bytes.
+drwxr-xr-x. yum.repos.d
+
+/etc/yum.repos.d
+vi Yum-rhel5u5.repo  gpgcheck=0
+
+yum info ansible
+yum install git
+baseurl=http://itcyum.ca.com/5.5/os/x86_64/  vi /etc/yum.repos.d/Yum-rhel5u5.repo
+baseurl=http://islyum.ca.com/7.2/os/$basearch/ vi /etc/yum.repos.d/Yum-rhel7_2_u2.repo
+grep -r "do_as" /opt
+
+
+cat /etc/redhat-release
+
+tar -zxf Python-2.7.6.tgz install from source
+cd Python-2.7.6
+./configure
+make
+make install
+
+stat -c %a /etc/yum.repos.d  displays the Octal value 755
+
+/dev/null 2>&1
+http://unix.stackexchange.com/questions/163352/what-does-dev-null-21-mean-in-this-article-of-crontab-basics
+
+
+awk -F/ '{print $2}'
+var="FName" ;awk -F ':' -v myvar=$var '{print myvar"="$1, $3}' file.txt
+cat /etc/redhat-release | awk -F"." '{print $1}'
+cat /etc/redhat-release| awk '{print $4}'
+
+OSMAJ=`uname -r | cut -c2-2`
+$ENV{'QASHR'} = '/Sources/QA/52/production/QASH';
+
+passwd
+
+Filesystem                  Mounted on
+10.131.180.8/PIM_SOURCES    /Sources
+10.131.180.8 is NFS server
+
+AIX----
+All binary RPMs  http://www.oss4aix.org/download/everything/RPMS/
+A Solution to the RPM dependency hell problem
+wget -B http://www.oss4aix.org/download/everything/RPMS/ -i python-2.6.8-1.aix6.1.ppc.deps
+rpm -Uhv /opt/python-rpm/python-2.7.5-1.aix6.1.ppc.rpm   –U” (upgrade)
+chfs -a size=+204800 /opt
+export LIBPATH=/opt/freeware/lib:/usr/lib
+
+ln -s ../../opt/freeware/bin/python2.6_64 python
+Here python is link which will route to python2.6_64
+tcsh - /usr/bin/tcsh  here tcsh is link that will route to /usr/bin/tcsh
+/usr/sysv/bin/df -n It shows filesystem type
+
+git----
+man git
+git status
+git add .
+use "git add/rm <file ..." to update what will be committed
+use "git checkout -- <file ..." to discard changes in working directory
+git checkout .
+git commit -m "msg"
+git push origin
+
+git clone https://github-isl-01.ca.com/PIM/ENTMServer.git -b HAWKEYE /hawkeye
+
+Notepad++
+Delete a all lines which a specific word in it
+Making new line from the specific point from the line.  \n
+
+stat -c "%a %n" *
+777 Build-Release-Env-SetUp
+ls -lt /usr/bin/ch*
+ipconfig -a
+showmount -e 10.130.24.175(This is nfs server machine)
+/etc/hosts  networked computers used local files to map hostnames to IP addresses
+ssh default port 22
+
+127.0.0.1 is the loopback Internet protocol (IP) address also referred to as the “localhost.”  (/etc/hosts)
+Transport layer protocols, such as the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP),
+specify a source and destination port number in their headers.
+scp -r kamal-python2.6-AIX root@lodibm20ai:/opt
+
+hostname lodiibm09f
+hostname <newhostname
+
+ping <hostname
+ssh-keygen -t rsa
+ssh-keygen -R hostname
+ssh-copy-id root@lodisun030p
+
+git add -f Solaris/
+git add -f NightlyTest-Env-SetUp/*       this * will identifies new folder
+
+chmod 0777 _SOLARIS10  gives drwxrwxrwx
+hostnamectl set-hostname <newhostname
+
+To change the hostname takecare of below two files
+/etc/hosts
+/etc/nodename
+
+
+To change the hostname in AIX
+chdev -l inet0 -a hostname=lodiibm09f
+
+ssh-keygen -R hostname
+This deletes the offending key from the known_hosts
+The man page entry reads:
+-R hostname Removes all keys belonging to hostname from a known_hosts file.
+This option is useful to delete hashed hosts (see the -H option above).
+
+30 00 * * * /usr/sbin/reboot
+
+after creating virtual machine in ESXvc55
+hostnamectl set-hostname <newname
+
+service network restart
+vi /etc/sysconfig/network-scripts/ifcfg-eno8976 to change the mac address
+vi /etc/hostname
+cd /etc/udev/rules.d/
+remove the rules files in above location.
+
+\\pim-buildshare1\ENTMBUILDS
+
+hostnamectl set-hostname oel-ansible-test
+service network restart
+
+
+---windows--
+C:\Users\MACKA05\AppData\Local\Temp
+Run - %Temp%
+Outlook search - May 23 + aws + devday
+putty -  hostname: itcacperfssh1  network error: host doesn't exist
+putty -  hostname: itcacperfssh1.ca.com  able to connect
+dns resolution problem
+C:\Users\MACKA05 ipconfig/flushdns
+C:\Users\MACKA05 ipconfig/displaydns
+grep -e 2017 -e May File.txt
+
+bash-3.2# nslookup mirror.opencsw.org
+Server:         10.130.64.215
+Address:        10.130.64.215#53
+
+sshpass -p mazda626 scp -r $RPT_SRC root@10.151.38.35:/Sources/BuildResults/SC141/DIST/
+
+bash-3.2# /usr/sfw/bin/gmake -version
+GNU Make 3.82
+export PATH="$PATH:/usr/sfw/bin"
+bash-3.2# gmake -version
+GNU Make 3.82
+Built for sparc-sun-solaris2.10
+
+/etc/profile  Contains global defaults for the bash shell
+/etc/profile.CA
+
+[root@macka05-I184086 Rhel]# yum info | grep dos2unix
+Name        : dos2unix
+URL         : http://waterlan.home.xs4all.nl/dos2unix.html
+[root@macka05-I184086 Rhel]#
+[root@macka05-I184086 Rhel]#
+[root@macka05-I184086 Rhel]# yum install dos2unix
+
+
+Use a simple cat -A to show up all the invisible characters:
+[root@macka05-I184086 Rhel]# cat -A hosts
+[rhel]$
+itc-nt-rhel73x64-ep1$
+
+Set/Change TimeZone Using /etc/localtime File
+ln -sf /usr/share/zoneinfo/Asia/Calcutta /etc/localtime
+
+/etc/resolv.conf -used in various operating systems to configure the system's Domain Name System (DNS) resolver.
+
+C:\Users\MACKA05
+nslookup
+Default Server:  inhynw16.ca.com
+Address:  155.35.34.108
+
+google.com
+### Type domain name to get information from dns server
+
+[root@usbld-rhel73 ~]# nslookup google.com
+Server:         141.202.205.74
+Address:        141.202.205.74#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 172.217.7.142
+
+To view hidden (“dot”) files, use the -la options of the ls command.
+
+
+cat /etc/profile
+$PATH variable also mentioned in the above file
+
+hostname change in Rhel6
+cd /etc/sysconfig
+vi network
+HOSTNAME=redhat9
+vi /etc/hosts
+hostname redhat9
+/etc/sysconfig/network
+service network restart
+
+---
+update the hostname in - vi /etc/sysconfig/network-scripts/ifcfg-eth7
+you can see above eth7 in #ifconfig (interface configuration)
+[root@con-ser-rhel67x64 network-scripts]# service network restart
+Shutting down interface eth7:  Device state: 3 (disconnected)
+                                                           [  OK  ]
+Shutting down loopback interface:                          [  OK  ]
+Bringing up loopback interface:                            [  OK  ]
+Bringing up interface eth7:  Active connection state: activating
+Active connection path: /org/freedesktop/NetworkManager/ActiveConnection/1
+state: activated
+Connection activated
+
+cat /etc/resolv.conf  [  OK  ]
+# Generated by NetworkManager
+domain ca.com
+search ca.com
+nameserver 155.35.34.108
+nameserver 141.202.205.74
+
+Note: If you are able to connect host only with domain with in it like
+hostname.ca.com It means that /etc/resolv.conf having domain ca.com
+if you comment out #domain ca.com then you will be able to connect
+with hostname.
+
+/etc/resolv.conf
+
+A list of domain name servers (DNS) used by the local machine.
+---
+
+Execute windowns batch command
+mkdir "\\pim-buildshare1\PAMSC\SC141\build_%ENTM_BUILD_NUMBER%
+xcopy "%WORKSPACE%\_Kit\3rdParty\Linux\iso\*.iso" "\\pim-buildshare1\PAMSC\SC141\build_%ENTM_BUILD_NUMBER%"
+xcopy "%WORKSPACE%\_Kit\Server\Linux\iso\*.iso" "\\pim-buildshare1\PAMSC\SC141\build_%ENTM_BUILD_NUMBER%"
+
+in windowns
+%Temp%
+xcopy "%WORKSPACE%\_Kit\3rdParty
+Path=%JAVA_HOME%\bin
+"%WORKSPACE%\Configuration_Items\Build Scripts\WindowsEPDownload.bat"
+
+X:\Jenkins\workspace\SC141 Job> mkdir "\\pim-buildshare1\PAMSC\SC141\build_74
+back shalsh \ are used in windowns
+starting with two back shalsh \\ means It could be a share drive
+---
+jenkins console debugging
+
+below two are windows batch command in jenkins job
+rmdir 3rdParty
+rmdir common
+below two are console output
+X:\Jenkins\workspace\SC141 Master Job>rmdir 3rdParty
+X:\Jenkins\workspace\SC141 Master Job>rmdir common
+you need to search this to get the location
+"%WORKSPACE%\Configuration_Items\Build Scripts\WindowsEPDownload.bat"
+ENTM_BUILD_NUMBER=$BUILD_NUMBER
+build.major=$BUILD.MAJOR
+build.minor=$BUILD.MINOR
+---
+In windowns Run and cmd.exe both are different
+
+\\pim-buildshare1\  unable to connect to this share bcoz this is using remote desktop in background with different domain
+thats why its unalbe to connect. so went remote desktop and remove the domain then its able to connect. actually this share doesnt have domain
+
+Jenkins -> Execute shell
+#!C:\Program Files\Git\bin\bash
+set +e
+echo $BRANCHNAME
+
+C:\Program Files (x86)\Git\bin\git.exe init C:\Program Files (x86)\Jenkins\workspace\localization-drops
+[localization-drops] $ C:\Program Files\Git\bin\bash C:\Users\ADMINI~1\AppData\Local\Temp\hudson8340530113781278127.sh
+[SC141 Master Job] $ cmd /c call C:\Users\ADMINI~1\AppData\Local\Temp\hudson2140752641076914542.bat
+
+add your pmf key to CA GitHub( github-isl-01.ca.com)
+
+To install some file *.tar.gz, you basically would do:
+Open a console, and go to the directory where the file is
+Type: tar -zxvf file.tar.gz
+
+
+adduser cascm -g cascm
+passwd cascm
+
+/home/*user*/*.profile
+.profile may holds env variables
+CA_SCM_HOME=/opt/CA/scm
+PATH=${CA_SCM_HOME}/bin:${PATH}
+export CA_SCM_HOME
+
+echo $?
+NIS, or Network Information Systems, is a network service that allows authentication and login information to be stored on a centrally located server
+https://www.whatismyip.com/
+
+[root@usbld17 ~]# service ypbind -verbose restart
+Usage: /etc/init.d/ypbind {start|stop|status|restart|condrestart|try-restart|reload|force-reload}
+
+tail -f usbld17.ca.com_build.log
+
+security/pam_appl.h no such file or directory
+.c : c file (where the real action is, in general)
+.h : header file (to be included with a preprocessor #include directive
+[root@usbld18 /]# yum install pam-devel
+
+How to fix /lib/ld-linux.so.2: bad ELF interpreter
+This will happen only on 64 bit systems, the cause is the fact that 32 bit libraries are missing from the system,
+so you can easily fix this issue by installing the 32 bit libraries on your system.
+
+bad ELF interpreter Error happens in below case
+You're on a 64-bit system, and don't have 32-bit library support installed.
+To install (baseline) support for 32-bit executables
+
+yum install gcc.x86_64
+yum install pam-devel-1.1.1-22.el6.x86_64
+yum install glibc-devel.i686
+yum install libgcc.i686
+yum install gcc-c++*
+yum remove package_name
+
+chmod -R 0777 /usr/local/bin
+chmod 6777 /usr/local/do_as sitbit need to be set
+chmod 6777 /usr/local/ssu
+
+yum whatprovides libgcc
+
+A couple RPM’s need to be installed from the OEL 7.2 or 7.3 media (these are NOT on RHEL media), these are
+libdtrace-ctf-devel-0.5.0-2.el7.x86_64 and
+libdtrace-ctf-0.5.0-2.el7.x86_64.
+
+[root@usbld18 ~]# yum list libgcc
+libgcc.i686                                 4.4.7-17.el6                               @Yum-rhel6_itc
+libgcc.x86_64                               4.4.7-17.el6                               @anaconda-RedHatEnterpriseLinux-201604140956.x86_64/6.8
+
+[root@usbld18 ~]# yum list libgcc
+
+[root@SC141-DIST-L1 bin]# which java
+/usr/bin/java
+[root@SC141-DIST-L1 bin]# unlink /usr/bin/java
+[root@SC141-DIST-L1 bin]# which java
+/usr/bin/which: no java in
+
+mount -o loop /versions/entm/SC141/ISO/CA_CM_PRM_SRV_14_1_134_LNX.iso /media/iso
+mount -o loop /versions/entm/SC141/ISO/CA_CM_PRM_3PARTY_14_1_135_LNX.iso /3rdparty/iso
+
+
+you can find runing services in /etc/init.d/
+
+Specifically, files in /etc/init.d are shell scripts that respond to start, stop, restart, and (when supported) reload commands to manage a particular service.
+Files in /etc/init are configuration files telling Upstart how and when to start, stop, reload the configuration, or query the status of a service.
+
+C:\Users\MACKA05\Downloads\PSTools>PsExec.exe \\ISTADV51 -u shareuser -p N0tall0wed cmd
+
+PsExec v2.2 - Execute processes remotely
+Copyright (C) 2001-2016 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+Couldn't access ISTADV51:
+Access is denied.
+
+
+[root@HAW-DIST-L1 bin]# netstat -nl|grep 61616
+tcp        0      0 :::61616                    :::*                        LISTEN
+
+From a Windows console, type:
+netstat -an|find "61616"
+OR
+From a Unix command shell, type:
+netstat -nl|grep 61616
+
+[root@SC141-DIST-L1 /]# ps -ef | grep ENTM
+root     11370 11351  0 15:17 pts/2    00:00:00 vi /work/ENTMauto/reply
+root     23624  4752  0 15:45 pts/1    00:00:00 grep ENTM
+
+/etc/init.d/ all runing services are appeared in this folder
+
+difference between $locate $find $grep
+
+$hostname  here hostname is variable
+$(hostname) here hostname is command
+
+ps -ef | grep SC141
+ps -ef    displays the process along with variable passed
+
+how to change the extension of multiple files
+
+/tmp/4659166.sh    Instance of running executable will be appear here
+
+[root@SC141-DIST-L1 /]# cd /etc/init.d/
+[root@SC141-DIST-L1 init.d]# ls activ*
+activemqd
+[root@SC141-DIST-L1 init.d]# service activemqd status
+activemqd (pid 5431) is running
+[root@SC141-DIST-L1 init.d
+
+[root@SC141-DIST-L1 init.d]# lsof -i TCP:61616
+COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    5437 root  120u  IPv6  95871      0t0  TCP *:61616 (LISTEN)
+
+[root@SC141-DIST-L1 init.d]# netstat -plnt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address               Foreign Address             State       PID/Program name
+tcp        0      0 :::111                      :::*                        LISTEN      1616/rpcbind
+tcp        0      0 :::61616                    :::*                        LISTEN      5437/java
+tcp        0      0 :::48498                    :::*                        LISTEN      1718/rpc.statd
+tcp        0      0 :::22                       :::*                        LISTEN      2019/sshd
+tcp        0      0 ::1:631                     :::*                        LISTEN      1761/cupsd
+tcp        0      0 ::1:25                      :::*                        LISTEN      2169/master
+
+windows Control Panel - Click Administrative Tools - Double-click Task Scheduler
+
+#service network restart
+shutting down loopback interface:
+Bringing up loopback interface:
+Bringing up interface eth0: no suitable device found: no device found for connection systme eth0
+
+[root@SC141-DIST-L3 yum.repos.d]# yum info ansible
+Loadehttp://itcyum.ca.com/6.8/os/x86_64/repodata/repomd.xml: [Errno 14] PYCURL ERROR 6 - "Couldn't resolve host 'itcyum.ca.com'"
+Ans: Need to check the /etc/resolv.conf and update the necessary things
+Couldn't reslove the host menas: check if the hostname of the url is resolvable to an ip address
+
+Resolve::Hostname is hostname resolver with:
+caching with specified TTL.
+reloading of name server configurations (ex: /etc/resolv.conf)
+/etc/resolv.conf -> to configure the system's Domain Name System (DNS) resolver
+
+What is a Nameserver?
+A name server is a specialized server on the Internet that handles queries or questions from your local computer,
+about the location of a domain name's various services.
+A great simple way to think about name servers is using a phone book analogy
+
+IPTables is a rule based firewall and it is pre-installed on most of Linux operating system.
+By default it runs without any rules.
+IPTables is a front-end tool to talk to the kernel and decides the packets to filter
+
+[root@SC141-DIST-L3 init.d]# service network status
+Configured devices:
+lo eth0 eth1 eth2
+Currently active devices:
+lo eth2
+so eth2 is device. It's respective config file: /etc/sysconfig/network-scripts/ifcfg-eth2
+ifcfg-eth2 having Hardware address which sould match with VM hardware address
+
+
+C:\Users\Administrator\Documents\New folder>mvn -X install > output.txt
+all mvn out put will be stored into output.txl
+mvn -X here -X is debug mode
+
+debug or verbose
+ant -v OR ant -verbose
+
+[root@SC141-DIST-L3 init.d]# service network status
+Configured devices:
+lo eth0 eth1 eth2
+Currently active devices:
+lo eth2
+so eth2 is device. It's respective config file: /etc/sysconfig/network-scripts/ifcfg-eth2
+ifcfg-eth2 having Hardware address which sould match with VM hardware address
+
+
+#!/bin/bash
+set -x   This turns debugging on
+..code to debug...
+set +x
+
+set -e makes the script stop immediately if any external program returns a non-zero exit status.
+
+
+git clone -b <branch> <remote_repo>
+
+Glossary | General Terms | Jenkins
+GitHub Glossary
+
+add new network adopter while creating new VM
+power on vm, then check ifconfig to if its eth0 or eth1 so on
+/etc/sysconfig/network
+
+yum repolist all
+yum install libgcc.i686
+installing specific arch with . textention if they are two (x86_64 and i686)
+
+yum install package1 package2 package3
+yum whatprovides */libstdc++.so.5
+
+in jenkins variable like HOST-1 will work properly
+Need to used with _ like HOST_1
+
+[root@sc141-aude-m1 ~]# umount /media/iso/ > /dev/null
+umount: /media/iso/: not mounted
+[root@sc141-aude-m1 ~]# umount /media/iso/ 2> /dev/null
+[root@sc141-aude-m1 ~]# reboot
+
+
+rpm  -i --prefix=/some/other/path/ packagename.rpm
+locate sql
+
+# ypwhich
+ismesv2b
+# ypcat passwd | grep timmy
+timmy:BJQasK7Ax3zcU:481:201:Ca Dev Timmy:/home/timmy:/usr/local/bin/tcsh
+
+
+yum --enablerepo=epel info ftp
+
+
+
+
+
+myVar="    kokor    iiij     ook      "
+echo "$myVar"
+    kokor    iiij     ook
+myVar=`echo $myVar`
+echo "$myVar"
+kokor iiij ook
+
+
+ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa):
+/c/Users/Administrator/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Administrator/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Administrator/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:aB5oaNtDFCuQigaew8P7UsjXhrehzz+6aXthwedvJwmWlW1qswEY Administrator@PIM-Jenkins-S1
+The key's randomart image is:
++---[RSA 2048]----+
+|o.  .            |
+|oo   o           |
+|+ o o            |
+|oo + o .   E   . |
+|. = O = S o   +  |
+| . @ O .   = + + |
+|  . * +   = = *  |
+|     . . + +o+.  |
+|       o*. .o+   |
++----[SHA256]-----+
+
+$ ssh-copy-id root@SC141-DIST-L1
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/c/Users/Administrator/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+root@sc141-dist-l1's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@SC141-DIST-L1'"
+and check to make sure that only the key(s) you wanted were added.
+
+
+grep -c en_US lang.eac  #en_US found only one. so this returns 1
+
+[root@SC141-DIST-L3 ~]# python -c 'import yum, pprint; yb = yum.YumBase(); pprint.pprint(yb.conf.yumvar, width=1)'
+Loaded plugins: product-id, refresh-packagekit
+{'arch': 'ia32e',
+ 'basearch': 'x86_64',
+ 'releasever': '6Server',
+ 'uuid': 'ea48839b-c62f-4105-b933-bf5af25b56ca'}
+
+yum is written in python, so the yum python module is already on your server, no need to install anything exra.
+
+https://dl.fedoraproject.org/pub/epel/
+
+yum -y update
+yum -y install epel-release  To install the EPEL repository, type the following command:
+yum repolist
+
+$(command)
+or
+`command`
+
+[root@sc141_lb_audp_01 ~]# echo "$name_01"{3,6,9}
+kamalakar3 kamalakar6 kamalakar9
+
+[root@SC141-DIST-L3 tmp]# curl -Is http://sc141-dist-l1:18080/iam/ac | head -1
+HTTP/1.1 200 OK
+
+touch {install_console_log.sh,uninstall_console_log.sh,bluehost,smoke_test.sh}
+
+git checkout is an easy way to “load” any of these saved snapshots onto your development machine.
+Checking out an old commit is a read-only operation
+
+During the normal course of development,
+the HEAD usually points to master or some other local branch,
+but when you check out a previous commit, HEAD no longer points to a branch—it points directly to a commit.
+This is called a “detached HEAD” state, and it can be visualized as the following:
+
+It's important to understand that git revert undoes a single commit—it does not "revert" back to
+the previous state of a project by removing all subsequent commits.
+In Git, this is actually called a reset, not a revert.
+
+
+# Edit some tracked files
+# Commit a snapshot
+git commit -m "Make some changes that will be undone"
+# Revert the commit we just created
+git revert HEAD
+
+
+lrwxrwxrwx. 1 root root          15 Dec  8 14:57 stderr -> /proc/self/fd/2
+lrwxrwxrwx. 1 root root          15 Dec  8 14:57 stdin -> /proc/self/fd/0
+lrwxrwxrwx. 1 root root          15 Dec  8 14:57 stdout -> /proc/self/fd/1
+
+./command -yes -no /home/username
+$# = 3
+$* = -yes -no /home/username
+$@ = array: {"-yes", "-no", "/home/username"}
+$0 = ./command, $1 = -yes etc.
+
+
+[root@SC141-DIST-L3 ~]# this ash for root user & $ for other user
+
+
+SCRUM Sprint kanban
+SCRUM sprints correspond to AGILE iterations.
+Daily Scrum / Standup
+Scrum of Scrums
+
+Where Scrum limits the amount of time allowed to accomplish a particular amount of work (by means of sprints),
+Kanban limits the amount of work allowed in any one condition (only so many tasks can be ongoing, only so many can be on the to-do list.)
+
+Seriously looking out for change(Hyd only) NP: 1 month
+
+Detached HEADS
+https://www.atlassian.com/git/tutorials/using-branches/git-checkout
+
+git reset : On the commit-level, resetting is a way to move the tip of a branch to a different commit.
+git checkout hotfix
+git reset HEAD~2
+
+Revert : Reverting undoes a commit by creating a new commit.
+git checkout hotfix
+git revert HEAD~2
+
+find ./my_dir -mtime +10 -type f -delete
+
+
+sed -i -e 's/few/asd/g' hello.txt
+s/ is used to substitute the found expression few with asd
+/g stands for "global", meaning to do this for the whole line.
+-i option is used to edit in place on the file hello.txt.
+-e option indicates the expression/command to run, in this case s/
+
+rebase: rebasing is changing the base of your branch from one commit to another
+making it appear as if you'd created your branch from a different commit.
+Internally, Git accomplishes this by creating new commits and applying them to the specified base.
+
+git config --global user.name "Mona Lisa"
+git config --global user.email "email@example.com"
+
+
+JENKINS_HOME
+ +- config.xml     (jenkins root configuration)
+ +- *.xml          (other site-wide configuration files)
+ +- userContent    (files in this directory will be served under your http://server/userContent/)
+ +- fingerprints   (stores fingerprint records)
+ +- plugins        (stores plugins)
+ +- workspace (working directory for the version control system)
+     +- [JOBNAME] (sub directory for each job)
+ +- jobs
+     +- [JOBNAME]      (sub directory for each job)
+         +- config.xml     (job configuration file)
+         +- latest         (symbolic link to the last successful build)
+         +- builds
+             +- [BUILD_ID]     (for each build)
+                 +- build.xml      (build result summary)
+                 +- log            (log file)
+                 +- changelog.xml  (change log)
+
+Simply put, code coverage is a way of ensuring that your tests are actually testing your code.
+
+Deleting all the Lines with sed
+cat /tmp/passwd | sed 'd'
+cat /tmp/passwd 1> /dev/null
+cat /tmp/passwd > /dev/null
+
+sed -i '1d' /tmp/passwd
+-i option is to edit the file
+
+take the backup of source file before editing
+root@nextstep4it:~# sed -i.bak '1d' /tmp/passwd
+root@nextstep4it:~# ls -l /tmp/passwd*
+-rw-r--r-- 1 root root 2229 Nov 24 22:36 /tmp/passwd
+-rw-r--r-- 1 root root 2261 Nov 24 22:35 /tmp/passwd.bak
+
+Deleting first 5 lines of /tmp/passwd file.
+cat /tmp/passwd | sed '1,5d'
+
+
+Suppose we want to delete line from the file /tmp/passwd which contains ‘games’ word.
+sed '/games/d' /tmp/passwd
+
+Suppose you want to replace the ‘root’ with ‘Admin’, example is shown below :
+sed 's/root/Admin/' /tmp/passwd
+
+Suppose we want to replace ‘root’ string with ‘Admin’ and ‘bash’ string with ‘sh’. Example is shown below :
+cat /tmp/passwd | sed -e 's/root/Admin/g' -e 's/bash/sh/g'
+
+
+[root@sc141_lb_audp_01 /]# stat /bin/sed
+  File: `/bin/sed'
+  Size: 72248           Blocks: 144        IO Block: 4096   regular file
+Device: fd00h/64768d    Inode: 1048845     Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2018-01-10 12:45:53.162008691 +0530  By this access time, get to know when it was accessed by last time.
+Modify: 2012-05-04 16:04:34.000000000 +0530
+Change: 2017-01-09 18:10:10.017695992 +0530
+
+Explore about Uid , Gid Above.
+
+I would use awk when the text looks more like rows and columns or, as awk refers to them "records" and "fields".
+
+
+echo "my name is:kamal" | cut -d':' -f2
+kamal
+
+git pull = git fetch <remote> followed by git merge origin/<current-branch>.
+Git hooks include encouraging a commit policy
+
+
+it does not rely on a central server
+you don’t want to do a commit of half-done work just so you can get back to this point later.
+
+Having hands-on experience with configuration management tools like ( Chef/Puppet/Ansible ),
+Service Discovery ( Consul ),
+Infra provisioning and orchestration( Terraform ).
+
+Standard tools ( GIT, Gerrit or BIT Bucket, Jenkins, Nexus ),Containerization ( Docker) , Automating deployment ( Kubernetes )
+
+----nfra provisioning and orchestration( Terraform )-----
+In particular, we’ve found that if you use Docker or Packer,
+the vast majority of your configuration management needs are already taken care of
+
+In particular, we’ve found that if you use Docker or Packer,
+the vast majority of your configuration management needs are already taken care of.
+With Docker and Packer, you can create images (such as containers or virtual machine images)
+that have all the software your server needs already installed
+and configured (for more info on what makes Docker great, see here).
+Once you have such an image, all you need is a server to run it.
+And if all you need to do is provision a bunch of servers,
+then an orchestration tool like Terraform is typically going to be a better fit than a configuration management tool
+(here’s an example of how to use Terraform to deploy Docker on AWS).
+
+
+Job 1) – Track 1
+Role : DevOps Engineer & Lead
+
+Having hands-on experience with configuration management tools like ( Chef/Puppet/Ansible ),
+Service Discovery ( Consul ), Infra provisioning and orchestration( Terraform ).
+
+Standard tools ( GIT, Gerrit or BIT Bucket, Jenkins, Nexus ),Containerization ( Docker) ,
+Automating deployment ( Kubernetes )
+
+Automating container image creation process, build and deployment in a container environment
+
+Strong Linux/Unix Fundamentals, good understanding on the various subsystems (memory, storage, network etc)
+
+DNS, TCP/IP, Routing, HA & Load Balancing
+
+Docker Containers, Automating container image creation process, build and deployment in a container environment
+
+Expertise in Kubernetes/Openshift .
+
+CloudForm (Good to have)
+
+Strong Background on any public cloud (AWS or GCP or Azure)
+
+Configuration management using tools like Ansible.
+
+Build tools like Jenkins and Bamboo
+
+HA and Load balancing using tools like the Elastic Load Balancer and HAProxy
+
+Monitoring tools like Promethous,Altermanager, Grafana
+
+Log management tools like Splunk, Kibana, Logstash and ElasticSeearch.
+
+Scripting with Bash and Python.
+
+Working with Git, various git workflows
+
+-----  memory,storage, network commands -------
+[root@SC141-DIST-L3 ~]# free -m | column -t
+total  used            free  shared  buffers  cached
+Mem:   5853            1966  3886    0        167     153
+-/+    buffers/cache:  1645  4207
+Swap:  2559            215   2344
+
+
+[root@SC141-DIST-L3 ~]# env
+HOSTNAME=SC141-DIST-L3
+SELINUX_ROLE_REQUESTED=
+TERM=xterm
+SHELL=/bin/bash
+
+[root@SC141-DIST-L3 ~]# du -sh /tmp/
+556K    /tmp/
+
+[root@SC141-DIST-L3 ~]# df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg_testrmrhx86-lv_root
+                       22G  6.8G   14G  34% /
+tmpfs                 2.9G   76K  2.9G   1% /dev/shm
+/dev/sda1             477M   40M  412M   9% /boot
+10.131.180.8:/vol/ds2b_PIM_SOURCES
+                      2.0T   77G  2.0T   4% /Sources
+10.131.180.8:/vol/ds2b_PIM_VERSIONS
+                      500G  277G  224G  56% /versions
+/work/builds/product/ISO_files/3rdParty/Linux_3rdparty.iso
+                      294M  294M     0 100% /work/builds/product/3rdParty
+/work/builds/product/ISO_files/ServerComps/Linux_main.iso
+                      1.1G  1.1G     0 100% /work/builds/product/ServerComponents
+
+
+[root@SC141-DIST-L3 ~]# mount
+/dev/mapper/vg_testrmrhx86-lv_root on / type ext4 (rw)
+proc on /proc type proc (rw)
+sysfs on /sys type sysfs (rw)
+devpts on /dev/pts type devpts (rw,gid=5,mode=620)
+tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
+/dev/sda1 on /boot type ext4 (rw)
+none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
+gvfs-fuse-daemon on /root/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev)
+sunrpc on /var/lib/nfs/rpc_pipefs type rpc_pipefs (rw)
+10.131.180.8:/vol/ds2b_PIM_SOURCES on /Sources type nfs (rw,vers=4,addr=10.131.180.8,clientaddr=10.131.85.22)
+10.131.180.8:/vol/ds2b_PIM_VERSIONS on /versions type nfs (rw,vers=4,addr=10.131.180.8,clientaddr=10.131.85.22)
+
+
+top
+service network status; service jenkins status
+sort just | uniq -i
+
+
+
+grep -i ismesv6.ca.com wholelist
+
+find . -type f -size +4096c
+to find files bigger than 4096 bytes.
+
+find . -type f -size -4096c
+to find files smaller than 4096 bytes.
+
+export PATH=$PATH:/sonar/sonar-scanner-3.0.3.778/bin
+
+[root@sc141-aude-m1 ~]# vim .bash_profile
+PATH=$PATH:$HOME/bin:/sonar/sonar-scanner-3.0.3.778/bin
+export PATH
+
+
+yum install gcc-c++
+
+You can type the following command in your terminal to see which shell you are using:
+echo $0
+The result will look something similar to the below if you are using the bash (Bourne Again Shell) terminal:
+-bash
+
+#!/bin/bash
+#triggering a sonar scan
+echo "MY SHELL IS: $0"
+$HOME/sonar/sonar-scanner-3.0.3.778-linux/bin/build-wrapper-linux-x86-64 --out-dir bw_output make -k >& /dev/null;
+$HOME/sonar/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner -Dsonar.login=db7d789514393c333f3610ae03883b2571bd4092
+
+[jenkins@rh-67-x64]$ shwihggo;pwd
+-bash: shwihggo: command not found
+/opt/jenkins/workspace/AC126-DIST-Sonar-Scan-LINUX
+
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+
+
+$$ is the PID of the current process.
+$? is the return code of the last executed command.
+$# is the number of arguments in $*
+$* is the list of arguments passed to the current process
+
+
+[root@sc141-aude-m1 ~]# echo $0
+-bash
+
+[root@sc141-aude-m1 ~]# echo $PS4
++
+
+PS4='+ $BASH_SOURCE : $LINENO : '
+carriage return:  cat -v script.sh
+
+Delete empty lines using SED
+sed '/^\s*$/d'
+sed -i '/^$/d'
+
+
+bash -c "echo kamalakar";\
+echo macharla;\
+echo ssmi;
+
+$ is other user
+# is for root user pound symbol
+~ is for home dir tilder
+
+ls --help or -h
+man ls
+g for top of the page
+G for end of the page
+
+. current directory
+.. Previous directory
+cd - change to previous directory.
+echo $OLDPWD to you previous directory.
+
+ls -a to show hidden files
+hidden files start with .
+ls -lF
+current@  my-app-2.4/  my-app-3.7/  README
+ls -F
+myapp*  here star represent executable
+ls -t   list files by time
+ls -r   list the files in reverse order
+ls -lrt longlist+reverse+time
+ls -d     list only directories names
+ls --color
+ls -R      list the files recursively
+tree -d    List directories only
+tree -C   Colorize output
+
+ls -l "my note.txt"
+
+root@ip-10-0-0-212:/opt/kamal# umask
+0022
+root@ip-10-0-0-212:/opt/kamal# umask -S
+u=rwx,g=rx,o=rx
+
+root@ip-10-0-0-212:/opt/kamal# stat file1.sh
+  File: 'file1.sh'
+  Size: 84              Blocks: 8          IO Block: 4096   regular file
+Device: ca01h/51713d    Inode: 257605      Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2018-05-07 11:59:19.896926604 +0000
+Modify: 2018-05-07 11:58:03.176996397 +0000
+Change: 2018-05-07 11:59:04.948941083 +0000
+ Birth: -
+
+cat file
+less file
+more file  hit space bar for next page & enter for next line, type q for quit
+head file
+tail file
+
+tail -15 file
+tail -f file (Realtime for the log files), to exit, hit ctrl+c
+
+vi editor
+^ (caret) go to begin of file
+$ go to end of file
+i insert mode
+I insert at begining of line
+A append at the end of line
+
+:w writes
+:w! forces file to be saved
+:q Quit
+:q! quit without saving the changes
+:wq! write and quit
+:x same as :wq
+
+:n   position the cursor at the line
+:set nu     Turn on line numbering
+:set nonu    Turn off
+:help
+
+x   Delete a character
+dw   Delete a word
+dd    Delete a line
+D    Deleting rest of the line
+man -k network
+cd -     change to previous directory
+ls -lF
+grep ^$ word.txt  find empty line
+grep -v ^$ word.txt  show all lines without empty lines
+egrep '[A-Z]+[0-9]+[A-Z]' regex.txt    my pan card ASGPK8110K number
+egrep '[0-9]{3}\.[0-9]{3}\.[0-9]{3}' regex.txt  this matches  568.485.658  bcoz \. = .
+egrep '[0-9]{3}.[0-9]{3}.[0-9]{3}' regex.txt  matches 568.658.457 OR 658-657-658 bcoz . = any single char
+egrep '[a-z][a-z0-9\.]+@[a-z]+\.[a-z]{3}' regex.txt matches below emails
+kamalakar312@gmail.com
+kamalakar.macharla@capgemini.com
+egrep '[Ee]rror' regex.txt
+you are not able to see the directory content if directory doesnt have read permissions
+x permission on directory allows to view metadata of file, like modification dates
+egrep -e '[8-9][0-9]%' -e '100%' dftext  >> onenote.txt
+tmpfs           5.0M  4.0K  5.0M   81% /run/lock
+tmpfs           1.9G     0  1.9G   92% /sys/fs/cgroup
+tmpfs           386M   60K  386M   100% /run/user/1001
+echo KAMALAKAR MACHARLA | tr '[:upper:]' '[:lower:]'
+cat /etc/passwd | cut -d ':' -f3,6 | tr ':' '\t'
+echo -e 'hyd 78656,chennai 87658,mumbai 87365' | tr ',' '\n'
+egrep '[0-9]{6}' regex.txt //this will find PIN code numbers
+
+powershell:
+Set-ExecutionPolicy RemoteSigned
+
+
+
+
+
+
+------------------------------------------------------------------------------
+Linux                   vs				       windows
+printenv			 						Get-ChildItem env:\
+printenv HOME								dir env:computername
+hostname			 						$env:computername
+whoami(kamal)		 						whoami (kamalakar\kamalakar312)
+cd ./Downloads                              cd .\Downloads
+hostna<tab>          						Get-Help *content*
+                                            Get-Help Select-Object -Online
+                                            Get-Process | Select-Object -Property ProcessName, Id, WS
+                                            Get-Process | Get-Member
+history				 						Get-History
+
+service --status-all						Get-Service
+ls /etc/init.d		 						Get-Service
+ls /etc/init.d > testRD.txt					Get-Service > c:\testRD.txt
+											Get-Service | Out-File -FilePath c:\test.txt
+											Get-Service | Export-Csv -Path c:\service.csv
+cat service.csv		 						notepad c:\service.csv
+cat service.csv		 						Get-Content c:\service.csv
+											Get-Service | ConvertTo-Html -Property name,status | Out-File c:\test.html
+cat test.html								c:\test.html
+rm test.html								Remove-Item c:\test.html -WhatIf
+rm test.html								Remove-Item c:\test.html -Confirm
+echo $PATH									$env:path
+											$variable:HOME
+											"Video  Video  Audio  Audio  VBI    VBI" -split '\s+'
+											"kamalakar macharla tkr college" | Out-File c:\tkr.txt
+											New-Item -ItemType Directory wb
+											1..10 | ForEach-Object {New-Item -ItemType Directory .\Folder_"$_"}
+											Copy-Item .\myfile.txt .\Folder_1\
+											Get-Service | Select-Object name, Status
+											Get-Service ws* | Select-Object Status, displayname
+											Get-Process notepad++ | Get-ChildItem
+man command or command --help				Get-Help Get-Service -ShowWindow
+											Get-Service -name bits | select -Property name, status | gm
+											Get-ChildItem C:\test.html | Select-String -Pattern "Appinfo"
+											Invoke-Command -ComputerName dc,s1,s2 {Get-EventLog -LogName System -new 3}
+											
+grep 										Select-String -Path .\*.txt -Pattern 'Get'
+find ./ -type f -name '*.txt' -exec grep 'exchange' {} \;                                 Get-ChildItem -Path C:\Windows\System32\*.txt -Recurse | Select-String -Pattern 'other' -CaseSensitive
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Error handling in powershell or try catch method-----------
+cls
+$ErrorActionPreference="stop"
+try{
+    #Write-Error "custom error"
+    Get-Content "c:\\eihsihiewi.txt"
+
+}catch{
+    Write-Output "this is from catch"
+    Write-Output $_.exception.itemname
+    Write-Output $_.exception.message
+
+}finally{
+    #Write-Output "this is from finally"
+}
+-----------------------------------------------------------------
+
+
+The System Identifier (SID) identifies a specific database instance.
+The SID uniquely distinguishes the instance from any other instance on the same computer.
+Each database instance requires a unique SID and database name.
+In most cases, the SID is the same as the database name portion of the global database name.
+
+For pre-release 8.1 databases, SID is used to identify the database.
+The SID is included in the connect descriptor of a tnsnames.ora file and in the definition of the listener in the listener.ora file.
