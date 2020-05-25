@@ -1,0 +1,24 @@
+
+
+------------- Sonar-qube ------------
+
+Manage-jenkins -> Global-Tool-Configuration
+						.Jdk
+						.Git
+						.Maven
+						.Sonar-Scanner
+							.Scanner-name=Sonar-Scanner
+							.SONAR-RUNNER-HOME=/opt/sonar-scanr
+
+Manage-jenkins -> Configure-Systems
+					.Sonar-Qube-Server
+						.name
+						.server-url
+						.server-authentiation-token
+							. To communicate with sonar server
+							. Go to sonar qube website
+								. go to my account -> security -> Generate Token
+
+Execute Sonar qube static code analysis with jenkinsfile
+pipeline as code (jenkinsfile)
+https://www.youtube.com/watch?v=yem4YAuwykg								
