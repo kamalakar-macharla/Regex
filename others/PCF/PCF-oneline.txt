@@ -1,0 +1,8 @@
+
+
+Buildpacks
+buildpacks provide framework and runtime support for apps
+Build packs typically examine your apps to determine what dependencies to download
+and how to configure the apps to communicate with bound services
+
+Build packager : in house one , within in your firewall

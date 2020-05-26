@@ -21,4 +21,15 @@ Manage-jenkins -> Configure-Systems
 
 Execute Sonar qube static code analysis with jenkinsfile
 pipeline as code (jenkinsfile)
-https://www.youtube.com/watch?v=yem4YAuwykg								
+https://www.youtube.com/watch?v=yem4YAuwykg
+
+stage('Code Analysis'){
+	def scannerhome = tool 'Sonar-Scanner';
+	withSonarQubeEnv('SonarQubeServer'){
+		sh '''
+			${scannerhome}/bin/sonar-runner -D sonar.login=admin -D sonar.password=admin
+		'''
+	}
+}
+
+
