@@ -1,5 +1,11 @@
+
+A Docker container image is a lightweight, standalone, executable package of software 
+that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
+self-sufficient containers that run virtually anywhere
+
 docker is to package app & deploy to any env
 Docker ‘write once, and execute anywhere’, Java promises the exact same thing with JVM
+
 
 https://github.com/BretFisher/udemy-docker-mastery
 
@@ -86,6 +92,7 @@ docker container exec -it  #run additional command in existing container
 
 No SSH Needed
 docker cli is great substitude for adding SSH to containers
+------------------------------------------------------
 
 docker container run [OPTIONS] IMAGE [COMMANDS] [ARG...]
 
@@ -94,6 +101,9 @@ docker container exec     #Run additional process in running container
 docker container exec --help
 docker container exec -it mysql bash
 
+-----------------------------------------
+The docker pull command serves for downloading Docker images from a registry.
+By default, the docker pull command pulls images from Docker Hub,
 docker pull alpine
 docker image ls
 
