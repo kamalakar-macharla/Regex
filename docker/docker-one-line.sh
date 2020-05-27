@@ -134,7 +134,7 @@ docker image build -t customnginx .     # here . is current dir contains Dockerf
 vim dockerfile
 build mayhappen using cached layers.
 
-Extending offical Images.
+------Extending offical Images.
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
 COPY index.html index.html
