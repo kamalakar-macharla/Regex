@@ -35,6 +35,24 @@ cf login -a apiurl -u username -p password -O org-name -s spacename
 pcf = PaaS (Application As a Service)
 Kubernatis = PaaS(Container As a Service)
 
+cf target packet-demo prod
+	api endpoint:
+	api version:
+	user:
+	org:
+	space:
+	
+$ cf services
+  Getting services in org xxxxx/space yyyyy as kamalakar
+
+Diego Brain is a service within PCF that allocates resources
+The CF Router facilitates routing & service Registry within PCF
+The cloud controller Exposes a REST Interface
+The UAA is an OAuth2 server with in pcf
+* OAuth2.0 server to protect your API with access token
+
+
+
 Buildpacks
 buildpacks provide framework and runtime support for apps
 Build packs typically examine your apps to determine what dependencies to download
