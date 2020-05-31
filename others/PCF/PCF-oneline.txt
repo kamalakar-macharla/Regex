@@ -1,4 +1,27 @@
+STS IDE, cf cli
+Maven, Gradle build tools
 
+pcf self-installation version on top (IaaS) Infra structure as service (Aws,google cloud,Microsoft Azure)
+This allows lot of portability.
+
+org: Banking,Insurance, Capital Market, Corporate
+spaces: dev, qa, prod
+
+Market Place:
+	Fully Managed Services
+		Auto-Scalar
+		Config-server
+		MySql-DB
+		Service-Registry
+		Rabbit-Mq
+		Blaze-Meter(Performance Testing Plat-Form)
+Services are binds to Space
+
+PCF-dev : self-contained pcf installation for developers and laptops/pcs
+
+
+		
+		
 
 Buildpacks
 buildpacks provide framework and runtime support for apps
