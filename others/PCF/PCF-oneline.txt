@@ -8,7 +8,7 @@ and how to configure the apps to communicate with bound services
 Build packager : in house one , within in your firewall
 
 
------- leveraging auto configuration to Bootstarp your application ----
+------ 1.10 leveraging auto configuration to Bootstarp your application ----
 change the application.properties to application.yml file
 spring:
 	profiles:
@@ -26,6 +26,50 @@ Application - Right click
 				VM arguments
 					-Djava.security.egd=file:/dev/./urandom
 					-Dspring.profiles.active=cloud
+					
+---Spring boot integarates with PCF
+Environment variable
+	vcap_services
+1. PCF Injects variable into your java app at runtime
+2. This facilitates spring boot auto-configure
+{
+ "user-provided": [
+	{
+		"name": "mydb2",
+		"lable": "user-provided",
+		"credentials": {
+			"jdbcurl": "jdbc:db2://hll345."
+			"password": "no_secrets"
+			"username": "dbuser2"
+		}
+	}
+
+  ]
+}
+ 
+ if spring boot detects the "default" profile, it will attempt to connect to local instances
+ of services you have added as dependencies. This is called "smart/sensible_defaults" in spring boot.
+
+--you can specify spring profile by adding it to your application.properties or application.yml 
+or by passing it as a runtime arguments to your app.
+
+. spring boot auto-configuration is a feature of the library that provides smart default configuration for beans
+. spring boot auto-configuration reduces the need for boilerplate configuration code
+. spring component scan detects and initializes beans in the class path with smart defaults
+. spring auto-configuration helps developers finish application faster
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
