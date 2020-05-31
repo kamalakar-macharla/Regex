@@ -72,10 +72,22 @@ dev:
 qa:
 prod:
 
-		
+who provides the resources to the applications to start? Ans: Diego Cell
 
+						|cloud controller : create an app
+Cf command line Tools   |Blob Store : Store the app's bits
+						|Diego cell : Allocates the Resources to the starting app
+						
+demo2cdc  * Running
+overview 	services	Router		Logs	Tasks	Trace	Threads
 
+Instances
+---------------------------------------------------------------
+  #  | App Health	|  CPU   |  Memory  |  Disk   |  UpTime
+---------------------------------------------------------------
 
+---- 1.8
+When app is bound to a service, PCF passes the credentials to the app via VCAP_SERVICES runtime arguments
 
 ------ 1.10 leveraging auto configuration to Bootstarp your application ----
 change the application.properties to application.yml file
