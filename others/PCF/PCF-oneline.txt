@@ -19,8 +19,15 @@ Services are binds to Space
 
 PCF-dev : self-contained pcf installation for developers and laptops/pcs
 
+Space:
+	development
+		App's	Services	Routes 	Members		settings
 
-		
+pivotal webservices: subcription & resource useage based billing
+pws is fully managed pivotal cloud foundary services, available as a service
+pws is quickest and seamless
+
+
 		
 
 Buildpacks
