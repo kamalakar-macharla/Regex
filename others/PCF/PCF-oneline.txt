@@ -51,14 +51,30 @@ The cloud controller Exposes a REST Interface
 The UAA is an OAuth2 server with in pcf
 * OAuth2.0 server to protect your API with access token
 
-
-
-Buildpacks
+Container app's are gets generated with in the Diego cell
+cf router : responsible for load-balancing
+Buildpacks : java, node, Ruby
 buildpacks provide framework and runtime support for apps
 Build packs typically examine your apps to determine what dependencies to download
 and how to configure the apps to communicate with bound services
 
 Build packager : in house one , within in your firewall
+
+---1.6 Role & Permission
+- member'scan
+	Invite New member:
+	Assign Orgs Role:
+		Org Manager		Org Auditor
+		
+	Assign Space Role:
+		Space Manager	space developer  space auditor
+dev:
+qa:
+prod:
+
+		
+
+
 
 
 ------ 1.10 leveraging auto configuration to Bootstarp your application ----
