@@ -116,6 +116,7 @@ docker network create --driver  #create a network
 docker network connect          #Attach a network to container
 docker network disconnect
 
+Dockerfile has no extension
 --------------------dockerfile--------------
 FROM debian:stretch-slim
 ENV NGINX_VERSION 1.13.6-1~stretch

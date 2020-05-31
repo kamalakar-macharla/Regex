@@ -6,3 +6,27 @@ Build packs typically examine your apps to determine what dependencies to downlo
 and how to configure the apps to communicate with bound services
 
 Build packager : in house one , within in your firewall
+
+
+------ leveraging auto configuration to Bootstarp your application ----
+change the application.properties to application.yml file
+spring:
+	profiles:
+		active:
+		- dev
+
+---- Spring Boot integarates with PCF ----
+1. PCF runs your app with "cloud spring profile"
+2. when "cloud" profile is detected, spring boot apps auto-configure with vcap_services
+-----
+Application - Right click
+	Run As
+		Run Configuration
+			Arguments
+				VM arguments
+					-Djava.security.egd=file:/dev/./urandom
+					-Dspring.profiles.active=cloud
+
+
+
+
