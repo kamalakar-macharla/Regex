@@ -17,6 +17,9 @@ Market Place:
 		Blaze-Meter(Performance Testing Plat-Form)
 Services are binds to Space
 
+1. Market place services
+2. user-provided services
+
 PCF-dev : self-contained pcf installation for developers and laptops/pcs
 
 Space:
