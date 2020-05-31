@@ -27,8 +27,10 @@ pivotal webservices: subcription & resource useage based billing
 pws is fully managed pivotal cloud foundary services, available as a service
 pws is quickest and seamless
 
+cf login -a apiurl -u username -p password -O org-name -s spacename
 
-		
+pcf = PaaS (Application As a Service)
+Kubernatis = PaaS(Container As a Service)
 
 Buildpacks
 buildpacks provide framework and runtime support for apps
