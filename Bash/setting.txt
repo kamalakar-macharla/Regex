@@ -1,0 +1,2 @@
+gitbash text format : Courier New - Bold - 12
+notepad++ notepad text format : Settings - style configuration - select theme - Zenburn
