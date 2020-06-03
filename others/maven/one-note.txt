@@ -9,13 +9,14 @@ cd ~/.m2/repository/
 
 To see the inside the content of the jar
 $ jar -tf jumpstart-example-1.0-SNAPSHOT.jar
-
+$ jar --help
+$ java --help
 
 
 $mvn archetype:generate
 org.apache.maven.archetype:maven-archetype-quickstart
 
-
+------------ ------------------
 <dependency>
 	<groupId>com.xmas.mps</groupId>     # com\xmas\mps  3 folders
 	<artifactId>mps-client</artifactId>		# mps-client 1 folder
@@ -32,7 +33,7 @@ total 35
 -rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161    40 Apr 15 14:01 mps-client-3.0.2.jar.sha1
 -rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161  4471 Apr 15 14:00 mps-client-3.0.2.pom
 -rw-r--r-- 1 MLIDDOMAIN1+machaka 2147484161    40 Apr 15 14:00 mps-client-3.0.2.pom.sha1
-
+-------- End ------------------------------------------------------
 
 [INFO] ----< com.xmas.gwam.cdn.grs.finn.lib:mps-corelib-assetbalance >-----
 [INFO] Building mps 0.0.1-SNAPSHOT
@@ -41,6 +42,7 @@ total 35
 In the above warning  com.xmas is group-id
 					  core-lib-framework is artifactId
 					  0.0.1-SNAPSHOT   is versionId
+---------------------------------------------------------------------
 
 cd ~/.m2/repository/<group-id>
 cd ~/.m2/repository/<com.vid.net>
@@ -50,9 +52,10 @@ $ ls
 $ cd 1.0
 $ ls
 _remote.repositories	maven-quick-start-1.0.jar	maven-quick-start-1.0.pom
+-----------------------------------------------------------
 
 maven plugins can do the following things
-.comiple the source code
+. comiple the source code
 . Run unit tests
 . publish to Artifact Repository
 . Deploy to Remote Server
@@ -60,7 +63,7 @@ maven plugins can do the following things
 
 java compiler plugin .... -source and -target
 
-transitive dependencies measns dependencies of dependencies
+ * transitive dependencies measns dependencies of dependencies
 
 ---execute the jar file by using below command
 java -cp maven-quick-start-1.0.jar clinic.programming.training.Application
@@ -73,6 +76,8 @@ maven-central
 $mvn dependency:tree > dependency-list.txt
 
 maven Archetypes
+
+
 
 
 
