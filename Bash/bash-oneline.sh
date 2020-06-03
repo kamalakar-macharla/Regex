@@ -47,7 +47,7 @@ strings binaryfile 		# to see text in the binary file
 ls -d */   				# List directories only
 
 mkdir -p dir1/dir2
-rm -rf ./*/            # remove delete all dirs in current folder
+rm -rf ./*/            # remove delete all dirs in current folder except files
 rm -r dir1             #-r  remove directories and their contents recursively
 rm -rf dir1/*
 
@@ -158,7 +158,7 @@ SERVER_NAME=$(hostname)
 SERVER_NAME=`hostname`
 first-three-letters="ABC" # invalid declaration
 
-[ -e /etc/passwd ]
+[ -e /etc/passwd ]  # if file exists
 [ -d /etc/dir ]
 --- string operators tests ----
 [ -z $mystr ] True if string is empty
@@ -535,6 +535,8 @@ test is a shell builtin
 man uptime   # use man for non-builtin 
 
 A-WORD='hello'   #this is a invalid variable name
+$ A-WORD='hello'
+bash: A-WORD=hello: command not found
 echo '$NAME'
 $NAME            # single quotes prevents the expansion of variable, 
                  # if you want variables to be interpreted use double quotes
