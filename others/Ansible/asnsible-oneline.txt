@@ -1,0 +1,12 @@
+
+Inventory file
+
+
+important modules
+1. command
+2. script
+3. yum
+4. service
+5. copy
+6. file
+7. 

@@ -15,7 +15,7 @@ grep :$ /etc/passwd
 The tools sed or tr will do this for you by swapping the whitespace for nothing
 sed 's/ //g'
 tr -d ' '
-echo "    kamal    " | sed 's/ //g';
+echo "    kamal    " | sed 's/ //g';   #remove white space
 kamal
 
 
