@@ -821,5 +821,5 @@ fi
 The -z switch will test if the expansion of "$1" is a null string or not. If it is a null string then the body is executed.
 -------------------
 
-grep -i '<java.version' -lR | xargs grep -i '<java.version'  # This is very useful
+grep -i '<java.version' -lR | xargs grep -i '<java.version'  # This is very useful, Find the word in files & open all it's files
 
