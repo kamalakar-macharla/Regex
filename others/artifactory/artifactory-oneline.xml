@@ -1,0 +1,20 @@
+
+Creating an Artifactory Server Instance in scripted pipeline
+To upload or download files to and from your Artifactory server, you need to create an Artifactory server instance in your Pipeline script.
+
+If your Artifactory server is already defined in Jenkins, you only need its server ID which can be obtained  under Manage | Configure System.
+
+Then, to create your Artifactory server instance, add the following line to your script:
+
+	def server = Artifactory.server 'my-server-id'
+If your Artifactory is not defined in Jenkins you can still create it as follows:
+
+	def server = Artifactory.newServer url: 'artifactory-url', username: 'username', password: 'password'
+You can also user Jenkins Credential ID instead of username and password:
+
+	def server = Artifactory.newServer url: 'artifactory-url', credentialsId: 'ccrreeddeennttiiaall'
+You can modify the server object using the following methods:
+
+
+
+

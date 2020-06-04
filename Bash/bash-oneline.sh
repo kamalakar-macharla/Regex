@@ -823,3 +823,8 @@ The -z switch will test if the expansion of "$1" is a null string or not. If it 
 
 grep -i '<java.version' -lR | xargs grep -i '<java.version'  # This is very useful, Find the word in files & open all it's files
 
+command1 | xargs -n1 basename # if command1 produces alot files, xargs -n1 makes filename one by one
+
+
+
+

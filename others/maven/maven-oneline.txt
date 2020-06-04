@@ -108,6 +108,17 @@ compiler:compile is bound to the compile phase and is used to compile the main s
 </project>
 
 
+------ setting.xml
+    Maven uses a global settings and a user settings file. If the user settings file exists, it overrides the global one.
+    The global one is found in %M2_HOME%\conf\, while the user one is in %HOME%\.m2\. 
+    Here %HOME% means the home directory of whatever user is running the Jenkins slave.
+    So the easiest solution, assuming it is possible in your situation, 
+    is to just copy the correct settings.xml file to the %HOME%\.m2\ directory on the Jenkins slave machine.
+    
+    The Maven installed one: $M2_HOME/conf/settings.xml
+	A user install: ${user.home}/.m2/settings.xml
+--------------
+
 
 
 

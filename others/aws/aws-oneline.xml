@@ -1,0 +1,263 @@
+
+
+Getting Started with AWS
+http://docs.aws.amazon.com/gettingstarted/latest/awsgsg-intro/gsg-aws-intro.html
+
+<set-theory> set theory
+	<h8y> -General
+	
+	why AWS services? whats the motivation behind using aws services?
+	on-demand computing resources and services
+	pay-as-you-go pricing - you pay only for what you use
+	no upfront investment
+	
+	Compute and Networking Services
+	Storage and Content Delivery Services
+	Security and Identity Services
+	Database Services
+	Analytics Services
+	Application Services
+	Management Tools
+	
+	How many ways AWS resources can be managed?
+	AWS Management Console
+	AWS Command Line Interface (AWS CLI)
+	
+	provision servers - set up firewall - configure Internet access - allocate & IP addresses - scale your infrastructure to meet increasing demand.
+	
+	which port number is used in SSH?
+	port 22 : Secure Shell (SSH), secure logins, file transfers (scp, sftp) and port forwarding	
+	HTTP	80, 8080	TCP	Hyptertext Transfer Protocol. Used by web browsers such as Internet Explorer, Firefox and Opera.
+	SSH	22	TCP	Secure Shell protocol. Provides a secure session when logging into a remote machine
+	
+	
+	If you host all your instances in a single location that is affected by such a failure, none of your instances would be available.
+	geographical location have region have available zone
+	Create EC2 instance in desired regions or Availability Zone
+	 
+	</h8y>
+	<5uy> -Identity and Access Management
+	http://aws.amazon.com/iam/
+	</5uy>
+	<d5k> -cloudwatch
+	
+	<gen>
+	what cloudwatch provides?
+	provides monitoring for AWS cloud resources and applications, starting with Amazon EC2. 
+	It provides you with visibility into resource utilization, operational performance, and 
+	overall demand patterns—including metrics such as CPU utilization, disk reads and writes, and network traffic.
+	
+	what you can do based on statistics?
+	You can get statistics, view graphs, and set alarms for your metric data
+	metrics accessed using web service APIs or Command Line Tools
+	
+	
+	how to enable cloudwatch?
+	To use Amazon CloudWatch, simply select the Amazon EC2 instances that you’d like to monitor.
+	
+	can i set custom metrics?
+	You can also supply your own business or application metric data
+	
+	how will you use cloudwatch stored metrics?
+	Amazon CloudWatch will begin aggregating and storing monitoring data that can be accessed using web service APIs or Command Line Tools.
+	
+	
+	</gen>
+	</d5k>
+	<857> -Elastic load balancing
+		How to configure and use AWS Elastic Load Balancer & Auto Scaling  https://www.youtube.com/watch?v=mMZb52V2Rds
+		Elastic load balancing - automatically distribute incoming web traffic across multiple amazon EC2 instances
+		A load balancer distributes traffic to multiple instances
+		
+		steps in setting up load balancer?
+		1. define load balancer
+		2. Assign security group
+		3. Configure health check
+		4. Add EC2 instaces
+		
+		which algorithm is used in the load balancer?
+		Round Robin
+		
+		What are the load balance properties?
+		protocol, port no, DNS name, LB name, number of servers assigned
+		
+		which protocol used for health check and why?
+		TCP is used. TCP enables two hosts to establish a connection and exchange streams of data.
+		TCP is one of the main protocols in TCP/IP networks. Whereas the IP protocol deals only with packets.
+		TCP guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent
+		
+		
+	</857>
+	<fgt> -Elastic Beanstalk
+	AWS Elastic Beanstalk is a PaaS (Platform as a Service) offered from Amazon Web Services 
+	that allows users to create applications and push them to a definable set of AWS services, 
+	including Amazon EC2, Amazon S3, Amazon Simple Notification Service (SNS), Amazon CloudWatch, auto scaling, and elastic load balancers.
+	</fgt>
+	<693> -EC2
+	Amazon EC2 - provides virtual servers in the AWS cloud.
+	AMI
+	<gen>
+	key pair when you launch your virtual server
+	When you log in to your virtual server, you must present the private key of the key pair to decrypt the login information.
+	if windows, download ppk file to connect to EC2 instance using PUTTY
+	if linux, download pem file(private key) to connect to EC2 instance using ssh
+	</gen>
+	</693>
+	<254> -VPC & subnet
+	subnet -> security, performance
+	Amazon VPC - Provides an isolated virtual network for your virtual servers.
+	Sub-netting allows for the department to have its own subnetwork.
+	subnet - a part of a larger network such as the Internet.
+	It speeds up the network
+	It provides security
+	organize the Depts
+	Subnetting allows for the department to have its own subnetwork.
+	http://www.chipkin.com/benefits-of-subnets/
+	network broadcast domain
+	https://www.google.co.in/search?q=router+switch+hub&source=lnms&tbm=isch&sa=X&ved=0CAcQ_AUoAWoVChMI-8mxjI7iyAIVx9saCh2PGAPp&biw=1366&bih=643#imgrc=34YRzLQGg5_40M%3A
+	
+	A network access control list (ACL) is an optional layer of security that acts as a firewall for controlling traffic in and out of a subnet.
+	You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC.
+	</254>
+	<459> -EBS
+		1. component failure - backup strategy
+		2. provisioned IOPS to reduce latency
+		3. suitable for I/O intensive applications- large relational databases
+		4. storage backed by SSDs(Solid state drive)
+		<gen>
+		what is throughput?
+			the amount of material or items passing through a system or process
+		
+		what is latency?
+			latency - time taken between sending the request and receiving the response.
+		
+		what is IOPS?		
+			IOPS are input/output operations per second
+		
+		How EBS protect from component failure?
+			Amazon EBS volume is automatically replicated within its Availability Zone - offering high availability and durability.
+		
+		what can you do with EBS volumes?
+			create point-in-time snapshots
+			you can create a incremental snapshots based on revisions.
+		
+		How many ways snapshots can be used?
+			you can consider Snapshots for backup strategy
+			EC2 instances can be created using a snapshots
+			using a single "snapshot" you can create multiple EC2 instances
+			you can send sanpshot to another region for geographical expansions
+		
+		when to use provisioned IOPS and what it's offers?
+			Provisioned IOPS (SSD) volumes offer storage with consistent and low-latency performance, 
+			and are designed for I/O intensive applications such as large relational or NoSQL databases. 
+		
+		for what purpose these Provisioned IOPS (SSD) volumes designed for?
+			designed for I/O intensive applications such as large relational or NoSQL databases. leverage provisioned IOPS to significantly reduce latency
+		
+		</gen>
+	</459>
+	<569> -ECS
+	Amazon ECS - Provides Docker containers on virtual servers from Amazon EC2.
+	</569>
+	<365> -Route 53
+	Amazon Route 53 - Routes traffic to your domain name to a resource, such as a virtual server or a load balancer.
+	<e34> Create a record in dns
+		In the DNS console, expand the Forward Lookup Zones folder for the server you want to work with.
+		Right-click the domain you want to update and then from the pop-up menu, choose New Alias. ...
+		Type the alias in the Alias Name field.
+	for more details, check below link
+	https://msdn.microsoft.com/en-us/library/bb727018.aspx
+	</e34>
+	</365>
+	<589> -Lambda
+	AWS Lambda - Runs your code on virtual servers from Amazon EC2 in response to events.
+	</589>
+	<58u> -Auto Scaling
+	where to start auto scaling?
+	first need to start with configuring the load balancer
+	
+	in auto scaling how to lanch the new server?
+	Create Launch Configuration
+	1. Choose AMI
+	2. Choose instance type
+	3. Configure details
+	4. Add storage
+	5. Configure security group
+	6. Review
+	
+	https://www.youtube.com/watch?v=7SfVZqOVcCI
+	avoid single point failure
+	load balancer properties : port number, protocol
+	<gen>
+	Auto Scaling allows you to automatically scale your Amazon EC2 capacity up or down according to conditions you define.
+	what are those conditions ?
+	
+	why scaling?
+	to maintain the performance seamlessly
+	
+	for which application this auto scaling suited ?
+	Auto Scaling is particularly well suited for applications that experience hourly, daily, or weekly variability in usage.
+	
+	how auto scalling is enabled?
+	Auto Scaling is enabled by Amazon CloudWatch
+	
+	</gen>
+	</58u>
+	<48h> -OpsWorks
+		stack - This group of instances is typically called a stack
+		Cloud-based computing usually involves groups of AWS resources
+		https://www.youtube.com/watch?v=cuf7Rqlgeq4
+		
+		Lifecycle events : set-up - configure - deploy - undeploy - shutdown
+		set-up : 			1. sent when instance boots
+							2. include deploy event
+							3. use for initial installation of softwares & services
+		configure event :
+							1. sent to all instances when any instances enters or leaves online state
+							2. use for making suer the configuration is up to date
+		Deploy event : 		sent when you deploy via UI/API, part of each set-up use for custom deployment
+							example : deploy from git, artifactory, ftp server
+		shut-down event : 	1. sent when an instance is shut down
+							2. use for clean shut down
+							ex : make a snapshot of something before terminates
+	</48h>
+	<rt6> -AWS Directory Service
+	https://aws.amazon.com/directoryservice/faqs/
+	</rt6>
+</set-theory>
+
+
+
+
+<45t> Migrate website to Amazon AWS EC2
+	Migrate any website to Amazon AWS EC2 in 5 Easy Steps
+		The correct way to this is to start route 53. 
+		and then make the necessary NS updates both at the domain side and route 53 side. 
+		Once done create an A record that will point to your servers.
+	Cpanel tool to zip the files and database
+	wget http://.../staticweb.zip
+	wget http://.../database.zip
+	port 80 is open in the security groups
+	youtube video https://www.youtube.com/watch?v=6eH_XNMUsFQ
+</45t>
+<5t8> LDAP & single signon
+</5t8>
+<345> qwiklab
+	https://run.qwiklab.com/
+	kamalakar312@gmail.com
+	Icon@312
+	ac : 298010492634
+	awsstudent
+	k4L4cR25DBH
+</345>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+
+
+	which port number is used in SSH?
+	port 22 : Secure Shell (SSH), secure logins, file transfers (scp, sftp) and port forwarding
+	SSH	22	TCP	Secure Shell protocol. Provides a secure session when logging into a remote machine
+	

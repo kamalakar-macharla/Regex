@@ -1,4 +1,21 @@
 
+Ansible is an open source automation platform. 
+Ansible is used for configuration management, application deployment, task automation
+
+
+preparing new machine for build Env ready.
+---------------------------------------------------------
+ansible master:
+            ansible software installed
+                
+Node machine:
+			python should be installed in this. [python+ssh]
+            No-Agent is required to be installed. Agent-less Archi
+
+
+
+
+
 Inventory file
 
 
