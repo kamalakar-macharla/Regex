@@ -27,6 +27,8 @@ def downloadSpec = """{
     }
  ]
 }"""
+server.download spec: downloadSpec
+
 The above spec specifies that all ZIP files in the bazinga-repo Artifactory repository should be downloaded into the bazinga directory on your Jenkins agent file system.
 "files" is an array
 
