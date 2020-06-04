@@ -1,4 +1,22 @@
 
+git reset :
+	for unstaging the commits (used if commits are not pushed to remote)
+	in unstaging commits means removing the commits from local repo & changes are kept in working directory
+	we can't remove secific commit(con't remove 5th or 6th commit)
+	git reset HEAD~2 #remove last 2 commits
+	
+git revert :
+	here changes are committed remote.
+	this makes a new commit, by editing any old commits
+	you can do undo changes from any commit
+
+	
+
+
+
+use "git checkout --<file> " to discard the changes in working directory
+git checkout .   to discard all changes in working directory
+
 How to update your Git credentials on Windows:
 go to Control Panel -> Credential Manager -> Generic Credentials -> windows credentials
 

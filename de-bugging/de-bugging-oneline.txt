@@ -6,10 +6,11 @@ Winmerge : ctrl+shift+m to mark a word
 Execution : File calling flow
 Execution : running in which folder; pwd
 bash : -xv
-grep : grep -i 'word' -lR
+grep : grep -i 'word' -lR | xargs grep -i 'word'
 $ file udemy-urls.sh  to know about if file belongs to win/unix
 	udemy-urls.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
 	with CRLF line terminators - this represent the windows file
+	
 dos2unix: converting file udemy-urls.sh to Unix format...
 unix2dos:
 
@@ -21,6 +22,11 @@ In windows a line is represented with a carriage return (CR) and a line feed (LF
 when you get code from git that was uploaded from a unix system they will only have an LF.
 If you are a single developer working on a windows machine, and you don't care that git automatically replaces LFs to CRLFs, 
 you can turn this warning off by typing the following in the git command line	
+
+file : this command shows whether its line based file or unix based file
+file ./Bash/bash-oneline.sh
+./Bash/bash-oneline.sh: Bourne-Again shell script, UTF-8 Unicode text executable, with CRLF line terminators
+
 
 
 
