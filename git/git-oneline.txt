@@ -1,4 +1,42 @@
 
+How to update your Git credentials on Windows:
+go to Control Panel -> Credential Manager -> Generic Credentials -> windows credentials
+
+warning: LF will be replaced by CRLF in Bash/bash.sh
+In Unix systems the end of a line is represented with a line feed (LF). 
+In windows a line is represented with a carriage return (CR) and a line feed (LF) thus (CRLF). 
+when you get code from git that was uploaded from a unix system they will only have an LF.
+
+bat "git clone -b ${branchName} https://${comm_git_clone_token}@${gitRepo} ${folder}";
+sh "scl enable rh-git29 -- git clone -b ${branchName} https://${comm_git_clone_token}@${gitRepo}";
+
+
+git clone -b br_name https://kmacharla@github.angio.net/reponame
+
+git config user.name "kamalakar"
+git config --global user.email "kamal4954@gmail.com"
+
+git reset : on the commit level, resetting is a way to move the tip of a branch to a different commit
+git checkout hotfix
+git reset HEAD~2
+
+git revert : Reverting undoes a commit by creating a new commit
+git checkout hotfix
+git revert HEAD~2
+
+
+To search the commit log (across all branches) for the given text:
+git log --all --grep='Build 0051'
+To search the actual content of commits through a repo's history, use:
+git grep 'Build 0051' $(git rev-list --all)
+
+I put this in my ~/.gitconfig:
+[alias]
+    find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
+Then I can type "git find string" and I get a list of all the commits containing that string in the message. 
+For example, to find all commits referencing ticket #33:
+
+
 git help # This very helpful command
 git grep 'manifest' # shows the files name & statements which are having the serch word
 git grep 'XXXXX' | grep -i 'fly'   # lists the files having a specific search word
@@ -84,3 +122,4 @@ a5afdd8 fix1 edit
 ece2e00 3rd commit
 b36dd38 2nd commit
 eeca928 first commit
+
