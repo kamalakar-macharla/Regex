@@ -15,6 +15,34 @@ You can also user Jenkins Credential ID instead of username and password:
 	def server = Artifactory.newServer url: 'artifactory-url', credentialsId: 'ccrreeddeennttiiaall'
 You can modify the server object using the following methods:
 
+---------
+Uploading and Downloading Files
+To upload or download files you first need to create a spec which is a JSON file that specifies which files should be uploaded or downloaded and the target path.
+For example:
+def downloadSpec = """{
+ "files": [
+  {
+      "pattern": "bazinga-repo/*.zip",
+      "target": "bazinga/"
+    }
+ ]
+}"""
+The above spec specifies that all ZIP files in the bazinga-repo Artifactory repository should be downloaded into the bazinga directory on your Jenkins agent file system.
+"files" is an array
 
+Since the "files" element is an array, you can specify several patterns and corresponding targets in a single download spec.
+To download the files, add the following line to your script:
+server.download spec: downloadSpec
+Uploading files is very similar. The following example uploads all ZIP files that include froggy in their names into the froggy-files folder in the bazinga-repo Artifactory repository.
 
+def uploadSpec = """{
+  "files": [
+    {
+      "pattern": "bazinga/*froggy*.zip",
+      "target": "bazinga-repo/froggy-files/"
+    }
+ ]
+}"""
+server.upload spec: uploadSpec
 
+-------------------------
