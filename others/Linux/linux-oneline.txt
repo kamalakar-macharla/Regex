@@ -30,3 +30,62 @@ d0:82:24:8e:d7:f1:bb:9b:33:53:96:93:49:da:9b:e3 schacon@mylaptop.local
 
 
 
+
+rpm --help
+man grep
+
+find /etc -type f -name yum*
+find /etc -type d -name ansib*
+drwxr-xr-x. yum.repos.d
+
+/etc/yum.repos.d
+vi Yum-rhel5u5.repo  gpgcheck=0
+
+yum info ansible
+yum install git
+baseurl=http://itcyum.ca.com/5.5/os/x86_64/  vi /etc/yum.repos.d/Yum-rhel5u5.repo
+baseurl=http://islyum.ca.com/7.2/os/$basearch/ vi /etc/yum.repos.d/Yum-rhel7_2_u2.repo
+grep -r "do_as" /opt
+
+cat /etc/redhat-release
+
+tar zxf Python-2.7.6.tgz install from source
+cd Python-2.7.6
+./configure
+make
+make install
+
+stat -c %a /etc/yum.repos.d  755
+
+/dev/null 2>&1
+http://unix.stackexchange.com/questions/163352/what-does-dev-null-21-mean-in-this-article-of-crontab-basics
+
+awk -F/ '{print $2}'
+cat /etc/redhat-release | awk -F"." '{print $1}'
+cat /etc/redhat-release | awk '{print $4}'
+
+AIX----
+All binary RPMs  http://www.oss4aix.org/download/everything/RPMS/
+A Solution to the RPM dependency hell problem
+wget -B http://www.oss4aix.org/download/everything/RPMS/ -i python-2.6.8-1.aix6.1.ppc.deps
+rpm -Uhv /opt/python-rpm/python-2.7.5-1.aix6.1.ppc.rpm      –U” (upgrade)
+chfs -a size=+204800 /opt
+export LIBPATH=/opt/freeware/lib:/usr/lib
+
+rpm --nodeps -i python-2.6.8-1.aix6.1.ppc.rpm
+rpm -ivh --nodeps BitTorrent-5.2.rpm
+rpm -q BitTorrent
+rpm -qa | grep zlib-devel*
+RPM Commands on Tecmint.com
+
+ln -s ../../opt/freeware/bin/python2.6_64 python
+Here python is link which will route to python2.6_64
+tcsh -> /usr/bin/tcsh  here tcsh is link that will route to /usr/bin/tcsh
+/usr/sysv/bin/df -n It shows filesystem type
+
+git----
+man git
+git status
+git add .
+git push origin master
+

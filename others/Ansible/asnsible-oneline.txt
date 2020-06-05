@@ -43,7 +43,6 @@ two.example.com
 three.example.com
 
 
-
 The default module for the ansible command-line utility is the command module. 
 You can use an ad-hoc task to call the command module and reboot all web servers in Atlanta, 10 at a time. 
 Before Ansible can do this, you must have all servers in Atlanta listed in a a group called [atlanta] in your inventory, 
