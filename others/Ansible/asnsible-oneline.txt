@@ -13,7 +13,7 @@ Node machine:
             No-Agent is required to be installed. Agent-less Archi
 
 
-
+The default location for inventory is a file called /etc/ansible/hosts.
 
 
 Inventory file

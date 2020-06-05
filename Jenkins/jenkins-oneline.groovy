@@ -292,3 +292,40 @@ stage('Code Analysis'){
 	}
 
 ---------------------------------------------
+
+SonarQube Scanner for Jenkins
+
+Example using scripted pipeline:
+
+
+      stage("build & SonarQube analysis") {
+          node {
+              withSonarQubeEnv('My SonarQube Server') {
+                 sh 'mvn clean package sonar:sonar'
+              }
+          }
+      }
+
+      stage("Quality Gate"){
+          timeout(time: 1, unit: 'HOURS') {
+              def qg = waitForQualityGate()
+              if (qg.status != 'OK') {
+                  error "Pipeline aborted due to quality gate failure: ${qg.status}"
+              }
+          }
+      }
+
+waitForQualityGate: Wait for SonarQube analysis to be completed and return quality gate status
+
+-------------------------------
+
+
+
+
+
+
+
+
+
+
+

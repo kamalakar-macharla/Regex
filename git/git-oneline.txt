@@ -1,7 +1,12 @@
 
+
+Webhooks are “user-defined HTTP callbacks”. 
+They are usually triggered by some event, such as pushing code to a repository or merge-request. 
+When that event occurs, the source app makes an HTTP request to the URI configured for the webhook.
+
 git reset :
-	for unstaging the commits (used if commits are not pushed to remote)
-	in unstaging commits means removing the commits from local repo & changes are kept in working directory
+	for unstaging the commits (this is used if commits are not pushed to remote)
+	unstaging commits means removing the commits from local repo & changes are kept in working directory
 	we can't remove secific commit(con't remove 5th or 6th commit)
 	git reset HEAD~2 #remove last 2 commits
 	
@@ -10,9 +15,6 @@ git revert :
 	this makes a new commit, by editing any old commits
 	you can do undo changes from any commit
 
-	
-
-
 
 use "git checkout --<file> " to discard the changes in working directory
 git checkout .   to discard all changes in working directory
@@ -20,7 +22,7 @@ git checkout .   to discard all changes in working directory
 How to update your Git credentials on Windows:
 go to Control Panel -> Credential Manager -> Generic Credentials -> windows credentials
 
-warning: LF will be replaced by CRLF in Bash/bash.sh
+warning: LF(line feed) will be replaced by CRLF in Bash/bash.sh
 In Unix systems the end of a line is represented with a line feed (LF). 
 In windows a line is represented with a carriage return (CR) and a line feed (LF) thus (CRLF). 
 when you get code from git that was uploaded from a unix system they will only have an LF.
