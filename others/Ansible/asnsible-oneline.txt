@@ -27,3 +27,51 @@ important modules
 5. copy
 6. file
 7. 
+
+
+etc/ansible/hosts might look like this:
+
+mail.example.com
+
+[webservers]            # brackets are group names
+foo.example.com
+bar.example.com
+
+[dbservers]
+one.example.com
+two.example.com
+three.example.com
+
+
+
+The default module for the ansible command-line utility is the command module. 
+You can use an ad-hoc task to call the command module and reboot all web servers in Atlanta, 10 at a time. 
+Before Ansible can do this, you must have all servers in Atlanta listed in a a group called [atlanta] in your inventory, 
+and you must have working SSH credentials for each machine in that group. To reboot all the servers in the [atlanta] group:
+
+$ ansible atlanta -a "/sbin/reboot"
+
+----------------- run play-book on specific distribution -----
+tasks/main.yml
+---
+- name: include distribution specific vars
+  include_vars: "{{ ansible_distribution }}{{ ansible_distribution_version }}.yml"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
