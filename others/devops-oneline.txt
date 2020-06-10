@@ -1,5 +1,16 @@
 
- Code	Build	Test 
+stage('Init') {
+stage('Increase Patch Version') {
+stage('Resolve Dependencies & Build') {                            mvnGoal += " -Dfortify.sca.buildId=\"${fortifyBuildId}\"" + " -Dfortify.sca.sourceanalyzer.executable=\"${fortifyRunner.fortifyRoot}/bin/sourceanalyzer\"" + ' com.fortify.sca.plugins.maven:sca-maven-plugin:clean' + ' com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
+stage('Run Unit Tests') {                                          sh "mvn ${mvnSettings} ${pipelineParams.mavenTestGoal}"
+stage('Gating') {
+	parallel {
+		stage('Code Review') {											   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
+		stage('Open-Source Governance (BlackDuck)') {
+		stage('Open-Source Governance (Snyk)') {
+		stage('Security Code Scanning') {
+stage('Package and Store') {
+stage('Trigger Deployment and Automated Testing Pipeline') {
 
 
 
@@ -19,3 +30,5 @@ Monitoring Tools:
 	Performance Monitoring (APM) : New Relic, AppDynamics
 Security : SonarQube, Fortify, AppScan, Blackduck
 planing and requirement Gathering : Jira, ServiceNow
+
+
