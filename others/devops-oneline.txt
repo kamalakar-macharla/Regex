@@ -1,0 +1,34 @@
+
+
+Configuration Management Tools : Ansible, chef, puppet
+
+--- SCM Tools/Versioning--
+	GitHub, GitLab, Bitbucket, TFS
+
+--- CI Tools
+	Jenkins, Bamboo, Teamcity
+	
+--- Code Analysis
+	SonarQube, Fortify
+	
+--- Unit Testing
+	Junit
+
+--- packaging Management
+	jar, war, Ear
+	
+--- Container
+	Docker
+	
+--- Code Coverage
+	Jacoco or Cobertura	
+
+--- Monitoring Tools:
+	Infrastructure Monitoring - Nagios, Zabbix, New Relic Infrastructure, Datadog
+	Log Monitoring - Splunk, ELBK
+	Performance Monitoring (APM) - New Relic, AppDynamics
+	
+---- Security 
+	security - SonarQube, Fortify, AppScan, Blackduck
+
+
