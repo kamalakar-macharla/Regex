@@ -13,7 +13,7 @@ stage('Package and Store') {
 stage('Trigger Deployment and Automated Testing Pipeline') {
 
 
-
+------------- devops Tools set -------------
 Configuration Management Tools : Ansible, chef, puppet
 SCM Tools/Versioning : GitHub, GitLab, Bitbucket, TFS
 Build Management : Maven, Gradle
@@ -30,6 +30,7 @@ Monitoring Tools:
 	Performance Monitoring (APM) : New Relic, AppDynamics
 Security : SonarQube, Fortify, AppScan, Blackduck
 planing and requirement Gathering : Jira, ServiceNow
+-------------------------------
 
 ------ 5465y ---
 fortifyResult = fortifyRunner.run(pipelineParams.fortifyScanTree)
