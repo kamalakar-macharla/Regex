@@ -1,4 +1,7 @@
 
+sonar-qube : static analysis of code to detect bugs, code smells, and security vulnerabilities on 20+ programming languages.
+
+
 ------------- Sonar-qube ------------
 
 Manage-jenkins -> Global-Tool-Configuration
@@ -61,8 +64,7 @@ waitForQualityGate: Wait for SonarQube analysis to be completed and return quali
 ----- sonar-project.properties
 Create a configuration file in the root directory of the project: sonar-project.properties
 
-sonar-project.properties
-
+		-- sonar-project.properties --
 sonar.projectKey=my:project           # must be unique in a given SonarQube instance
 sonar.projectName=My project          # this is the name and version displayed in the SonarQube UI. Was mandatory prior to SonarQube 6.1.
 sonar.projectVersion=1.0
@@ -74,6 +76,7 @@ Alternatives to sonar-project.properties
 If a sonar-project.properties file cannot be created in the root directory of the project, there are several alternatives:
 The properties can be specified directly through the command line. Ex:
 sonar-scanner -Dsonar.projectKey=myproject -Dsonar.sources=src1
+ *  "Runner" is the old name for "Scanner"
 -----------
 
 
