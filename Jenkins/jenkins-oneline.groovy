@@ -260,64 +260,6 @@ The dir wrapper can wrap, any other step, and it all works inside a steps block,
           sh "$PWD"
         } 
 
-------------- Sonar-qube ------------
-
-Manage-jenkins -> Global-Tool-Configuration
-						.Jdk
-						.Git
-						.Maven
-						.Sonar-Scanner
-							.Scanner-name=Sonar-Scanner
-							.SONAR-RUNNER-HOME=/opt/sonar-scanr
-
-Manage-jenkins -> Configure-Systems
-					.Sonar-Qube-Server
-						.name
-						.server-url
-						.server-authentiation-token
-							. To communicate with sonar server
-							. Go to sonar qube website
-								. go to my account -> security -> Generate Token
-
-Execute Sonar qube static code analysis with jenkinsfile
-pipeline as code (jenkinsfile)
-https://www.youtube.com/watch?v=yem4YAuwykg
-
-stage('Code Analysis'){
-	def scannerhome = tool 'Sonar-Scanner';
-	withSonarQubeEnv('SonarQubeServer'){
-		sh '''
-			${scannerhome}/bin/sonar-runner -D sonar.login=admin -D sonar.password=admin
-		'''
-	}
-
-----------------------------------
-
-SonarQube Scanner for Jenkins
-
-Example using scripted pipeline:
-
-
-      stage("build & SonarQube analysis") {
-          node {
-              withSonarQubeEnv('My SonarQube Server') {
-                 sh 'mvn clean package sonar:sonar'
-              }
-          }
-      }
-
-      stage("Quality Gate"){
-          timeout(time: 1, unit: 'HOURS') {
-              def qg = waitForQualityGate()
-              if (qg.status != 'OK') {
-                  error "Pipeline aborted due to quality gate failure: ${qg.status}"
-              }
-          }
-      }
-
-waitForQualityGate: Wait for SonarQube analysis to be completed and return quality gate status
-
--------------------------------
 
 
 

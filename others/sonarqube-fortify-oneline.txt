@@ -1,14 +1,94 @@
 
+------------- Sonar-qube ------------
+
+Manage-jenkins -> Global-Tool-Configuration
+						.Jdk
+						.Git
+						.Maven
+						.Sonar-Scanner
+							.Scanner-name=Sonar-Scanner
+							.SONAR-RUNNER-HOME=/opt/sonar-scanr
+
+Manage-jenkins -> Configure-Systems
+					.Sonar-Qube-Server
+						.name
+						.server-url
+						.server-authentiation-token
+							. To communicate with sonar server
+							. Go to sonar qube website
+								. go to my account -> security -> Generate Token
+
+Execute Sonar qube static code analysis with jenkinsfile
+pipeline as code (jenkinsfile)
+https://www.youtube.com/watch?v=yem4YAuwykg
+
+stage('Code Analysis'){
+	def scannerhome = tool 'Sonar-Scanner';
+	withSonarQubeEnv('SonarQubeServer'){
+		sh '''
+			${scannerhome}/bin/sonar-runner -D sonar.login=admin -D sonar.password=admin
+		'''
+	}
+
+----------------------------------
+
+SonarQube Scanner for Jenkins
+
+Example using scripted pipeline:
+
+
+      stage("build & SonarQube analysis") {
+          node {
+              withSonarQubeEnv('My SonarQube Server') {
+                 sh 'mvn clean package sonar:sonar'
+              }
+          }
+      }
+
+      stage("Quality Gate"){
+          timeout(time: 1, unit: 'HOURS') {
+              def qg = waitForQualityGate()
+              if (qg.status != 'OK') {
+                  error "Pipeline aborted due to quality gate failure: ${qg.status}"
+              }
+          }
+      }
+
+waitForQualityGate: Wait for SonarQube analysis to be completed and return quality gate status
+
+-------------------------------
+
+----- sonar-project.properties
+Create a configuration file in the root directory of the project: sonar-project.properties
+
+sonar-project.properties
+
+sonar.projectKey=my:project           # must be unique in a given SonarQube instance
+sonar.projectName=My project          # this is the name and version displayed in the SonarQube UI. Was mandatory prior to SonarQube 6.1.
+sonar.projectVersion=1.0
+sonar.sources=.                       # Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows. This property is optional if sonar.modules is set. 
+sonar.sourceEncoding=UTF-8            # Encoding of the source code. Default is default system encoding
+
+
+Alternatives to sonar-project.properties
+If a sonar-project.properties file cannot be created in the root directory of the project, there are several alternatives:
+The properties can be specified directly through the command line. Ex:
+sonar-scanner -Dsonar.projectKey=myproject -Dsonar.sources=src1
+-----------
+
+
+
+
 
 Static and Dynamic Application Security Testing ???
 
 
---- Fortify
+----- Fortify  ---------
 It's a static code analyzer
 commercial one, Basic access is free, subcription is there
 app -> critical high medium low
 create a report/schedule a report then send it to your team. this is not there in sonar
- It uses a build tool that runs on a source code file or set of files and converts it into an intermediate model that is optimized for security analysis by Fortify.
+It uses a build tool that runs on a source code file or set of files and converts it into an intermediate model that is optimized for security analysis by Fortify.
 
 
 https://www.youtube.com/watch?v=9R6FZQu_jGc
