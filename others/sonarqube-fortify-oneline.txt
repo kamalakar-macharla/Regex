@@ -1,0 +1,32 @@
+
+
+Static and Dynamic Application Security Testing ???
+
+
+--- Fortify
+It's a static code analyzer
+commercial one, Basic access is free, subcription is there
+app -> critical high medium low
+create a report/schedule a report then send it to your team. this is not there in sonar
+ It uses a build tool that runs on a source code file or set of files and converts it into an intermediate model that is optimized for security analysis by Fortify.
+
+Fortify pulgin for jenkins : 
+	Adds the ability to perform security analysis with fortiy static code analyzer
+	upload the results into security center, show the analysis summary, and 
+	set build failure criteria based on the analysis results.
+	see "using Micro Focus fortiy jenkins plugin"
+
+Jenkins ->
+	Manage jenkins
+		configure systems
+			Global Properties
+				Environment variables
+					Name : FORTIFY_HOME
+					value : /opt/Fortify/Fortify_SCA_and_Apps_19.2.0
+				Fortify Assessment
+				Software Security center configuration
+					SSC URL              : http://35.208.16.7:8080/ssc
+					Authentication Token : h9fuha9fuuhfh9uefihaofheq
+
+
+

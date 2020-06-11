@@ -27,10 +27,10 @@ stage('Resolve Dependencies & Build') {                            mvnGoal += " 
 stage('Run Unit Tests') {                                          sh "mvn ${mvnSettings} ${pipelineParams.mavenTestGoal}"
 stage('Gating') {
 	parallel {
-		stage('Code Review') {									   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
+		stage('Code Review (SonarQube)') {						   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
 		stage('Open-Source Governance (BlackDuck)') {
 		stage('Open-Source Governance (Snyk)') {
-		stage('Security Code Scanning') {						   fortifyRunner.run(pipelineParams.fortifyScanTree) #5465y
+		stage('Security Code Scanning (fortify)') {			       fortifyRunner.run(pipelineParams.fortifyScanTree) #5465y
 stage('Package and Store') {                                       artifactoryHelper.uploadMavenArtifact(pipelineParams, GIT_COMMIT     #56te3
 stage('Trigger Deployment and Automated Testing Pipeline') {	   build job: "${pipelineParams.deploymentJenkinsJobName}",             #76rt54
 
