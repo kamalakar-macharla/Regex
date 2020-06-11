@@ -1,3 +1,8 @@
+
+pipeline basic steps : https://www.jenkins.io/doc/pipeline/steps/
+
+
+
 https://github.com/pipelineascodecourse/source_code
 
 node('iMac-agent'){
@@ -48,6 +53,7 @@ error
 sleep
 retry
 timeout
+tool: Use a tool from a predefined Tool Installation
 -------------------------------------------------------
 withEnv
 withCredentials
