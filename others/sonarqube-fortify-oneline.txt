@@ -18,7 +18,7 @@ Fortify pulgin for jenkins :
 	set build failure criteria based on the analysis results.
 	see "using Micro Focus fortiy jenkins plugin"
 
-Jenkins ->
+Jenkins
 	Manage jenkins
 		configure systems
 			Global Properties
@@ -30,7 +30,7 @@ Jenkins ->
 					SSC URL              : http://35.208.16.7:8080/ssc
 					Authentication Token : h9fuha9fuuhfh9uefihaofheq
 					
-Jenkins job : 
+Jenkins job
 	post-build Actions
 		Fortify Assessment
 			Remote SCA translation and scan
