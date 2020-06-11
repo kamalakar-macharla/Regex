@@ -5,10 +5,10 @@ stage('Resolve Dependencies & Build') {                            mvnGoal += " 
 stage('Run Unit Tests') {                                          sh "mvn ${mvnSettings} ${pipelineParams.mavenTestGoal}"
 stage('Gating') {
 	parallel {
-		stage('Code Review') {											   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
+		stage('Code Review') {									   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
 		stage('Open-Source Governance (BlackDuck)') {
 		stage('Open-Source Governance (Snyk)') {
-		stage('Security Code Scanning') {
+		stage('Security Code Scanning') {						   fortifyRunner.run(pipelineParams.fortifyScanTree) #5465y
 stage('Package and Store') {
 stage('Trigger Deployment and Automated Testing Pipeline') {
 
@@ -30,5 +30,23 @@ Monitoring Tools:
 	Performance Monitoring (APM) : New Relic, AppDynamics
 Security : SonarQube, Fortify, AppScan, Blackduck
 planing and requirement Gathering : Jira, ServiceNow
+
+------ 5465y ---
+fortifyResult = fortifyRunner.run(pipelineParams.fortifyScanTree)
+if (!fortifyResult.codeSecurityGatePassed) {
+    if (pipelineParams.fortifyGating) {
+        currentBuild.result = 'FAILED'; error("Failed on Code Security assessment: ${fortifyResult.message}")
+    } 
+    else if (currentBuild.result != 'FAILED') {
+        currentBuild.result = 'UNSTABLE'
+    }
+}
+-------------------
+
+
+
+
+
+
 
 
