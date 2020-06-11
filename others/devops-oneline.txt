@@ -1,18 +1,4 @@
 
-stage('Init') {
-stage('Increase Patch Version') {
-stage('Resolve Dependencies & Build') {                            mvnGoal += " -Dfortify.sca.buildId=\"${fortifyBuildId}\"" + " -Dfortify.sca.sourceanalyzer.executable=\"${fortifyRunner.fortifyRoot}/bin/sourceanalyzer\"" + ' com.fortify.sca.plugins.maven:sca-maven-plugin:clean' + ' com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
-stage('Run Unit Tests') {                                          sh "mvn ${mvnSettings} ${pipelineParams.mavenTestGoal}"
-stage('Gating') {
-	parallel {
-		stage('Code Review') {									   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
-		stage('Open-Source Governance (BlackDuck)') {
-		stage('Open-Source Governance (Snyk)') {
-		stage('Security Code Scanning') {						   fortifyRunner.run(pipelineParams.fortifyScanTree) #5465y
-stage('Package and Store') {
-stage('Trigger Deployment and Automated Testing Pipeline') {
-
-
 ------------- devops Tools set -------------
 Configuration Management Tools : Ansible, chef, puppet
 SCM Tools/Versioning : GitHub, GitLab, Bitbucket, TFS
@@ -30,7 +16,80 @@ Monitoring Tools:
 	Performance Monitoring (APM) : New Relic, AppDynamics
 Security : SonarQube, Fortify, AppScan, Blackduck
 planing and requirement Gathering : Jira, ServiceNow
+Terraform : is an open-source infrastructure as code software tool created by HashiCorp.
 -------------------------------
+
+--------- pipeline manulif--------
+stage('Init') {
+stage('Increase Patch Version') {
+stage('Resolve Dependencies & Build') {                            mvnGoal += " -Dfortify.sca.buildId=\"${fortifyBuildId}\"" + " -Dfortify.sca.sourceanalyzer.executable=\"${fortifyRunner.fortifyRoot}/bin/sourceanalyzer\"" + ' com.fortify.sca.plugins.maven:sca-maven-plugin:clean' + ' com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
+stage('Run Unit Tests') {                                          sh "mvn ${mvnSettings} ${pipelineParams.mavenTestGoal}"
+stage('Gating') {
+	parallel {
+		stage('Code Review') {									   SonarQubeRunner.runScan(this, PipelineType.JAVA_MAVEN, { sonarParams -> artifactoryMaven.run pom: mvnPom, goals: "${mvnSettings} sonar:sonar ${sonarParams}".toString(), buildInfo: buildInfo }, unix, MRCommitsList, projectVersion)
+		stage('Open-Source Governance (BlackDuck)') {
+		stage('Open-Source Governance (Snyk)') {
+		stage('Security Code Scanning') {						   fortifyRunner.run(pipelineParams.fortifyScanTree) #5465y
+stage('Package and Store') {                                       artifactoryHelper.uploadMavenArtifact(pipelineParams, GIT_COMMIT     #56te3
+stage('Trigger Deployment and Automated Testing Pipeline') {	   build job: "${pipelineParams.deploymentJenkinsJobName}",             #76rt54
+
+----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ------ 5465y ---
 fortifyResult = fortifyRunner.run(pipelineParams.fortifyScanTree)
@@ -43,8 +102,30 @@ if (!fortifyResult.codeSecurityGatePassed) {
     }
 }
 -------------------
+------ #56te3 -----
+artifactoryHelper.uploadMavenArtifact(pipelineParams,
+      GIT_COMMIT,
+      mvnSettings,
+      sonarQubeResult.codeQualityGatePassed,
+      blackDuckResult.governanceGatePassed,
+      snykRunner.result.governanceGatePassed,
+      fortifyResult.codeSecurityGatePassed,
+      sonarQubeResult.message,
+      blackDuckResult.message,
+      snykRunner.result.message,
+      fortifyResult.message,
+      projectVersion.toString())
 
-
+------ #76rt54 ----
+stage('Trigger Deployment and Automated Testing Pipeline') {
+    when { expression { return pipelineParams.deploymentJenkinsJobName && ('MERGE' != env.gitlabActionType && 'NOTE' != env.gitlabActionType) } }
+    steps {
+        build job: "${pipelineParams.deploymentJenkinsJobName}",
+  wait: false,
+  parameters: [[$class: 'StringParameterValue', name: 'commit_id', value: "${GIT_COMMIT}"]]
+    }
+}
+------------------
 
 
 
