@@ -10,6 +10,8 @@ app -> critical high medium low
 create a report/schedule a report then send it to your team. this is not there in sonar
  It uses a build tool that runs on a source code file or set of files and converts it into an intermediate model that is optimized for security analysis by Fortify.
 
+
+https://www.youtube.com/watch?v=9R6FZQu_jGc
 Fortify pulgin for jenkins : 
 	Adds the ability to perform security analysis with fortiy static code analyzer
 	upload the results into security center, show the analysis summary, and 
@@ -27,6 +29,18 @@ Jenkins ->
 				Software Security center configuration
 					SSC URL              : http://35.208.16.7:8080/ssc
 					Authentication Token : h9fuha9fuuhfh9uefihaofheq
+					
+Jenkins job : 
+	post-build Actions
+		Fortify Assessment
+			Remote SCA translation and scan
+				Application type
+					Maven
+						Build file = /var/webgoat-develop/pom.xml
+			upload fortiy SCA scan results to Fortify Software Security Center
+				Application name = webgoat
+				Application server = 8.0
+				
 
 
 
