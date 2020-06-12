@@ -125,5 +125,37 @@ Jenkins job
 				Application server = 8.0
 				
 
+JaCoCo : Java Code Coverage library
+JaCoCo is a free code coverage library for Java
+
+What is JaCoCo and how it works?
+Working with JaCoCo
+JaCoCo uses the standard JVM Tool Interface. During a build a JaCoCo agent attaches itself to a JVM. When the JVM starts. and 
+whenever a class is loaded, JaCoCo can use the agent to see when the class is called and what lines are executed. ... 
+When the JVM terminates it creates the coverage report file.
+
+Code coverage is an indication of how much of your application code is actually executed during your tests—it can be a useful tool
+in particular for finding areas of code that have not been tested by your test suites.
+
+Maven – JaCoCo code coverage example : https://mkyong.com/maven/maven-jacoco-code-coverage-example/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
