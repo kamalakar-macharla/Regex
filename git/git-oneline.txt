@@ -13,7 +13,7 @@ git reset :
 git revert :
 	here changes are committed remote.
 	this makes a new commit, by editing any old commits
-	you can do undo changes from any commit
+	you can do undo changes from any commit.
 
 
 use "git checkout --<file> " to discard the changes in working directory
