@@ -1,11 +1,15 @@
 
-open source risk profile
+open source risk profile .
 Blackduck knowledge base : the wordl's largest database of open source information
 which continuously monitors the national vulnerability database automatically, 
 we compare that security data againest the code catalog we help our customers build.
 
 security, operational and legal risk associated with any open source you have
+Software vulnerability like Open SSL.
 
-Software vulnerability like Open SSL
+
+
+
+
 
 
