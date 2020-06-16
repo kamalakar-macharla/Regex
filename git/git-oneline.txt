@@ -93,7 +93,7 @@ Applying: adding covid file
 kamalakar@DESKTOP-D38FM35 MINGW64 /e/GitHub-Repos/Temp/Git-practice/myrepo/myrepo (covid)
 $ git log --oneline
 2a7ba9e (HEAD -> covid) adding covid file
-b47dda3 (origin/master, origin/HEAD, master) adding master-file   #this has been added newly as result of rebase
+b47dda3 (origin/master, origin/HEAD, master) adding master-file   #this has been added newly as result of rebase # adding new commits from source to destination
 37d69c6 index file added
 31b2dc7 4th commit
 ece2e00 3rd commit

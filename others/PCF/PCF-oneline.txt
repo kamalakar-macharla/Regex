@@ -62,7 +62,7 @@ cf router : responsible for load-balancing
 Buildpacks : java, node, Ruby
 buildpacks provide framework and runtime support for apps
 Build packs typically examine your apps to determine what dependencies to download
-and how to configure the apps to communicate with bound services
+and how to configure the apps to communicate with bound services.
 
 Build packager : in house one , within in your firewall
 
@@ -93,7 +93,7 @@ Instances
 ---------------------------------------------------------------
 
 ---- 1.8
-When app is bound to a service, PCF passes the credentials to the app via VCAP_SERVICES runtime arguments
+When app is bound to a service, PCF passes the credentials to the application via VCAP_SERVICES runtime arguments
 
 ------ 1.10 leveraging auto configuration to Bootstarp your application ----
 change the application.properties to application.yml file
@@ -134,7 +134,7 @@ Environment variable
   ]
 }
  
- if spring boot detects the "default" profile, it will attempt to connect to local instances
+if spring boot detects the "default" profile, it will attempt to connect to local instances
  of services you have added as dependencies. This is called "smart/sensible_defaults" in spring boot.
 
 --you can specify spring profile by adding it to your application.properties or application.yml 

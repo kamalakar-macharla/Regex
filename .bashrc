@@ -26,7 +26,7 @@ oneline(){
     cd ~/mastermind/; find -type f -iname '*-oneline.*' | grep -i "$1" | xargs -n1 basename
  fi
  if [ $# -eq 1 ] ; then
-	cd ~/mastermind/; find -type f -iname '*-oneline.*' | grep -i "$1"
+	cd ~/mastermind/; find -type f -iname '*-oneline.*' | grep -i "$1" | xargs notepad++
  fi
 }
 push(){

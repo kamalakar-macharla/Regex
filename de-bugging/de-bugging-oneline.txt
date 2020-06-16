@@ -6,7 +6,7 @@ Winmerge : ctrl+shift+m to mark a word
 Execution : File calling flow
 Execution : running in which folder; pwd
 bash : -xv
-grep : grep -i 'word' -lR | xargs grep -i 'word'
+grep : grep -i 'word' -lR | xargs grep -i 'word'  # xargs -n1
 $ file udemy-urls.sh  to know about if file belongs to win/unix
 	udemy-urls.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
 	with CRLF line terminators - this represent the windows file
@@ -26,6 +26,8 @@ you can turn this warning off by typing the following in the git command line
 file : this command shows whether its line based file or unix based file
 file ./Bash/bash-oneline.sh
 ./Bash/bash-oneline.sh: Bourne-Again shell script, UTF-8 Unicode text executable, with CRLF line terminators
+
+
 
 
 
