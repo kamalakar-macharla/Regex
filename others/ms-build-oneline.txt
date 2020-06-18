@@ -1,5 +1,11 @@
 
 
+MSBuild in below 2 ways
+1. using command prompt
+2. using project file
+
+
+
 MSBuild in the previous versions of .NET Framework was installed with it but, they decided to install it with Visual Studio or with the package BuildTools_Full.exe.
 
 The path to MSBuild when installed with the .NET framework:
@@ -30,4 +36,49 @@ You can use Azure Pipelines to automatically compile, test, and deploy your appl
 Your build system can automatically run builds when developers check in code (for example, as part of a Continuous Integration strategy) or according to a schedule (for example, a nightly Build Verification Test build). Azure Pipelines compiles your code by using MSBuild.
 
 An msbuild file defines the process for running a build of your code - generally for an automated build like a Continuous Integration build.
+
+.proj
+A popular convention for generic use. Commonly used by a main build script.
+
+Examples:
+build.proj
+main.proj 
+company.product.build.proj
+
+.*proj for project files --- msbuild.exe will find them automatically if they match this pattern
+.targets for build process --- generally imported towards the end of your project
+.props for shared settings --- generally imported towards the top of your project. C++ (*.vcxproj) files use these, and they will doubtless get added to VB and C# default project files at some point.
+
+
+.**proj
+Language specific convention where **** represents the language short acronym.
+
+Well-known extensions:
+
+.csproj    | C#
+.vbproj    | VB.NET
+.vcxproj   | Visual C++
+.dbproj    | Database project
+.fsproj    | F#
+.pyproj    | IronPython
+.rbproj    | IronRuby
+.wixproj   | Windows Installer XML (WiX)
+.vdproj    | Visual Studio Deployment Project
+.isproj    | InstallShield 
+.pssproj   | PowerShell
+.modelproj | Modeling project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
