@@ -4,6 +4,8 @@ MSBuild in below 2 ways
 1. using command prompt
 2. using project file
 
+msbuild test.sln /t:project /p:Configuration="Release" /p:Platform="x86" /p:BuildProjectReferences=false
+Notice that what is assigned to /t is the project name in the solution, it can be different from the project file name.
 
 
 MSBuild in the previous versions of .NET Framework was installed with it but, they decided to install it with Visual Studio or with the package BuildTools_Full.exe.

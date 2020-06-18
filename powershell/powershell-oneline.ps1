@@ -1,3 +1,98 @@
+
+---- udemy course : Learning windows powershell
+1.7 : powershell or CMD
+in powershell everting is an Object.
+ipconfig
+ipconfig | Out-File -FilePath C:\IPtxt.txt; c:\iptxt.txt
+
+12 : installing powershell
+	download windows management framework & installing
+14 : Post installation
+	Update-Help
+Enable powershell script execution
+	Get-ExecutionPolicy
+	Restricted
+	Set-ExecutionPolicy RemoteSigned
+Enable PowerShell remoting
+	By default, powershell is configured to run remote commands on other Windows computers
+	However, the computers will not allow remote commands to be executed on them
+	so run this on remote pcs;  Enable-PSRemoting
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$PSVersionTable.PSVersion
+
+WinRm (Windows Remote Management)
+Test-WSMan 192.168.1.21
+	wsmid : ------
+	protocol version : ----
+If you get the successfull result means WinRm is enabled on Remote machine.
+
+gpudate /force
+
+ Get-NetTCPConnection   # to see the ports are enabled, in linux use below thing
+                        # netstat   #display connection info, routing table information etc
+						
+nslookup  in works in powershell
+nslookup remotepc
+
+Test-NetConnection -Port 5985 -ComputerName SAMS01
+	Above returns some results, It means that we can do the powershell execution on Remote pc
+Test-WSMan -ComputerName SAMS01
+    shows some result
+Enter-PSSession -ComputerName SAMS01
+[SAMS01] : ps C:\users\xishjs> hostname
+
+
+PS C:\WINDOWS\system32> Enable-PSRemoting
+WinRM has been updated to receive requests.
+WinRM service type changed successfully. 
+WinRM service started. 
+
+WinRM has been updated for remote management.
+WinRM firewall exception enabled. 
+Configured LocalAccountTokenFilterPolicy to grant administrative rights remotely to local users. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #####################################################################################
 xxx-yyyyy | Get-Member
 xxx-yyyy  | select propertyname
