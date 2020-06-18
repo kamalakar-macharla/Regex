@@ -1,0 +1,33 @@
+
+
+MSBuild in the previous versions of .NET Framework was installed with it but, they decided to install it with Visual Studio or with the package BuildTools_Full.exe.
+
+The path to MSBuild when installed with the .NET framework:
+
+C:\Windows\Microsoft.NET\Framework[64 or empty][framework_version]
+
+The path to MSBuild when installed with Visual Studio is:
+
+C:\Program Files (x86)\MSBuild[version]\Bin for x86 and, C:\Program Files (x86)\MSBuild[version]\Bin\amd64 for x64.
+
+The path when BuildTools_Full.exe is installed is the same as when MSBuild is installed with Visual Studio.
+
+Adding MSBuild to class path, so that it can be access from command line
+
+buildtools_full.exe is an executable file that is part of the Microsoft Build Tools 2015 program developed by Microsoft Corporation.
+
+What is Microsoft build tools?
+MSBuild is a build tool that helps automate the process of creating a software product, including 
+compiling the source code, packaging, testing, deployment and creating documentations. 
+With MSBuild, it is possible to build Visual Studio projects and solutions without the Visual Studio IDE installed.
+
+
+Azure development build tools: MSBuild tasks and Targets for building Azure applications
+
+MSBuild.exe MyProject.proj -t:rebuild
+
+You can use Azure Pipelines to automatically compile, test, and deploy your application. 
+Your build system can automatically run builds when developers check in code (for example, as part of a Continuous Integration strategy) or according to a schedule (for example, a nightly Build Verification Test build). Azure Pipelines compiles your code by using MSBuild.
+
+An msbuild file defines the process for running a build of your code - generally for an automated build like a Continuous Integration build.
+

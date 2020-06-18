@@ -5,8 +5,10 @@ Automating manual interventions to achieve fast faced delivery.
 AWS DevOps tools such as AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, CodeCommit
 AWS’s simplified provisioning, configuration, and scaling features
 container management.
-Pay-As-You-Go-
-single point failure
+Pay-As-You-Go
+single point failure.
+
+
 
 
 
