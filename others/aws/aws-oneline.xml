@@ -231,7 +231,6 @@ http://docs.aws.amazon.com/gettingstarted/latest/awsgsg-intro/gsg-aws-intro.html
 
 
 
-
 <45t> Migrate website to Amazon AWS EC2
 	Migrate any website to Amazon AWS EC2 in 5 Easy Steps
 		The correct way to this is to start route 53. 
