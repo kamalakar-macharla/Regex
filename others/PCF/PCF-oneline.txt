@@ -145,6 +145,13 @@ or by passing it as a runtime arguments to your app.
 . spring component scan detects and initializes beans in the class path with smart defaults
 . spring auto-configuration helps developers finish application faster
 
+ --- New Relic service broker ---
+New Relic APM supports real-time instrumentation and monitoring of application performance via its embedded agent that runs with apps.
+
+New Relic agent code publishes performance monitoring metrics and other details back to New Relic APM Dashboard.
+
+The language agents also send all of the application and browser events to New Relic Analytics tool, Insights, for visualization and dashboarding.
+
 
 
 
