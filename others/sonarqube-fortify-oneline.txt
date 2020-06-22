@@ -95,7 +95,7 @@ It uses a build tool that runs on a source code file or set of files and convert
 
 
 https://www.youtube.com/watch?v=9R6FZQu_jGc
-Fortify pulgin for jenkins : 
+Fortify pulgin for jenkins :
 	Adds the ability to perform security analysis with fortiy static code analyzer
 	upload the results into security center, show the analysis summary, and 
 	set build failure criteria based on the analysis results.

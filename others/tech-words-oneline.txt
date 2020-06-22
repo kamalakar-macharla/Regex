@@ -14,7 +14,7 @@ quality assurance activity
 buildpacks provide framework and runtime support for apps
 consistent, seamless
 Expose restful api's
-
+security vulnerabilities
 
 
 

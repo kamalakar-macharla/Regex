@@ -24,8 +24,8 @@ Configuration Management Tools : Ansible, chef, puppet
 SCM Tools/Versioning : GitHub, GitLab, Bitbucket, TFS
 Build Management : Maven, Gradle
 CI Tools : Jenkins, Bamboo, Teamcity	
-Code Analysis : SonarQube, Fortify
-Unit Testing  : Junit
+Code Analysis : SonarQube, Fortify , blackduck (security, operational and legal risk associated with any open source)
+Unit Testing  : Junit (maven-surefire-plugin)
 packaging Management : jar, war, Ear
 Repository Management : Artifactory, Nexus
 Container : Docker
@@ -38,6 +38,7 @@ Security : SonarQube, Fortify, AppScan, Blackduck
 planing and requirement Gathering : Jira, ServiceNow
 Terraform : is an open-source infrastructure as code software tool created by HashiCorp.
 Cloud Foundry : is an open source cloud platform as a service (PaaS). Cloud Foundry makes the process of building, testing, deploying and scaling applications must easier and faster.
+Confluence : Create, collaborate, and organize all your work in one place
 -------------------------------
 
 --------- pipeline manulif--------
