@@ -5,9 +5,9 @@ ftp
 winscp
 nslookup
 ping
-ipconfig
-ifconfig
-printenv
+ipconfig (win)
+ifconfig (Lix)
+printenv (ps,cmd,lix,bash)
 $env:\
 services.msc
 network share
@@ -40,3 +40,7 @@ jq : json command line processor , jqplay.org
 ~./bashrc
 alias npp='notepad++' #get this from path var
 winmerge : ctrl+shift+M
+
+
+
+

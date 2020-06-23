@@ -54,6 +54,15 @@ sleep
 retry
 timeout
 tool: Use a tool from a predefined Tool Installation
+
+Pipeline: Groovy
+	load: Evaluate a Groovy source file into the Pipeline script
+	parallel: Execute in parallel
+Pipeline Utility Steps
+	findFiles: Find files in the workspace
+	zip: Create Zip file
+	unzip: Extract Zip file
+	readProperties: Read properties from files in the workspace or text.
 -------------------------------------------------------
 withEnv
 withCredentials
@@ -265,6 +274,18 @@ The dir wrapper can wrap, any other step, and it all works inside a steps block,
           }
           sh "$PWD"
         } 
+
+
+
+Artifactory Plugin
+	artifactoryDownload: Download artifacts
+	artifactoryUpload: Upload artifacts
+Fortify
+	fortifyScan: Run Fortify SCA scan
+Black Duck Hub Plugin
+	hub_scan: Black Duck Hub Integration
+	hub_scan_failure: Black Duck Hub Failure Conditions (Hub 3.0+)
+
 
 
 
