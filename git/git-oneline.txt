@@ -22,6 +22,9 @@ git checkout .   to discard all changes in working directory
 How to update your Git credentials on Windows:
 go to Control Panel -> Credential Manager -> Generic Credentials -> windows credentials
 
+windows - CRLF
+Linux   -   LF
+
 warning: LF(line feed) will be replaced by CRLF in Bash/bash.sh
 In Unix systems the end of a line is represented with a line feed (LF). 
 In windows a line is represented with a carriage return (CR) and a line feed (LF) thus (CRLF). 

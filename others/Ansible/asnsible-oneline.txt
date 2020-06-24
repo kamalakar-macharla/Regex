@@ -26,7 +26,6 @@ important modules
 4. service
 5. copy
 6. file
-7. 
 
 
 etc/ansible/hosts might look like this:

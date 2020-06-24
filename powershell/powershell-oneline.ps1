@@ -19,33 +19,6 @@ Enable PowerShell remoting
 	so run this on remote pcs;  Enable-PSRemoting
 	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $PSVersionTable.PSVersion
 
 WinRm (Windows Remote Management)
@@ -234,3 +207,9 @@ Get-Help Where-Object -Online
 
 Get-Process | Select-Object -Property processname,cpu | Sort-Object -Property cpu | select -Last 5 | Where-Object {$_.processname -eq "chrome"} | Get-Member
 
+
+function get-kamal {
+	$PSVersionTable.PSVersion
+}
+
+get-kamal
