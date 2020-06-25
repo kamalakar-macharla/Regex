@@ -1,0 +1,70 @@
+
+
+SRE = Define Availability
+	  Level of availability
+	  plan in case of failure
+	  
+Define (services level objectives) in collaboration with product owner. by agreeing these metrics in advance
+we make sure that there is a less of change of confusion and conflict in the feaute.
+SLO is just an agreement among stakeholders about how reliable service should be.
+
+Every application has unique set of requirement that dectate how the reliable does it has to be before customer no longer notice the difference.
+what is availability in the context of service?
+
+SLI : are most often metrics over time such as 
+	  request latency, 
+      throughput of request per second in case of a batch system.
+	  or 
+	  failure per total number of request
+	  
+	They are usually aggregated over time,and we typically apply a function like a percentile
+	like a 99 percentile or a median
+	And that way, we can get to a concrete threshold which we can define to say,
+	is this single number good or bad?
+	
+	  
+	
+
+
+
+
+
+
+
+
+Error-Budget : 
+
+SRE metrics including 
+SLI :
+SLO :
+SLA : 
+
+reliability and availability
+
+
+
+
+
+Position: Dev-Ops/SRE Consultant
+Job Description:
+- At least 6-9 years experience Information Technology with SDLC/Agile Software development and maintain software to improve the availability, scalability, latency, and efficiency of services
+- Experience in one or more of programming languages/tools like Python, SQL scripting, VB.Net, or Spring, NodeJS
+- Experience & Familiar in DevOps process with DevOps tools (Git, Jenkins, Nexus, SonarQube)
+- Improvisation of application SLA with Code review, log analysis, batch scheduling & reports
+- Expertise in Upgrade & enhance flows with SRE practices using automation for application, deployment and monitoring.
+- Experience in managing system reliability, availability as part of customer journey with SRE metrics including SLI, SLO, SLA and error budget. Should be able to measure these metrics and tie them to business objectives - with the ultimate goal of providing value to your customers
+- Exposure to Cloud Infra, AWS, OpenShift and Kubernetes is added advantage.
+- Working experience on CI/CD pipeline for build, release and configuration management.
+- System troubleshooting and problem solving across platform and application domains
+- Reviewing & Suggesting improvements on application and batch processing, recommending & implementing process improvements
+- Looking forward to work in dynamic change environment and have the positive attitude to learn and implement.
+- Strong analytical, problem-solving and communication skills
+- Work within an agile environment as part of a cross-functional collaborative team distributed across locations
+Responsibilities:
+- Reviewing, deploying, automating, maintaining and managing application, to ensure the availability, performance.
+- Analyse on system reliability, availability as part of customer journey with SRE metrics including SLI, SLO, SLA and error budget, measure these metrics and tie them to business objectives—with the ultimate goal of providing value to your customers 
+- Closing work with application team to review application SDLS process, log management and implement necessary improvements to obtain SRE factors, and create automation scripts for reports extractions
+- To plan and execute configuration management, software performance analysis and system tuning
+- Prepare and maintain release metrics, weekly and monthly reports.
+ 
+ 
