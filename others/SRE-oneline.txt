@@ -90,7 +90,7 @@ What are the ways to make a website scalable to handle million users?
 	
 Site reliability engineering is more focused on operations and monitoring.
 	
-a site reliability engineer at New Relic, says it may be more helpful to think in terms of architecture style rather than tooling.
+A site reliability engineer at New Relic, says it may be more helpful to think in terms of architecture style rather than tooling.
 
 Containers and microservices play a significant role at New Relic, for instance, so Docker and container orchestration are integral parts of our SRE toolset. 
 I think the biggest tool that SREs are using today is an orchestrator like Kubernetes or Mesosphere, 
@@ -100,6 +100,59 @@ To receive mobile push notifications:
 	Log in to your New Relic account via the mobile app at least once to ensure the device is registered.
 	Add the user channel to the alert policy.
 	Switch push notifications On for the device.
+
+time picker
+all jvms
+	single machine data
+	Aggregate data
+		Web transacations time
+			we can see average Response time
+			/login
+			/catogory 
+		throughput
+
+Web transactions time
+900ms
+500ms
+200ms
+100ms
+----------------------------------------
+Jvm Redis MySql
+
+Error Rate
+	How many Transactions got failed
+
+4 hosts (All these are docker containers)
+	Resp.time	throughput	ErrorRate	CPU usage	Memory
+app-1	19ms		607Rpm		0.005%		5%		320MB
+app-2
+app-3
+app-4
+
+all above app's are having same Authentication Token
+*Rpm = Request per minute
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Position: Dev-Ops/SRE Consultant
 Job Description:
