@@ -6,7 +6,7 @@ I am looking for an opportunity for DevOps profile.
 Current location - Hyderabad
 Total exp - 10 years
 Skills - Jenkins CI/CD, Pivotal Cloud Foundary, MicroServices, GitHub/Gitlab, Artifactory, SonarQube, Fortify, Blackduck, New Relic,
- Maven, Ansible, Docker, Linux, AWS , Jira, ServiceNow
+Maven, Ansible, Docker, Linux, AWS , Jira, ServiceNow
  
 Grade/Designation: C1/Senior-Consultant
  

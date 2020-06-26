@@ -77,9 +77,29 @@ SLA :
 
 reliability and availability
 
+Latency (lag) is the delay between a user's action and a web application's response to that action, often referred to in networking terms as the total round trip time.
+it takes for a data packet to travel.
 
+low latency means small delay times, while a 
+high latency means long delays.
 
+throughput : can be defined as the total number of business transactions completed by the application in unit time (per second or per hour).
 
+What are the ways to make a website scalable to handle million users?
+	Load Balancer, Web Server, MySql/database, Caching Server
+	
+Site reliability engineering is more focused on operations and monitoring.
+	
+a site reliability engineer at New Relic, says it may be more helpful to think in terms of architecture style rather than tooling.
+
+Containers and microservices play a significant role at New Relic, for instance, so Docker and container orchestration are integral parts of our SRE toolset. 
+I think the biggest tool that SREs are using today is an orchestrator like Kubernetes or Mesosphere, 
+
+New Relic that collect metrics from applications and infrastructure, some form of log or analytic data, and alert on that data via dashboards.
+To receive mobile push notifications:
+	Log in to your New Relic account via the mobile app at least once to ensure the device is registered.
+	Add the user channel to the alert policy.
+	Switch push notifications On for the device.
 
 Position: Dev-Ops/SRE Consultant
 Job Description:
