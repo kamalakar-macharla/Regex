@@ -1,0 +1,8 @@
+
+download logstash zip from net, unzip the zip into any specific dir
+then run below command in first place to check whether it's working
+	bin/logstash -e "input { stdin { } } output { stdout { } }"
+	
+
+
+
