@@ -5,6 +5,7 @@ then run below command in first place to check whether it's working
 ----
 Open kibana/config/kibana.yml file an editor	
 Set elasticsearch.url to point at your Elasticsearch instance
+#elasticsearch.url: "http://localhost:9200"
 ---
 
 
