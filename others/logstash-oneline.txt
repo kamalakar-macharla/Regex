@@ -2,7 +2,45 @@
 download logstash zip from net, unzip the zip into any specific dir
 then run below command in first place to check whether it's working
 	bin/logstash -e "input { stdin { } } output { stdout { } }"
+After typing above command, logstash will start automatically
 	
+Hello kamalakar
+
+{
+       "message" => "Hello kamalakar",
+      "@version" => "1",
+    "@timestamp" => 2020-07-21T11:22:40.646Z,
+          "host" => "kamal-dell-laptop-home"
+}
+
+--debug flag to see more detailed log
+
+{ "name": "kamal", "surname": "macharla" }
+{ "name": 2, "surname": 5 }
+
+codec => json
+
+{"surname":"macharla","name":"kamal","@version":"1","@timestamp":"2020-07-22T08:53:23.706Z","host":"kamal-dell-laptop-home"}
+
+./bin/logstash -f ./pipelines/first/pipeline.conf --config.reload.automatic
+-----------------------------
+input {
+	file {
+		path => "C:/Users/kamalakar/ELK/logstash-7.8.0/logstash-7.8.0/input.txt"
+		start_position => "beginning"
+	}
+}
+
+output {
+	stdout {
+		codec => rubydebug
+	}
+	file {
+		path => "./pipelines/first/output.txt"
+	}
+}
+-------------------------------------------
+
 
 
 
