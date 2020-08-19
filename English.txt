@@ -1,5 +1,5 @@
 Registry is kind of like github is to source code.
-but for now,
+but for now,...
 Name is also required to be unquie.
 use whatever makes sense to you.
 Expect the best, prepare for the worst
