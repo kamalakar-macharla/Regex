@@ -1,6 +1,11 @@
 
 
-
+----- Add a local path to PATH variable ------
+echo off
+set PATH=C:\Users\kamalakar312\mastermind\others;%PATH%
+echo %PATH%
+pause
+--------
 
 --------  start new cmd from current cmd ---------
 echo off
