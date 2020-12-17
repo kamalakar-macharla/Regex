@@ -1,0 +1,24 @@
+
+
+
+
+--------  start new cmd from current cmd ---------
+echo off
+echo "Below line will new cmd in window & run program"
+start cmd /k echo "this is new window"
+pause
+-------
+
+-------- check if the notepad is running ------------
+echo off
+tasklist /FI "IMAGENAME eq notepad.exe" 2>NUL | find /I /N "notepad.exe">NUL
+if "%ERRORLEVEL%"=="0" echo "notepad Program is running"
+pause
+---------
+----------  if notepad is not running , start the notepad -----
+echo off
+tasklist /FI "IMAGENAME eq notepad.exe" 2>NUL | find /I /N "notepad.exe">NUL
+if "%ERRORLEVEL%"=="1" start notepad
+pause
+---------------------------------------------------------------
+
