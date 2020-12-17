@@ -12,6 +12,11 @@ tasklist > .\search.log
 pause
 ---
 
+----- open a folder from batch ---
+echo off
+start "" "C:\Users\folder-1\folder-2"
+pause
+-------
 
 --------  start new cmd from current cmd ---------
 echo off
