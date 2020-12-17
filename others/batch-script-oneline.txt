@@ -6,6 +6,12 @@ set PATH=C:\Users\kamalakar312\mastermind\others;%PATH%
 echo %PATH%
 pause
 --------
+----- store the cmd output into file ---
+@echo off
+tasklist > .\search.log
+pause
+---
+
 
 --------  start new cmd from current cmd ---------
 echo off
