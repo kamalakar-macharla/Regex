@@ -1,4 +1,11 @@
 
+----------
+@echo off
+echo %time%
+timeout 15 > NUL
+echo %time%
+pause
+-----------
 
 ----- Add a local path to PATH variable ------
 echo off
@@ -6,6 +13,20 @@ set PATH=C:\Users\kamalakar312\mastermind\others;%PATH%
 echo %PATH%
 pause
 --------
+
+How to stop process from .BAT file?
+@echo off
+taskkill /IM notepad.exe
+taskkill /F /IM notepad.exe # with force option.
+pause
+
+----------
+@echo off
+echo %time%
+timeout 15 > NUL
+echo %time%
+pause
+-----------
 ----- store the cmd output into file ---
 @echo off
 tasklist > .\search.log
@@ -38,3 +59,19 @@ if "%ERRORLEVEL%"=="1" start notepad
 pause
 ---------------------------------------------------------------
 
+%cd% refers to the current working directory (variable)
+%~dp0 refers to the full path to the batch file's directory (static)
+%~dpnx0 and %~f0 both refer to the full path to the batch directory and file name (static).
+%~dp0filename.txt this append the filename.txt to the path.
+
+
+
+---- test.bat
+@echo off
+title mybatchfile
+echo ...do something
+
+ ---testkill.bat
+Taskkill /FI "WINDOWTITLE eq mybatchfile"
+testkill.bat will kill the test.bat
+-----

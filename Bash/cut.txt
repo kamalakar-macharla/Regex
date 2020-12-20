@@ -18,3 +18,8 @@ cut -d ',' -f 1 people.csv
 
 MAIN="Kamalakar"
 echo ${#MAIN} # this gives length of a string
+
+$ pwd
+/c/Users/kamalakar312/temp
+below command would convert the linux path to windows
+pwd | cut -c 2- | tr "/" "\\" | sed -e 's/^c/c:/g'  # result c:\Users\kamalakar312\temp
