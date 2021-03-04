@@ -34,6 +34,7 @@ push(){
 }
 # echo 'copy to keyboard' | clip # copy out put to clip board
 alias getrepos='reposgitlab'
+alias npp='"/c/Program Files/Notepad++/notepad++.exe"'
 alias npp='notepad++'
 alias exp='explorer .'
 alias getscript='cp -r ~/whileloop .'
@@ -41,6 +42,8 @@ alias winmerge='WinMergeU'
 alias DR='cat ~/dr-script.txt'
 alias hp='cat ~/hp.txt'
 alias cdt='cd ~/temp'
+alias pw='echo mypw@123 | clip'
+alias jira='start chrome https://websitess.com/page'
 # alias oneline='cd ~/mastermind/; find -type f -iname *-oneline.*'
 
 
