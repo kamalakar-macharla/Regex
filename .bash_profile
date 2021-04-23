@@ -42,8 +42,9 @@ alias winmerge='WinMergeU'
 alias DR='cat ~/dr-script.txt'
 alias hp='cat ~/hp.txt'
 alias cdt='cd ~/temp'
-alias pw='echo mypw@123 | clip'
 alias jira='start chrome https://websitess.com/page'
+alias pw='echo mypw@123 | clip' # to login into websites   jira;pw
+
 # alias oneline='cd ~/mastermind/; find -type f -iname *-oneline.*'
 
 
