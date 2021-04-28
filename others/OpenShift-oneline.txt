@@ -1,0 +1,68 @@
+
+udemy : openshift developers workshop : 3. overview of the openshift
+
+Openshift : offers the ability to deploy your web application code using a library of predefined platform images that build your environment,
+	openshift also allows you to build and obtain your docker images and use them quickly deploy your application on top of them.
+	openshift provides web based console that makes it easy to perform managing deployment, pod's creating services, routes
+
+docker : light weight portable image which has dependencies, and system libraries to run the application. Openshift uses a docker images.
+
+
+OC (cli) : command line interface for Openshift.
+
+Name space : All resources within a namespace are accessible as a whole. user access with namespace will always have access to all resources within namespace.
+
+Project : wrap the namespace and provides security model based on users and groups.
+
+POD : pods are basic unit, pod resides in single node, pod can contains one or more containers. each pod will their own IP address.
+
+Containers : containers within a pod will share the same IP address & also share the storage. container snipup form the images.
+
+Route : act as load balancer across the pod's 
+
+DNS : this provides accessible name , that application to be accessed.
+
+Service Layer : Provides internal communication between application components in OpenShift. Service. A service is a set of replicated pods. Generally used to define a consumable application function
+
+How openshift works : Openshift is built on the top of the core technologies docker based containers and kubernetes system for orchestration.
+
+Routes : Pods are also made available to external world outside the cluster uring routes.
+
+DNS : the external DNS entry that is created to point to the service so it can be accessed.
+
+Relication : Management pod is controlled by relication controller which ensures that a specified number of replicas of POD are running all the time.
+
+Build configuration : holds the definition of how to build a new image to be deployed.
+	Source to image : will download the base application server image, clone your code repository run the build, a new docker image
+	that contains your whole stack and deploy this build and start of the resulting container.
+
+Build process : produces and image that gets stored in an integrated docker registry and is used for the application deployment,
+	or nodes open shift tracks images through the image stream component.
+
+Deployment Configuration : defines their template for the pod and manages the deployment of new images or configuration changes.
+
+Replication Controller : manage the pod's and keep them running.
+
+What's the difference between a Service and a Deployment in Kubernetes? 
+	A deployment is responsible for keeping a set of pods running. 
+	A service is responsible for enabling network access to a set of pods. 
+	We could use a deployment without a service to keep a set of identical pods running in the Kubernetes cluster.
+
+
+$ oc login
+$ oc new-project mywordpressapp --display-name="my wordpress application"
+$ oc new-app php:latest~http://github.com/girepo
+$ oc status
+$ oc expose service mywordpressapp # first service has to be created, when you expose the service , you get route.
+$ oc get routes
+$ oc get svc # to get service listed
+route : using route application can be accessed by outside world 
+access the application using service IP within in the cluster.
+
+service can be accessed on cluster level, using the cURL command.
+
+service : A Kubernetes service serves as an internal load balancer. Service provides a consistent address pods while pods are being added and removed.
+service identifies a set of replicated pods in order to proxy the connections it receives to them.
+The default service clusterIP addresses are from the OpenShift Container Platform internal network and they are used to permit pods to access each other.
+
+

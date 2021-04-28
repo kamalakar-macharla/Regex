@@ -1,6 +1,17 @@
 #!/bin/bash
 #!/path/to/interpreter
 #!/bin/bash -e
+valid variables
+FIRST3LETTERS="ABC"
+FIRST_THREE_LETTERS="ABC"
+FirstTheeLetters="ABC"
+
+in-valid variables
+3FIRSTLETTERS="ABC"
+FIRST-THREE-LETTERS="ABC"
+FIRST@THREE@LETTERS="ABC"
+
+
 ssh-keygen -t rsa
 ssh-copy-id root@RHost
 printenv

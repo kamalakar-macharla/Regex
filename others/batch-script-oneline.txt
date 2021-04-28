@@ -1,4 +1,4 @@
-
+To check the batch script i have developed , refer to Batch-Script-DDBSS folder.
 ----------
 @echo off
 echo %time%
