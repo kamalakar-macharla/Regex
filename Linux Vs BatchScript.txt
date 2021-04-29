@@ -1,0 +1,74 @@
+
+#! /bin/bash
+@echo off
+
+----- exit value -----
+echo $?
+exit 0
+exit 23
+
+echo %ERRORLEVEL%
+exit /B 0
+exit /B 23
+
+----- variables ------
+
+$ MYVAR=KAMAL
+$ MYVAR = KAMAL # bash: MYVAR: command not found
+$ $MYVAR        # bash: KAMAL: command not found
+
+>set var=Rahul
+>echo %var%
+>%var% Rahul not recognized as command
+
+>set mycommand=dir
+>%mycommand%
+
+---- display the variables ---
+
+filename='test.txt'
+echo "The file name is : ${filename}"
+
+set filename=test.txt
+echo The file name is %filename%
+
+----- line comments ---
+
+REM anything  (REM means remark)
+:: anything (:: same as REM)
+#  anything
+
+----- Environment variables ---
+
+env
+printenv
+echo $HOMEPATH
+export mytoken='jsihisjs'
+
+set        (than enter)
+echo %ProgramFiles%
+cd %SystemRoot%
+ComSpec=C:\WINDOWS\system32\cmd.exe
+%ComSpec%  (this runs above cmd.exe file)
+
+--- 
+
+
+
+
+
+
+------ Run .bat file from git bash ----
+$ which cmd
+/c/WINDOWS/system32/cmd
+
+chmod +x your.bat
+cmd /c your.bat params
+
+----- Run a PowerShell script from the CMD shell --------
+C:\> powershell -file "c:\batch\demo.ps1"
+
+
+---- how to open git bash from CMD of windows ---
+C:\Users\KAMALAKAR>set mypro="C:\Program Files\Git\git-bash.exe"
+C:\Users\KAMALAKAR>%mypro%

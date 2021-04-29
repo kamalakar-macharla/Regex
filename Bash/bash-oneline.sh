@@ -11,6 +11,9 @@ in-valid variables
 FIRST-THREE-LETTERS="ABC"
 FIRST@THREE@LETTERS="ABC"
 
+Test Syntax is :   [ condition-to-test-for ]
+Example is : [ -e /etc/passwd ]
+$ help test # works in gitbash , shows all tests options.
 
 ssh-keygen -t rsa
 ssh-copy-id root@RHost
