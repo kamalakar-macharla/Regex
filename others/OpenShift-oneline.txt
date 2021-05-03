@@ -7,8 +7,47 @@ openshift : This container orchestration engine do the following tasks.
 	5) creating a service and route (External url to access the app)
 
 To see a typical example  : udemy : openshift developers workshop 17. Demo: Install and Run wordpress on PHP and MySql
+youtube : OpenShift for Beginners - CI/CD & DevOps - Builds and Build Triggers
 
+Openshift Registry
+Docker hub
+Other Registry
 
+image streams are pointers to the actual docker images (image id's)
+
+$ oc login
+$ oc new-project mywordpressapp --display-name="my wordpress application"
+$ oc new-app php:latest~http://github.com/girepo --name="mywordpressApp"
+	----> Found image 1e8c42f in image stream "openshift/php" under tag "latest" for "php:latest"
+		  Apache 2.4 with PHP 5.6
+		  -----------------------
+		  Platform for building and running PHP 5.6 applications
+		  Tags: builder, php, php56, rh-php56
+
+		  * A source build using source code from http://github.com/repository will be created
+			 * The resulting image will be pushed to image stream "mywordpressapp:latest"
+			 * Use 'start-build' to trigger a new build
+		  * This image will be deployed in deployment config "mywordpressapp"
+		  * Port 8080/tcp will be load balanced by service "mywordpressapp"
+			* Other container can access this service through the hostname "mywordpressapp"
+	----> Creating resources
+		  imagestream "mywordpressapp" created
+		  buildconfig "mywordpressapp" created
+		  deploymentconfig "mywordpressapp" created
+		  service "mywordpressapp" created      
+	----> Success
+		  Build scheduled, use 'oc logs -f bc/mywordpressapp' to track its progress.
+		  Run 'oc status' to view your app.
+
+$ oc status mywordpressapp
+$ oc expose service mywordpressapp # first service has to be created, when you expose the service , you get route.
+	route mywordpressapp is exposed
+$ oc get routes
+	Name                   host/Port                    path       services              PORT
+	mywordpressapp       mywordpressapp-192.168.xip.io           mywordpressapp        8080-tcp
+$ oc get svc # to get service listed
+route : using route application can be accessed by outside world 
+access the application using service IP within in the cluster.
 
 
 udemy : openshift developers workshop : 3. overview of the openshift
@@ -61,36 +100,7 @@ What's the difference between a Service and a Deployment in Kubernetes?
 	We could use a deployment without a service to keep a set of identical pods running in the Kubernetes cluster.
 
 
-$ oc login
-$ oc new-project mywordpressapp --display-name="my wordpress application"
-$ oc new-app php:latest~http://github.com/girepo --name="mywordpressApp"
-	----> Found image 1e8c42f in image stream "openshift/php" under tag "latest" for "php:latest"
-		  Apache 2.4 with PHP 5.6
-		  -----------------------
-		  Platform for building and running PHP 5.6 applications
-		  Tags: builder, php, php56, rh-php56
 
-		  * A source build using source code from http://github.com/repository will be created
-			 * The resulting image will be pushed to image stream "mywordpressapp:latest"
-			 * Use 'start-build' to trigger a new build
-		  * This image will be deployed in deployment config "mywordpressapp"
-		  * Port 8080/tcp will be load balanced by service "mywordpressapp"
-			* Other container can access this service through the hostname "mywordpressapp"
-	----> Creating resources
-		  imagestream "mywordpressapp" created
-		  buildconfig "mywordpressapp" created
-		  deploymentconfig "mywordpressapp" created
-		  service "mywordpressapp" created      
-	----> Success
-		  Build scheduled, use 'oc logs -f bc/mywordpressapp' to track its progress.
-		  Run 'oc status' to view your app.
-
-$ oc status
-$ oc expose service mywordpressapp # first service has to be created, when you expose the service , you get route.
-$ oc get routes
-$ oc get svc # to get service listed
-route : using route application can be accessed by outside world 
-access the application using service IP within in the cluster.
 
 service can be accessed on cluster level, using the cURL command.
 
