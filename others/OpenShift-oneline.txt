@@ -1,4 +1,16 @@
 
+openshift : This container orchestration engine do the following tasks.
+	1) takes source code from git url and build
+	2) takes the image from Docker hub
+	3) creating container from image
+	4) deploying the build to container
+	5) creating a service and route (External url to access the app)
+
+To see a typical example  : udemy : openshift developers workshop 17. Demo: Install and Run wordpress on PHP and MySql
+
+
+
+
 udemy : openshift developers workshop : 3. overview of the openshift
 
 Openshift : offers the ability to deploy your web application code using a library of predefined platform images that build your environment,
@@ -51,7 +63,28 @@ What's the difference between a Service and a Deployment in Kubernetes?
 
 $ oc login
 $ oc new-project mywordpressapp --display-name="my wordpress application"
-$ oc new-app php:latest~http://github.com/girepo
+$ oc new-app php:latest~http://github.com/girepo --name="mywordpressApp"
+	----> Found image 1e8c42f in image stream "openshift/php" under tag "latest" for "php:latest"
+		  Apache 2.4 with PHP 5.6
+		  -----------------------
+		  Platform for building and running PHP 5.6 applications
+		  Tags: builder, php, php56, rh-php56
+
+		  * A source build using source code from http://github.com/repository will be created
+			 * The resulting image will be pushed to image stream "mywordpressapp:latest"
+			 * Use 'start-build' to trigger a new build
+		  * This image will be deployed in deployment config "mywordpressapp"
+		  * Port 8080/tcp will be load balanced by service "mywordpressapp"
+			* Other container can access this service through the hostname "mywordpressapp"
+	----> Creating resources
+		  imagestream "mywordpressapp" created
+		  buildconfig "mywordpressapp" created
+		  deploymentconfig "mywordpressapp" created
+		  service "mywordpressapp" created      
+	----> Success
+		  Build scheduled, use 'oc logs -f bc/mywordpressapp' to track its progress.
+		  Run 'oc status' to view your app.
+
 $ oc status
 $ oc expose service mywordpressapp # first service has to be created, when you expose the service , you get route.
 $ oc get routes
@@ -62,7 +95,8 @@ access the application using service IP within in the cluster.
 service can be accessed on cluster level, using the cURL command.
 
 service : A Kubernetes service serves as an internal load balancer. Service provides a consistent address pods while pods are being added and removed.
-service identifies a set of replicated pods in order to proxy the connections it receives to them.
+service
+0 identifies a set of replicated pods in order to proxy the connections it receives to them.
 The default service clusterIP addresses are from the OpenShift Container Platform internal network and they are used to permit pods to access each other.
 
 

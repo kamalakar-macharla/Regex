@@ -33,29 +33,69 @@ set filename=test.txt
 echo The file name is %filename%
 
 ----- line comments ---
+#  anything
 
 REM anything  (REM means remark)
 :: anything (:: same as REM)
-#  anything
 
 ----- Environment variables ---
-
 env
 printenv
 echo $HOMEPATH
 export mytoken='jsihisjs'
 
-set        (than enter)
+set        (then enter)
 echo %ProgramFiles%
 cd %SystemRoot%
 ComSpec=C:\WINDOWS\system32\cmd.exe
 %ComSpec%  (this runs above cmd.exe file)
 
---- 
+--- echo ------------
+$ MYSHELL=Bash
+$ echo "${MYSHELL}ing"
+
+echo %USERNAME%-kamal-%windir%
+echo %USERNAME% & echo %windir%  # executing 2 commands in oneline
+
+---- second command to execute only if the first exited successfully ----
+$ pwd && echo 'kamal'
+
+dir && echo foo
+
+-----  input -----
+read -p "Enter y or n :" ANSWER
+
+@echo off
+set /P Number1=Enter Number
+
+----- help ---
+help exit
+exit --help
+help test
+
+> help exit
+
+---- functions ---
+mkcd(){
+  mkdir $1 ; cd $1
+}
+
+mkcd my-new-folder
 
 
+@echo off
 
+goto : userinput
 
+:main
+	echo Your number is %~1 and %~2
+goto :eof
+
+:userinput
+	set /P Number1=Enter first Number
+	set /P Number2=Enter second Number
+
+call :main %Number1% %Number2%
 
 
 ------ Run .bat file from git bash ----
