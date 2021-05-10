@@ -8,8 +8,12 @@ FirstTheeLetters="ABC"
 
 in-valid variables
 3FIRSTLETTERS="ABC"
-FIRST-THREE-LETTERS="ABC"
+FIRST-THREE-LETTERS="ABC" (This is very important)
 FIRST@THREE@LETTERS="ABC"
+
+echo 'kamal'; \
+echo 'mac'; \
+echo 'apts';  # all these lines executed one after another.
 
 Test Syntax is :   [ condition-to-test-for ]
 Example is : [ -e /etc/passwd ]

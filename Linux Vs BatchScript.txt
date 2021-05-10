@@ -1,13 +1,13 @@
 
-#! /bin/bash
+#!/bin/bash
 @echo off
 
 ----- exit value -----
-echo $?
+echo $?    or  echo "$?"
 exit 0
 exit 23
 
-echo %ERRORLEVEL%
+echo %ERRORLEVEL%  or echo "%ERRORLEVEL%"
 exit /B 0
 exit /B 23
 
@@ -62,6 +62,13 @@ $ pwd && echo 'kamal'
 
 dir && echo foo
 
+------- grep  and findstr ---------
+how to extract/filter the said information from the console command output.
+cat file.txt | grep -i 'world'
+
+dir | C:\Windows\System32\findstr.exe /r /c:"Music"
+dir | findstr /r /c:"Music"
+echo kamalakar macharla | findstr /r /c:"malaka"
 -----  input -----
 read -p "Enter y or n :" ANSWER
 
