@@ -42,6 +42,11 @@ hello-world:latest    quay.io/hello-world@sha256:548osi     35 minutes ago
 $ oc delete svc/hello-world
 service "hello-world" deleted
 
+$ oc delete dc/hello-world
+deploymentconfig.apps.openshift.io "hello-world" deleted
+
+
+
 
 http://hello-world-default.2886795303-80-host01nc.environments.katacoda.com to pod port 8080-tcp (svc/hello-world)
   dc/hello-world deploys istag/hello-world:latest 
