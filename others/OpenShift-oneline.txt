@@ -1,4 +1,57 @@
 
+$ oc version
+Client Version: 4.4.0-202005290638-1960dd7
+Server Version: 4.4.8
+Kubernetes Version: v1.17.1+3f6f40d
+
+$ oc new-app quay.io/practicalopenshift/hello-world   or   oc create -f pods/pod.yaml
+--> Found container image 34b5ac8 (13 months old) from quay.io for "quay.io/practicalopenshift/hello-world"
+
+    * An image stream tag will be created as "hello-world:latest" that will track this image
+    * This image will be deployed in deployment config "hello-world"
+    * Port 8080/tcp will be load balanced by service "hello-world"
+      * Other containers can access this service through the hostname "hello-world"
+
+--> Creating resources ...
+    imagestream.image.openshift.io "hello-world" created
+    deploymentconfig.apps.openshift.io "hello-world" created
+    service "hello-world" created
+--> Success
+    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+     'oc expose svc/hello-world' 
+    Run 'oc status' to view your app.
+$ 
+$ oc expose svc/hello-world
+route.route.openshift.io/hello-world exposed
+
+$ oc status
+In project default on server https://openshift:6443
+
+$ oc get svc      (service)
+NAME		TYPE		CLUSTER-IP	PORTS		AGE
+hello-world    Cluster-ip     172.30.143.126   8080/TCP         33m
+
+$ oc get dc    (deployment config)
+NAME		REVISION     DESIRED	CURRENT		TRIGGERED BY
+hello-world       1            1          1             config, image(hello-world:latest)
+
+$ oc get istag    (image stream tag)
+NAME			DOCER REF                            UPDATED
+hello-world:latest    quay.io/hello-world@sha256:548osi     35 minutes ago
+
+$ oc delete svc/hello-world
+service "hello-world" deleted
+
+
+http://hello-world-default.2886795303-80-host01nc.environments.katacoda.com to pod port 8080-tcp (svc/hello-world)
+  dc/hello-world deploys istag/hello-world:latest 
+    deployment #1 deployed 12 minutes ago - 1 pod
+
+svc/openshift - kubernetes.default.svc.cluster.local
+svc/kubernetes - 172.30.0.1:443 -> 6443
+
+
+
 openshift : This container orchestration engine do the following tasks.
 	1) takes source code from git url and build
 	2) takes the image from Docker hub
