@@ -19,6 +19,14 @@ Test Syntax is :   [ condition-to-test-for ]
 Example is : [ -e /etc/passwd ]
 $ help test # works in gitbash , shows all tests options.
 
+$id
+$id -u
+$id -n
+$ echo "User name: $(id -un)"
+$ echo "User id: $(id -u)"
+
+$ ls -ld  #print the current directory permission
+
 ssh-keygen -t rsa
 ssh-copy-id root@RHost
 printenv

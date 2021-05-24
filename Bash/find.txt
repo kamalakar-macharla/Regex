@@ -1,4 +1,15 @@
 
+$ find . -type f -name "*.txt"
+./Ansible/asnsible-oneline.txt
+./azure-oneline.txt
+./batch-script-oneline.txt
+./devops-oneline.txt
+$ find . -type f -name "*.txt" | sed 's/^..//g'
+Ansible/asnsible-oneline.txt
+azure-oneline.txt
+batch-script-oneline.txt
+devops-oneline.txt
+
 $ find -type d -name 'java'  # this finds through all sub-folders
 ./net/java
 
