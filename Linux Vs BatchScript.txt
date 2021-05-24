@@ -66,6 +66,7 @@ dir && echo foo
 how to extract/filter the said information from the console command output.
 cat file.txt | grep -i 'world'
 
+netstat -f | findstr amazonaws
 dir | C:\Windows\System32\findstr.exe /r /c:"Music"
 dir | findstr /r /c:"Music"
 echo kamalakar macharla | findstr /r /c:"malaka"
