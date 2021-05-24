@@ -1,4 +1,9 @@
 
+Docker solves problems like: missing or incorrect application dependencies such as libraries, interpreters, code/binaries, 
+A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application:
+Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package.
+Docker : OS-level virtualization to deliver software in packages called containers.
+
 A Docker container image is a lightweight, standalone, executable package of software 
 that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 self-sufficient containers that run virtually anywhere

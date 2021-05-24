@@ -393,9 +393,13 @@ The item is : one
 The item is : two
 The item is : three
 
-ls > /dev/null
-nwgpnpo 2> /dev/null
+ls > /dev/null      Redirect stdout to /dev/null 
+nwgpnpo 2> /dev/null   Redirect stderr to /dev/null
 ls &> /dev/null       # for std error and output
+find /c/Program*/* -type f -iname notepad++*.exe >/dev/null       Redirect stdout to /dev/null
+find /c/Program*/* -type f -iname notepad++*.exe 2>/dev/null      Redirect stderr to /dev/null
+find /c/Program*/* -type f -iname notepad++*.exe >&/dev/null      # for std error and output
+
 
 echo 'kamalakar' && \  # write single long command in multiple lines
 echo 'aparna'

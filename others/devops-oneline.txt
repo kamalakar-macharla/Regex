@@ -1,20 +1,7 @@
 
-Hello Everyone,
- 
-I am looking for an opportunity for DevOps profile.
-
-Current location - Hyderabad
-Total exp - 10 years
-Skills - Jenkins CI/CD, Pivotal Cloud Foundary, MicroServices, GitHub/Gitlab, Artifactory, SonarQube, Fortify, Blackduck, New Relic,
-Maven, Ansible, Docker, Linux, AWS , Jira, ServiceNow
- 
-Grade/Designation: C1/Senior-Consultant
- 
-Please let me know if there is any opportunity.
-Thank You,
-Kamalakar Macharla
-Mobile- 9867 904 907
-Email – kamalakar.macharla@capgemini.com
+CI/CD : streamline software building, testing, and release. 
+DevOps : combine the roles of dev and ops to achieve the same shared business goal.
+CI/CD :  pipeline is a series of steps that must be performed in order to deliver a new version of software.
 
 ------------- devops Tools set -------------
 Configuration Management Tools : Ansible, chef, puppet

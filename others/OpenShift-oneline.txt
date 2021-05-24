@@ -25,7 +25,11 @@ $ oc expose svc/hello-world
 route.route.openshift.io/hello-world exposed
 
 $ oc status
-In project default on server https://openshift:6443
+in project My project (myproject) on server https://192.168.99.116:8443t:6443
+
+svc/hello-world - 172.30.143.126:8080
+  dc/hello-world deploys istag/hello-world:latest
+    deployment #1 deployed 32 minutes ago - 1 pod
 
 $ oc get svc      (service)
 NAME		TYPE		CLUSTER-IP	PORTS		AGE
@@ -45,6 +49,34 @@ service "hello-world" deleted
 $ oc delete dc/hello-world
 deploymentconfig.apps.openshift.io "hello-world" deleted
 
+$ oc delete all -l app=hello-world
+pod "hello-wordl-1-lp4r5" deleted
+replicationcontroller "hello-world-1" deleted
+service "hello-world" deleted
+deploymentconfig.apps.openshift.io "hello-world" deleted
+imagestream.image.openshift.io "hello-world" deleted.
+
+$ oc new-app quay.io/practicalopenshift/hello-world --name demo-app
+
+
+$ oc describe dc/hello-world
+$ oc describe dc/demo-app
+$ oc delete all -l app=demo-app
+
+$ oc get -o yaml dc/hello-world
+ 
+$ oc get rc   # rc means replication controller
+NAME		DESIRED		CURRENT 	READY 		AGE
+hello-world-1	1		1		1		10m
+
+$ oc rollout latest dc/hello-world
+deploymentconfig.apps.openshift.io/hello-world rolled out
+$ oc rollback dc/hello-world
+deploymentconfig.apps.openshift.io/hello-world deployment #3 rolled back to hello-world-1
+
+
+
+$ oc explain deploymentconfig            (dc is collection of pods)
 
 
 
