@@ -1,3 +1,12 @@
+curl --help
+
+STATUS=$(curl -kIs https://github.com/kamalakar-macharla/mastermind | head -1 | cut -d " " -f 2)
+if [ ${STATUS}  == "200" ]; then 
+ echo "Site is Reachable";  
+else 
+ echo "Site is NOT Reachable";
+fi
+
 To get the jenkins job console output to file.
 curl -s -S -u macjcuej:Mejujfmo@123 https://jenkins.jdiejuj.com/job/GRS_Projects/job/GRS_GRSPlus/job/GRS_portal-node/job/GRS_portal-node_DEV_Deploy/113/consoleText > output.txt
 
