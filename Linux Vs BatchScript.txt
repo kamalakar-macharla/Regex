@@ -2,6 +2,21 @@
 #!/bin/bash
 @echo off
 
+-----
+
+
+
+query user
+whoami
+echo %USERNAME%
+echo %COMPUTERNAME%
+echo %USERDOMAIN%
+echo %PATH%
+-------
+
+powershell.exe -Command "& {Get-ChildItem}"    # Run a powershell from cmd
+powershell.exe -Command "& {Get-ChildItem;echo kamal}"    # Run a powershell from cmd
+powershell.exe -Command "& {$a=( echo $env:Path | Out-String );$a -split ';' }"   # displays the path variables in one by one
 ----- exit value -----
 echo $?    or  echo "$?"
 exit 0
@@ -49,6 +64,11 @@ echo %ProgramFiles%
 cd %SystemRoot%
 ComSpec=C:\WINDOWS\system32\cmd.exe
 %ComSpec%  (this runs above cmd.exe file)
+
+Get-ChildItem env:*
+Get-ChildItem env:PATH
+gci env:*
+gci env:* | sort-object name
 
 --- echo ------------
 $ MYSHELL=Bash
