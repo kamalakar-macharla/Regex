@@ -40,6 +40,7 @@ jq : json command line processor , jqplay.org
 ~./bashrc
 alias npp='notepad++' #get this from path var
 winmerge : ctrl+shift+M
+terraform puttykeygen.exe generating keypairs, ssh should aviable in windows
 
 
 

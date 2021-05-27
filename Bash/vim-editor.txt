@@ -1,0 +1,17 @@
+
+
+0 or ^       # to go to the starting of the line
+$            # to go to the ending of the line
+
+:set ruler   # displays the line you are in
+
+w            # to shift to the next word
+b            # to shift to the previous word
+
+gg           # to go to the 1 line of the file
+G            # to go to the last line of the file
+
+:5           # to go to the 5th line of the file
+:$           # to go to the last line of the file
+
+
