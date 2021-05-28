@@ -32,6 +32,8 @@ stat ./Bash/bash-oneline.sh  # shows time & date of birth/accessed/modified uid/
 stat file.sh to know Uid & Gid , access/modify/change times
 	Uid: (2148198368/MLIDDOMAIN1+machaka)   Gid: (2147484161/ UNKNOWN)
 
+vim ~/.bash_profile # use custom .bash_profile in pc/laptop/server to custom diagnosis alias commands
+
 
 
 
