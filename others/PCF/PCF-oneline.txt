@@ -1,4 +1,7 @@
 
+Run $ cf push APP-NAME to push an app the easiest way, using default settings.
+$ cf push .     # The manifest file must be named manifest.yml and reside in the directory where you run cf push.
+
 VCAP-SERVICES
 https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES
 

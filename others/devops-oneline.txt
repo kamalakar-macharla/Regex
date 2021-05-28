@@ -17,7 +17,7 @@ Container : Docker
 Code Coverage : Jacoco or Cobertura	
 Monitoring Tools:
 	Infrastructure Monitoring : Nagios, Zabbix, New Relic Infrastructure, Datadog
-	Log Monitoring : Splunk, ELBK (elastic search(like DB), log stack(streaming component), kibana (UI component to display))
+	Log Monitoring : Splunk, ELK (elastic search(like DB), log stack(streaming component), kibana (UI component to display))
 	Performance Monitoring (APM) : New Relic, AppDynamics                  https://docs.run.pivotal.io/marketplace/services/newrelic/
 Security : SonarQube, Fortify, AppScan, Blackduck
 planing and requirement Gathering : Jira, ServiceNow
