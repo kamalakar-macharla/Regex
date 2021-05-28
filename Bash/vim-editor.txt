@@ -1,4 +1,6 @@
-
+x            # to delete a char where the cursor is
+dw           # delete a word
+dd           # delete the entire line
 
 0 or ^       # to go to the starting of the line
 $            # to go to the ending of the line
