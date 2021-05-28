@@ -1,9 +1,21 @@
 
+git rebase : For example, if working on a feature branch that is out of date with a dev branch, rebasing the feature branch onto dev will allow all the new commits from dev to be included in feature
+Rebase is another way to integrate changes from one branch to another.
+
 - Fast-Forward Merge         Recursive Merge
 Rebase							no-ff
 No new commits on master		new commits on master
 No merget commit 				merge commits created
 Linear History					Commit-2 parent
+
+Detached HEAD means that what's currently checked out is not a local branch.
+
+Some scenarios that will result in a Detached HEAD state:
+1) If you checkout a remote branch, say origin/master. This is a read-only branch. Thus, when creating a commit from origin/master it will be free-floating, i.e. not connected to any branch.
+2) If you checkout a specific tag or commit. When doing a new commit from here, it will again be free-floating, 
+i.e. not connected to any branch. Note that when a branch is checked out, new commits always gets automatically placed at the tip.
+
+git checkout <branchName> will resolve the Detached HEAD.
 
 GIT. ... Squash is technique in which you bundle up some of your last insignificant or less important commits into a single one.
 
