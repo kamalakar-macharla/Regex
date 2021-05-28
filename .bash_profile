@@ -18,7 +18,7 @@ mkcd(){
   mkdir $1 ; cd $1
 }
 gpush(){
-  git add .; git commit -m 'update'; git push
+  cd ~/mastermind/; git add .; git commit -m 'update'; git push
 }
 # oneline jenkins
 oneline(){
