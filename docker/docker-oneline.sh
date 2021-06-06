@@ -94,6 +94,8 @@ docker container stat mysql      # all the live info like cpu usage
 ----------------------------------------------------
 docker container run -it   #start new container interactively ( -t allocate pseudo TTY, -i interactive)
 docker container exec -it  #run additional command in existing container
+--interactive , -i		Keep STDIN open even if not attached
+--tty , -t		Allocate a pseudo-TTY  (TTy means virtual terminal)
 
 No SSH Needed
 docker cli is great substitude for adding SSH to containers
@@ -105,6 +107,7 @@ docker container run -it --name proxy nginx bash
 docker container exec     #Run additional process in running container
 docker container exec --help
 docker container exec -it mysql bash
+docker exec -it nginx-test /bin/bash  #getting into container bash shell
 
 -----------------------------------------
 The docker pull command serves for downloading Docker images from a registry.
