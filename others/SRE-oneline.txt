@@ -7,6 +7,7 @@ SRE = Define Availability
 
 SLI :
 	SLI are “what we are measuring.” 
+	Service Level Indicators (SLIs) are the quantitative measures defined for a system, also knows as “what we are measuring.” 
 	are most often metrics over time such as 
 	request latency, 
     throughput of request per second in case of a batch system.
@@ -84,8 +85,7 @@ reliability and availability
 Latency (lag) is the delay between a user's action and a web application's response to that action, often referred to in networking terms as the total round trip time.
 it takes for a data packet to travel.
 
-low latency means small delay times, while a 
-high latency means long delays.
+low latency means small delay times, while a high latency means long delays.
 
 throughput : can be defined as the total number of business transactions completed by the application in unit time (per second or per hour).
 
@@ -136,26 +136,9 @@ app-4
 all above app's are having same Authentication Token
 *Rpm = Request per minute
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+endpoint is one end of a communication channel.
+When an API interacts with another system, the touchpoints of this communication are considered endpoints. 
+For APIs, an endpoint can include a URL of a server or service.
 
 
 Position: Dev-Ops/SRE Consultant
@@ -179,5 +162,4 @@ Responsibilities:
 - Closing work with application team to review application SDLS process, log management and implement necessary improvements to obtain SRE factors, and create automation scripts for reports extractions
 - To plan and execute configuration management, software performance analysis and system tuning
 - Prepare and maintain release metrics, weekly and monthly reports.
- 
- 
+
