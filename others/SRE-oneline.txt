@@ -3,17 +3,10 @@
 SRE = Define Availability
 	  Level of availability
 	  plan in case of failure
-	  
-SLO : 
-	Define (services level objectives) in collaboration with product owner. by agreeing these metrics in advance
-	we make sure that there is a less of change of confusion and conflict in the feaute.
-	SLO is just an agreement among stakeholders about how reliable service should be.
 
-	Every application has unique set of requirement that dectate how the reliable does it has to be before customer no longer notice the difference.
-	what is availability in the context of service?
-	
 
 SLI :
+	SLI are “what we are measuring.” 
 	are most often metrics over time such as 
 	request latency, 
     throughput of request per second in case of a batch system.
@@ -25,6 +18,17 @@ SLI :
 	And that way, we can get to a concrete threshold which we can define to say,
 	is this single number good or bad?
 	Binding the target for a collection of SLIs
+
+	  
+SLO :
+	“SLA = SLO + consequences.”
+	SLOs are the target value or range the system should operate “how good should it be.”
+	Define (services level objectives) in collaboration with product owner. by agreeing these metrics in advance
+	we make sure that there is a less of change of confusion and conflict in the feaute.
+	SLO is just an agreement among stakeholders about how reliable service should be.
+
+	Every application has unique set of requirement that dectate how the reliable does it has to be before customer no longer notice the difference.
+	what is availability in the context of service?
 	
 	  
 SLA : 
